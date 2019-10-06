@@ -25,14 +25,33 @@ It can be
   - Standard coding style reference
   - DJ
 - **Information**
-  - Websites to improve workflow
+  - Library for manupilating map data
+  - Belal
+- **Information**
+  - Source Map data
   - Belal
 - **Discussion**
   - Project resaerch direction and asignment
   - `All`
 
+### Progress Report
+
+- Nothing for the first.
+
 ### TODO List
-- [ ] This part will be decided during the discussion
+
+- [ ] Get familiar with git. **Everyone**
+- [ ] Decision on `Trello` and `Pivotal tracker`. **Belal**
+- [ ] Further research on some library for manipulating map data. **Everyone**
+  - [ ] [mapnik](https://github.com/mapnik/mapnik)
+  - [ ] [qtlocation](https://doc.qt.io/qt-5/location-plugin-mapboxgl.html)
+  - [ ] ~~[mapbox]()~~ It require Internet access
+  - [ ] ~~[Maptiler]()~~ It require Internet access
+  - [ ] [libosmscout](https://github.com/Framstag/libosmscout)
+  - [ ] [OSM-binary](https://github.com/scrosby/OSM-binary)
+  - [ ] [libosmpbfreader](https://github.com/CanalTP/libosmpbfreader)
+  - [ ] [osmium](https://github.com/joto/osmium)
+- [ ] Check with Yohan about the weekly report. **DJ**
 
 ### Notes
 
@@ -40,3 +59,6 @@ It can be
 - Git tutorial and reference: [Bitbucket](https://www.atlassian.com/git/tutorials/what-is-version-control) very detailed tutorial.
 - Using [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) as workflow reference. Branch `master`, `release` and `develop` will be in the platform while the others will only be in your local PC.
 - Something about [git rebase](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#workflow-walkthrough), very important
+- [Website](https://extract.bbbike.org) to download the map data. (map data already download)
+- [Download the map here](https://1drv.ms/u/s!Ak5vTudxDjY5hSsx4VxW767tC-vy?e=SkfjbY)
+- An `introduction slide` about using openstreetmap data availabel on [cloud](https://1drv.ms/u/s!Ak5vTudxDjY5hSsx4VxW767tC-vy?e=SkfjbY)
