@@ -41,16 +41,16 @@ It can be
 ### TODO List
 
 - [ ] Get familiar with git. **Everyone**
-- [ ] Decision on `Trello` and `Pivotal tracker`. **Belal**
+- [ ] Decision on [Trello](https://trello.com/) and [Pivotal tracker](https://www.pivotaltracker.com/). **Belal**
 - [ ] Further research on some library for manipulating map data. **Everyone**
-  - [ ] [mapnik](https://github.com/mapnik/mapnik)
-  - [ ] [qtlocation](https://doc.qt.io/qt-5/location-plugin-mapboxgl.html)
+  - [ ] [mapnik](https://github.com/mapnik/mapnik) **DJ**
+  - [ ] [qtlocation](https://doc.qt.io/qt-5location-plugin-mapboxgl.html) **DJ**
   - [ ] ~~[mapbox]()~~ It require Internet access
   - [ ] ~~[Maptiler]()~~ It require Internet access
-  - [ ] [libosmscout](https://github.com/Framstag/libosmscout)
-  - [ ] [OSM-binary](https://github.com/scrosby/OSM-binary)
-  - [ ] [libosmpbfreader](https://github.com/CanalTP/libosmpbfreader)
-  - [ ] [osmium](https://github.com/joto/osmium)
+  - [ ] [libosmscout](https://github.com/Framstag/libosmscout) **Azadeh**
+  - [ ] [OSM-binary](https://github.com/scrosby/OSM-binary) **Azadeh**
+  - [ ] [libosmpbfreader](https://github.com/CanalTP/libosmpbfreader) **Belal**
+  - [ ] [osmium](https://github.com/joto/osmium) **Belal**
 - [ ] Check with Yohan about the weekly report. **DJ**
 
 ### Notes
@@ -63,3 +63,18 @@ It can be
 - [Download the map here](https://1drv.ms/u/s!Ak5vTudxDjY5hSsx4VxW767tC-vy?e=SkfjbY)
 - An `introduction slide` about using openstreetmap data availabel on [cloud](https://1drv.ms/u/s!Ak5vTudxDjY5hSsx4VxW767tC-vy?e=SkfjbY)
 - [Markdown](https://www.markdownguide.org/) tutorial if it is helpful.
+
+## Date: 09/10/2019
+
+### Subject for discussion
+
+#### Subject
+
+- **Information**
+  - Small report about the library
+  - All
+
+#### Notes
+
+- Decided to use [trello](https://trello.com/b/cPwkMSrr/project) for project management.
+- Outline of the project (finish this part later)
