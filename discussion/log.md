@@ -68,13 +68,18 @@ It can be
 
 ### Subject for discussion
 
-#### Subject
-
 - **Information**
   - Small report about the library
   - All
 
-#### Notes
+### Todo
+
+- [ ] Write a draft about the outline of the project **DJ**
+
+### Notes
 
 - Decided to use [trello](https://trello.com/b/cPwkMSrr/project) for project management.
 - Outline of the project (finish this part later)
+- Notification for modification on the repository
+
+## Date: 15/10/2019
