@@ -74,7 +74,7 @@ It can be
 
 ### Todo
 
-- [ ] Write a draft about the outline of the project **DJ**
+- [x] Write a draft about the outline of the project **DJ**
 
 ### Notes
 
