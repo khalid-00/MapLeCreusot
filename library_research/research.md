@@ -48,7 +48,10 @@
 - You can find basically all the functions you need for this project.
 - Officially support [OpenStreetMap offline](https://wiki.openstreetmap.org/wiki/Using_OpenStreetMap_offline)
 - A complete map app with open source code using this library. Basically shows you everything about how to do this project
+- [API documentation](http://www.cartotype.com/assets/api_doc/index.html)
+- [Main Page](http://www.cartotype.com)
 
 ### Problems
 
 - The library is so well-developed that it just makes the porject too easy
+

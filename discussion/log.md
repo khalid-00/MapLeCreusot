@@ -4,6 +4,8 @@
 
 ### Subject for discussion
 
+<font size = 3>
+
 <!-- Anyone in the team can raise a discussion subject before the meeting. Just change the `subject` part directly for the upcoming discussion
 
 It can be
@@ -83,3 +85,36 @@ It can be
 - Notification for modification on the repository
 
 ## Date: 15/10/2019
+
+- **Information**
+  - Small report about the library
+  - All
+
+- **Dicussion**
+  - Modifications on the project overview
+  - All
+
+### Notes
+
+- Detailed research for decision on libraries
+  - Simple comparison between `Libosmium` and `Cartotype` with the following questions:
+      1. Map displaying for UI
+      2. How they manage the data of the map
+      3. Detailed for how to import and use in the project(graph or diagram, no code)
+      4. Interaction of the map, for example zoom in, zoom out
+      5. Is itw easy to use( detailed documentation for beginner in both library)
+- No modifications for the overview file yet.
+
+### Todo
+
+- [ ] Simple research on the list above for `Cartotype`. ( Q2, Q3, Q5) **DJ**
+- [ ] Simple research on the list above for `Libosmium`. ( Q3, Q5) **Azadeh**
+- [ ] Simple research on the list above for `Libosmium`. ( Q1, Q2, Q4) **Belal**
+
+## Date: 17/10/2019
+
+### Subject for discussion
+
+- **Discussion**
+  - Simple comparison between `Libosmium` and `Cartotype` and decide whicth to use.
+  - All
