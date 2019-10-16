@@ -55,3 +55,18 @@
 
 - The library is so well-developed that it just makes the porject too easy
 
+### Detailed Questions
+
+- Q2: How they manage the data of the map
+  - A: No detailed tutorial or diagram on its website. We need to go through the code by ourself. We may get some hints [here](http://www.cartotype.com/assets/api_doc/classCartoType_1_1CFramework.html#a656390a9c833c04da194c9ae1de9f5f8)
+
+- Q3: Detailed for how to import and use in the project(graph or diagram, no code)
+  - A: [Envirement setup for different platform](http://www.cartotype.com/articles/102-cartotype-and-qt)
+
+- Q5: Is it easy to use( detailed documentation for beginner in both library)
+  - A: 
+    - [API](http://www.cartotype.com/assets/api_doc/)
+    - [Sample code](https://github.com/CartoType/CartoType-Public)
+    - [Simple tutorial](http://www.cartotype.com/developers/documentation/42-cartotype-tutorial)
+    - In the example code, the library reads the map data format `CTM1`. The OSM data need to be converted to `CTM1` before it is used. [Tutorial here](http://www.cartotype.com/developers/documentation/50-how-to-create-map-files-for-cartotype-ctm1-files)
+    - No document for top-level veiw of the library, as suggested in the website, we should go through the `example code`

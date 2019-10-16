@@ -99,10 +99,10 @@ It can be
 - Detailed research for decision on libraries
   - Simple comparison between `Libosmium` and `Cartotype` with the following questions:
       1. Map displaying for UI
-      2. How they manage the data of the map
-      3. Detailed for how to import and use in the project(graph or diagram, no code)
+      2. How they manage the data of the map (graph or diagram, no code)
+      3. Detailed for how to import and use in the project(referring to the library)
       4. Interaction of the map, for example zoom in, zoom out
-      5. Is itw easy to use( detailed documentation for beginner in both library)
+      5. Is it easy to use( detailed documentation for beginner in both library)
 - No modifications for the overview file yet.
 
 ### Todo
