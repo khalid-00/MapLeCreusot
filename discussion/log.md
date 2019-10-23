@@ -107,9 +107,10 @@ It can be
 
 ### Todo
 
-- [ ] Simple research on the list above for `Cartotype`. ( Q2, Q3, Q5) **DJ**
+- [x] Simple research on the list above for `Cartotype`. ( Q2, Q3, Q5) **DJ**
 - [ ] Simple research on the list above for `Libosmium`. ( Q3, Q5) **Azadeh**
-- [ ] Simple research on the list above for `Libosmium`. ( Q1, Q2, Q4) **Belal**
+  - this will be set to done after updating the documents
+- [x] Simple research on the list above for `Libosmium`. ( Q1, Q2, Q4) **Belal**
 
 ## Date: 17/10/2019
 
@@ -117,4 +118,53 @@ It can be
 
 - **Discussion**
   - Simple comparison between `Libosmium` and `Cartotype` and decide whicth to use.
+  - All
+
+### Notes
+
+- Send Yohan an email to ask for advice on the library. And we will move on after our decision on this.
+
+## Date: 23/10/2019
+
+### Preparation for the meeting
+
+- [x] Draft of the schedule and work assginment. **DJ**
+
+### Subject for discussion
+
+- **Discussion**
+  - Complete detailed on the `overview.md` file in order to schedule our work for the next month.
+  - All
+
+- **Discussion**
+  - Modification of the schedule
+  - All
+
+- **Discussion**
+  - Work assignment
+  - All
+
+- **Notes**
+
+- Split the task into 3 parts and every one of us will be in charge of one.
+
+- **Todo**
+
+- [ ] Write your own time schedule for the task and upload it before next monday(28/10/2019).
+  - [ ] Deng
+  - [ ] Belal
+  - [ ] Azadeh
+- [ ] Update the `Overview.md` file during the development for the part you'r in charge of.
+- [ ] Everyone of us should be familiar of the library
+
+## Date: 06/11/2019
+
+### Subject for discussion
+
+- **Report**
+  - Brief report on our progress.
+  - All
+
+- **Discussion**
+  - In case we have difficulties during the development.
   - All
