@@ -11,7 +11,7 @@ Drafted by Deng 23/10/2019
   - Result:
     - Decide to use `cartotype` for our development. `Libosmium` and other library recommended in Yohan's tutorial will be considered as backup plan.
 
-## Coding / Development $\quad$ `From 23rd Oct. to 23rd Nov.`
+## Coding / Development $\quad$ `From 23 Oct. to 23 Nov.`
 
 - [ ] Development $\quad$ `From 23rd Oct. to 23rd Nov.`
   - [ ] Basic data manipulation $\quad$ **Belal**
