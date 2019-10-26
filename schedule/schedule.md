@@ -11,15 +11,15 @@ Drafted by Deng 23/10/2019
   - Result:
     - Decide to use `cartotype` for our development. `Libosmium` and other library recommended in Yohan's tutorial will be considered as backup plan.
 
-## Coding / Development $\quad$ `From 23 Oct. to 23 Nov.`
+## Coding / Development | `From 23 Oct. to 23 Nov.`
 
-- [ ] Development $\quad$ `From 23rd Oct. to 23rd Nov.`
-  - [ ] Basic data manipulation $\quad$ **Belal**
+- [ ] Development | `From 23rd Oct. to 23rd Nov.`
+  - [ ] Basic data manipulation | **Belal**
     - [ ] Map conversion
     - [ ] Load map data
     - [ ] Database Interface
       - [ ] original interface from `cartotype`
-  - [ ] User Interface $\quad$ **Azadeh**
+  - [ ] User Interface | **Azadeh**
     - [ ] Map display
     - [ ] Interactions
       - [ ] Zoom in & Zoom out
@@ -29,7 +29,7 @@ Drafted by Deng 23/10/2019
       - [ ] choose travel mode
       - [ ] showing path for navigation
 
-  - [ ] Key algorithm implementation $\quad$ **Deng**
+  - [ ] Key algorithm implementation | **Deng**
     - [ ] Research on the basic principles for path planning
     - [ ] Research on libraries for path planing/ Or build our own library for this
     - [ ] Implement the algorithms
@@ -37,11 +37,11 @@ Drafted by Deng 23/10/2019
       - [ ] Basic path planning for different travel mode
     - [ ] Modification on the data base in order to implement the algorithm
 
-- [ ] Merge & Test & Debug $\quad$ `From 23rd Nov to 1st Dec`
+- [ ] Merge & Test & Debug | `From 23rd Nov to 1st Dec`
   - [ ] User interface with data manipulation
   - [ ] User interface with path planning
   - [ ] data maniulation with path planning
-- [ ] Release $\quad$ `1st Dec`
+- [ ] Release | `1st Dec`
 
 ## Upgrades & hotfix
 
