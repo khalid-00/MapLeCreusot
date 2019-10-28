@@ -3,23 +3,29 @@
 # Main schedule
 
 Drafted by Deng 23/10/2019
+Modified by Deng 28/10/2019
 
 ## Research
 
 - [x] General research for libraries we will use.
-  - Due data: end of Oct.
+  - Due date: end of Oct.
   - Result:
-    - Decide to use `cartotype` for our development. `Libosmium` and other library recommended in Yohan's tutorial will be considered as backup plan.
+    - ~~Decide to use `cartotype` for our development. `Libosmium` and other library recommended in Yohan's tutorial will be considered as backup plan.~~
+    - `Cartotype` is a totally blackbox for the teammates. With limited documentations, it is very difficult to set up environments. Thus, we need to switch to another library. The new solution maybe using `Libosmium` for data manipulation to support algorithms and use `Marble` for map displaying in GUI.
+- [ ] Simple guide about using `Marble` for osm data rendering | **Deng**
+  - Due date: end of Oct.
 
-## Coding / Development $\quad$ `From 23 Oct. to 23 Nov.`
+## Coding / Development | `From 23 Oct. to 23 Nov.`
 
-- [ ] Development $\quad$ `From 23rd Oct. to 23rd Nov.`
-  - [ ] Basic data manipulation $\quad$ **Belal**
+- [ ] Development | `From 23rd Oct. to 23rd Nov.`
+  - [ ] Basic data manipulation | **Deng**
+    - [ ] Switch to `Libosmium`
+    - [ ] How to interact with `Marble`
     - [ ] Map conversion
     - [ ] Load map data
     - [ ] Database Interface
-      - [ ] original interface from `cartotype`
-  - [ ] User Interface $\quad$ **Azadeh**
+      - [ ] ~~original interface from `cartotype`~~
+  - [ ] User Interface | **Azadeh**
     - [ ] Map display
     - [ ] Interactions
       - [ ] Zoom in & Zoom out
@@ -29,19 +35,19 @@ Drafted by Deng 23/10/2019
       - [ ] choose travel mode
       - [ ] showing path for navigation
 
-  - [ ] Key algorithm implementation $\quad$ **Deng**
+  - [ ] Key algorithm implementation | **Belal**
     - [ ] Research on the basic principles for path planning
     - [ ] Research on libraries for path planing/ Or build our own library for this
     - [ ] Implement the algorithms
       - [ ] Basic path planning
       - [ ] Basic path planning for different travel mode
     - [ ] Modification on the data base in order to implement the algorithm
-
-- [ ] Merge & Test & Debug $\quad$ `From 23rd Nov to 1st Dec`
+- [ ] Discuss IO standard for these 3 module. | `estimated at 10th Nov, the second discussion in Nov.`
+- [ ] Merge & Test & Debug | `From 23rd Nov to 1st Dec`
   - [ ] User interface with data manipulation
   - [ ] User interface with path planning
   - [ ] data maniulation with path planning
-- [ ] Release $\quad$ `1st Dec`
+- [ ] Release | `1st Dec`
 
 ## Upgrades & hotfix
 
