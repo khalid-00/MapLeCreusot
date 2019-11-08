@@ -168,3 +168,9 @@ It can be
 - **Discussion**
   - In case we have difficulties during the development.
   - All
+
+### Notes
+
+- Since we have different opinions for the solution, we decided to divided in to two teams:
+  - **Deng** & **Belal** will continue on the solution 2
+  - **Azadeh** will continue on the solution 3 on her own
