@@ -8,6 +8,7 @@
 #include <vector>
 #include <iostream>
 #include <modelDataStructure.h>
+#include <modeldata.h>
 
 class modelDataHandler : public osmium::handler::Handler
 {
@@ -15,10 +16,6 @@ class modelDataHandler : public osmium::handler::Handler
     using locationType = osmium::index::map::FlexMem<osmium::unsigned_object_id_type, osmium::Location>;
     using tagPair = std::pair<std::string,std::string>;
     using idType = osmium::unsigned_object_id_type;
-    locationType m_NodesLocation;
-    std::map<idType, nodeData> m_NodeMap;
-    std::map<idType, wayData> m_WayMap;
-    std::map<idType, relationData> m_RelationMap;
 
     void getTags(std::vector<tagPair>& tagStore, const osmium::TagList& tagList)
     {
@@ -30,20 +27,27 @@ class modelDataHandler : public osmium::handler::Handler
         }
     }
 
+//    friend class modelData;
+
+    modelData* m_modelData;
+
 public:
-    modelDataHandler(){}
+    modelDataHandler(modelData* Data)
+    {
+        m_modelData = Data;
+    }
     void node(const osmium::Node& node)
     {
         const int64_t id = node.id();
         if (id >= 0)    //now only support unsign id
         {
-            m_NodesLocation.set(static_cast<idType>(id), node.location());
+            m_modelData->m_NodesLocation.set(static_cast<idType>(id), node.location());
             if(!node.tags().empty())
             {
                 nodeData temp;
                 getTags(temp.tagList, node.tags());
-                m_NodeMap[static_cast<idType>(id)] = temp;
-//                std::cout << temp.tagList[0].first << std::endl;
+                m_modelData -> m_NodeMap[static_cast<idType>(id)] = temp;
+                std::cout << temp.tagList[0].first << std::endl;
             }
         }
     }
@@ -60,7 +64,7 @@ public:
                 temp.nodeRefList.emplace_back(node.ref());
             //get tag list
             getTags(temp.tagList, ways.tags());
-            m_WayMap[static_cast<idType>(id)] = temp;
+            m_modelData->m_WayMap[static_cast<idType>(id)] = temp;
         }
     }
 
@@ -83,51 +87,11 @@ public:
             }
             getTags(tempData.tagList, relations.tags());
 
-            m_RelationMap[static_cast<idType>(id)] = tempData;
+            m_modelData->m_RelationMap[static_cast<idType>(id)] = tempData;
         }
 
     }
 
-    const osmium::Location getNodeLoaction(idType id)
-    {
-        return m_NodesLocation.get(id);
-    }
-
-    const nodeData getNodeData(idType id)
-    {
-        return m_NodeMap.at(id);
-    }
-
-    const wayData getWayData(idType id)
-    {
-        return m_WayMap.at(id);
-    }
-
-    const relationData getRelationData(idType id)
-    {
-        return m_RelationMap.at(id);
-    }
-
-    const map<idType,nodeData> getNodeMap()
-    {
-        return m_NodeMap;
-    }
-
-    const map<idType,wayData> getWayMap()
-    {
-        return m_WayMap;
-    }
-
-    const map<idType,relationData> getRelationMap()
-    {
-        return m_RelationMap;
-    }
-
-
-    size_t totalMemory()
-    {
-        return m_NodesLocation.used_memory() ;//+ m_NodesTags.used_memory();
-    }
 };
 
 #endif // MODELDATAHANDLER_H

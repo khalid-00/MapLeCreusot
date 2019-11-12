@@ -12,7 +12,7 @@
 #include <modelDataHandler.h>
 #include <osmium/storage/item_stash.hpp>
 #include <map>
-
+#include "model.h"
 using namespace std;
 
 
@@ -24,33 +24,34 @@ int main()
 
     const string filePath = "/home/dj/git/cpp_project/data/Le_Creusot.pbf";
 
-    osmium::io::File inputFile(filePath);
-    modelDataHandler myhandler;
-    osmium::io::Reader reader(inputFile, osmium::io::read_meta::no);
-    osmium::apply(reader, myhandler);
+    Model mapModel;
+
+    mapModel.setFilePath(filePath);
+    mapModel.loadFile();
+
     stop = clock();
     duration = double(stop - start);
 
     printf("Used time for loading file: %f\n",(duration/CLOCKS_PER_SEC));
 
-    auto testNode = myhandler.getNodeMap();
-    cout << "No. of nodes: " << testNode.size() << endl;
-    auto testWay = myhandler.getWayMap();
-    cout << "No. of ways: " << testWay.size() << endl;
-    auto test = myhandler.getRelationMap();
-    cout << "No. of relations: " << test.size() << endl;
+//    auto testNode = myhandler.getNodeMap();
+//    cout << "No. of nodes: " << testNode.size() << endl;
+//    auto testWay = myhandler.getWayMap();
+//    cout << "No. of ways: " << testWay.size() << endl;
+//    auto test = myhandler.getRelationMap();
+//    cout << "No. of relations: " << test.size() << endl;
 
-    start = clock();
-    for(auto &r:test)
-    {
-        for(auto &t:r.second.tagList)
-        {
-            cout << t.first << ": " << t.second << endl;
-        }
-    }
-    stop = clock();
-    duration = stop - start;
-    printf("\nUsed time for looping tags in all relation: %f\n\n",(duration/CLOCKS_PER_SEC));
+//    start = clock();
+//    for(auto &r:test)
+//    {
+//        for(auto &t:r.second.tagList)
+//        {
+//            cout << t.first << ": " << t.second << endl;
+//        }
+//    }
+//    stop = clock();
+//    duration = stop - start;
+//    printf("\nUsed time for looping tags in all relation: %f\n\n",(duration/CLOCKS_PER_SEC));
 
 
     return 0;

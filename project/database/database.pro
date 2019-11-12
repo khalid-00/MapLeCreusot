@@ -14,5 +14,7 @@ LIBS += -lz\
         -pthread
 
 HEADERS += \
+    model.h \
     modelDataHandler.h \
-    modelDataStructure.h
+    modelDataStructure.h \
+    modeldata.h
