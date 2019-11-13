@@ -25,37 +25,37 @@ public:
 
     const osmium::Location getNodeLoaction(idType id)
     {
-        return &m_NodesLocation.get(id);
+        return m_NodesLocation.get(id);
     }
 
     const nodeData getNodeData(idType id)
     {
-        return &m_NodeMap.at(id);
+        return m_NodeMap.at(id);
     }
 
     const wayData getWayData(idType id)
     {
-        return &m_WayMap.at(id);
+        return m_WayMap.at(id);
     }
 
     const relationData getRelationData(idType id)
     {
-        return &m_RelationMap.at(id);
+        return m_RelationMap.at(id);
     }
 
     const map<idType,nodeData> getNodeMap()
     {
-        return &m_NodeMap;
+        return m_NodeMap;
     }
 
     const map<idType,wayData> getWayMap()
     {
-        return &m_WayMap;
+        return m_WayMap;
     }
 
     const map<idType,relationData> getRelationMap()
     {
-        return &m_RelationMap;
+        return m_RelationMap;
     }
 
 };
