@@ -2,3 +2,4 @@ dockerfile
 data
 schedule/Deng/database/*.user
 project/build*
+project/integrate/*.user
