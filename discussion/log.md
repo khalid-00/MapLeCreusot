@@ -174,3 +174,15 @@ It can be
 - Since we have different opinions for the solution, we decided to divided in to two teams:
   - **Deng** & **Belal** will continue on the solution 2
   - **Azadeh** will continue on the solution 3 on her own
+
+## Date: 15/11/2019
+
+### Subject for discussion
+
+- **Report**
+  - Brief report on our progress.
+  - **Deng & Belal**
+
+- **Discussion**
+  - Work schedule change.
+  - **Deng & Belal**
