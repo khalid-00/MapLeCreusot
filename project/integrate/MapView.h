@@ -7,7 +7,7 @@
 
 
 #define MAX_SCALE 10
-#define MIN_SCALE 0.1
+#define MIN_SCALE 0.0002
 #define ZOOM_STEP 1.2
 
 class MapView : public QGraphicsView
@@ -42,7 +42,7 @@ private:
 public:
     MapView()
     {
-        m_scale = 1.0;
+        m_scale = 0.01;
     }
     ~MapView(){}
 };

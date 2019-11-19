@@ -49,11 +49,11 @@ void MainWindow::loadFile(string filePath)
 
     SceneBuilder *scene = new SceneBuilder(m_model);
 
-    scene->addAllItem();
+    scene->addPolyItem();
 
     m_mapView->setScene(scene->getScene());
 
-    m_mapView->scale(2,2);
+//    m_mapView->scale(2,2);
 
     m_mapView->setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
 //    m_mapView->setBackgroundBrush(Qt::yellow);

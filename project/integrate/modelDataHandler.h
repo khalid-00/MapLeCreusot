@@ -9,6 +9,7 @@
 #include <iostream>
 #include <modelDataStructure.h>
 #include <modeldata.h>
+#include "RenderEnum.h"
 
 class modelDataHandler : public osmium::handler::Handler
 {
@@ -27,12 +28,61 @@ class modelDataHandler : public osmium::handler::Handler
         }
     }
 
-// projection transformation
-// x =
-// y =
-
-//    friend class modelData;
-
+    void getTagsAndType(std::vector<tagPair>& tagStore, const osmium::TagList& tagList, wayData& wayD)
+    {
+        for(const auto& tag:tagList)
+        {
+            string tempKey = tag.key();
+            string tempValue = tag.value();
+            if(wayD.isClosed)
+            {
+                if(tempKey == "building" || tempKey == "tourism" || tempKey == "man_made")
+                    wayD.pType = building;
+                else if(tempKey == "leisure" || tempKey == "amenity")
+                    wayD.pType = leisure;
+                else if(tempKey == "waterway")
+                    wayD.pType = water;
+                else if(tempKey == "landuse")
+                {
+                    if(tempValue == "water")
+                        wayD.pType = water;
+                    else if(tempValue == "grass" || tempValue == "grassland" || tempValue == "wood")
+                        wayD.pType = grass;
+                }
+                else if(tempKey == "natural")
+                {
+                    if(tempValue == "water")
+                        wayD.pType = water;
+                    if(tempValue == "scrub")
+                        wayD.pType = grass;
+                }
+            }
+            else if(tempKey == "highway")
+            {
+                if (tempValue == "footway")
+                    wayD.rType = Footway;
+                else if(tempValue == "motorway")
+                    wayD.rType = Motorway;
+                else if(tempValue == "trunk")
+                    wayD.rType = Trunk;
+                else if(tempValue == "primary")
+                    wayD.rType = Primary;
+                else if(tempValue == "secondary")
+                    wayD.rType = Secondary;
+                else if (tempValue == "tertiary")
+                    wayD.rType = Tertiary;
+                else if (tempValue == "service")
+                    wayD.rType = Service;
+                else if (tempValue == "residential")
+                    wayD.rType = Residential;
+                else if (tempValue == "unclassified")
+                    wayD.rType = Unclassified;
+                else
+                    wayD.rType = Invalid;
+            }
+            tagStore.emplace_back(std::make_pair(tempKey,tempValue));
+        }
+    }
     modelData* m_modelData;
 
 public:
@@ -67,7 +117,14 @@ public:
             for(const auto node:ways.nodes())
                 temp.nodeRefList.emplace_back(node.ref());
             //get tag list
-            getTags(temp.tagList, ways.tags());
+
+
+            temp.isClosed = ways.is_closed();
+
+//            getTags(temp.tagList, ways.tags());
+
+            getTagsAndType(temp.tagList, ways.tags(), temp);
+
             m_modelData->m_WayMap[static_cast<idType>(id)] = temp;
             if(ways.is_closed())
                 m_modelData->m_Multipolygon[static_cast<idType>(id)] = temp.nodeRefList;
