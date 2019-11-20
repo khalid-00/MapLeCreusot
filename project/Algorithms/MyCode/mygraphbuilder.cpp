@@ -43,19 +43,30 @@ MyGraphBuilder::MyGraphBuilder() // default Constructor
   m_Data = new modelData;
   WayMap MyWayMap = m_Data->getWayMap();
   WayMap::iterator it;
+  graph_t *MyGraph;
   // it->first  ;// (key = WayID)
   // it->second ;// (Value WayData.nodRefList[idType])
-  // map <source distination weight(distance) >
+  // edge map <source distination weight(distance) >
   for ( it = MyWayMap.begin(); it != MyWayMap.end(); it++ ) // Loop the Whole Way Map
     {
-      for(it->second.nodeRefList.begin();it->second.nodeRefList != it->second.nodeRefList.rbegin()-1;it->second.nodeRefList++)// Loop The Whole Nodes of Each way
-               ;
+      unsigned int WayIndex = 0; //define Index
+      idType VertixID; // define Variable to Store Vertix Index
+      std::vector<Vertex> WayNodes(it->second.nodeRefList.size());//define a vector of nodes with size of Way
+      for(auto j = it->second.nodeRefList.begin(); j != it->second.nodeRefList.end(); ++j)// Loop The Whole Nodes of Each way
+        VertixID = it->second.nodeRefList.at(WayIndex);
+      WayNodes[WayIndex] = add_vertex(VertixID, *MyGraph );
+      if(WayIndex != 0) {
+          add_edge(WayNodes[WayIndex - 1], WayNodes[WayIndex],MyGraphBuilder::Distance(WayNodes[WayIndex - 1], WayNodes[WayIndex]), *MyGraph);
+        }
+      WayIndex++;
     }
 }
 
 MyGraphBuilder::MyGraphBuilder(WayMap YourWayMap){  // Parameters Constructor
   WayMap::iterator it;
   WayMap MyWayMap = YourWayMap;
+  WayMap::iterator it2;
+  graph_t MyGraph;
   for ( it = MyWayMap.begin(); it != MyWayMap.end(); it++ )
     {
 
