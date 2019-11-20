@@ -119,6 +119,9 @@ public:
     }
 };
 
-class Roads : public
+class Roads : public QGraphicsLineItem
+{
+
+};
 
 #endif // RENDERITEM_H

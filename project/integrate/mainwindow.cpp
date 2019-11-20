@@ -49,7 +49,11 @@ void MainWindow::loadFile(string filePath)
 
     SceneBuilder *scene = new SceneBuilder(m_model);
 
+    start = clock();
     scene->addPolyItem();
+
+    t = (clock() - start + 0.0)/CLOCKS_PER_SEC;
+    std::cout << "time used for rendering the map: " << t << "s" << std::endl;
 
     m_mapView->setScene(scene->getScene());
 
