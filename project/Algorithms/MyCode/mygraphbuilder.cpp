@@ -54,23 +54,35 @@ MyGraphBuilder::MyGraphBuilder() // default Constructor
       std::vector<Vertex> WayNodes(it->second.nodeRefList.size());//define a vector of nodes with size of Way
       for(auto j = it->second.nodeRefList.begin(); j != it->second.nodeRefList.end(); ++j)// Loop The Whole Nodes of Each way
         VertixID = it->second.nodeRefList.at(WayIndex);
-      WayNodes[WayIndex] = add_vertex(VertixID, *MyGraph );
+      //VertixID added as property name to the vertex
+      WayNodes[WayIndex] = add_vertex(graph_t::vertex_property_type(VertixID), *MyGraph);
+           if(WayIndex != 0) {
+          add_edge(WayNodes[WayIndex - 1], WayNodes[WayIndex],MyGraphBuilder::Distance(WayNodes[WayIndex - 1], WayNodes[WayIndex]), *MyGraph);
+        }
+      WayIndex++;
+    }
+  cout<<"/n/n Graph Was Built ...\n\n";
+}
+//===========================================================================
+MyGraphBuilder::MyGraphBuilder(WayMap YourWayMap){  // Parameters Constructor
+  WayMap::iterator it;
+  WayMap MyWayMap = YourWayMap;
+  graph_t *MyGraph;
+  for ( it = MyWayMap.begin(); it != MyWayMap.end(); it++ )
+    {
+      unsigned int WayIndex = 0; //define Index
+      idType VertixID; // define Variable to Store Vertix Index
+      std::vector<Vertex> WayNodes(it->second.nodeRefList.size());//define a vector of nodes with size of Way
+      for(auto j = it->second.nodeRefList.begin(); j != it->second.nodeRefList.end(); ++j)// Loop The Whole Nodes of Each way
+        VertixID = it->second.nodeRefList.at(WayIndex);
+      WayNodes[WayIndex] = add_vertex( *MyGraph );
+      //VertixID, should be added as property name to the vertex
       if(WayIndex != 0) {
           add_edge(WayNodes[WayIndex - 1], WayNodes[WayIndex],MyGraphBuilder::Distance(WayNodes[WayIndex - 1], WayNodes[WayIndex]), *MyGraph);
         }
       WayIndex++;
     }
-}
-
-MyGraphBuilder::MyGraphBuilder(WayMap YourWayMap){  // Parameters Constructor
-  WayMap::iterator it;
-  WayMap MyWayMap = YourWayMap;
-  WayMap::iterator it2;
-  graph_t MyGraph;
-  for ( it = MyWayMap.begin(); it != MyWayMap.end(); it++ )
-    {
-
-    }
+  cout<<"/n/n Graph Was Built ...\n\n";
 }
 
 MyGraphBuilder::~MyGraphBuilder (){ // default Destructor

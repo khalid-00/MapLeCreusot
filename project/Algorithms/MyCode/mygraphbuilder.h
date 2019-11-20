@@ -51,7 +51,7 @@ class MyGraphBuilder
   //typedef osmium::Location::lat() Latitude;
   //typedef osmium::Location::lon() Lnogitude;
   //==================================================
-  typedef adjacency_list < vecS, vecS, directedS,no_property, property < edge_weight_t, double > > graph_t;
+  typedef adjacency_list < vecS,vecS,directedS,property<vertex_name_t, idType>, property < edge_weight_t, double > > graph_t;
   typedef graph_traits < graph_t >::vertex_descriptor Vertex; // Vertex declaration
   typedef pair<idType, idType> Edge; // Edge as link between two Nodes specified by ID
   typedef map<idType, wayData> WayMap;//Define map of Ways ans Their ID
