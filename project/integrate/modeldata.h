@@ -64,6 +64,12 @@ public:
         return m_Multipolygon;
     }
 
+    void setRelation(idType wayId)
+    {
+        auto way = m_WayMap.at(wayId);
+        way.isRelation = true;
+        m_WayMap[wayId] = way;
+    }
 };
 
 #endif // MODELDATA_H

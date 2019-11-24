@@ -21,6 +21,8 @@ SOURCES += \
 
 HEADERS += \
     MapView.h \
+    RenderEnum.h \
+    RenderItem.h \
     SceneBuilder.h \
     mainwindow.h \
     model.h \

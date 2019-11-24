@@ -4,6 +4,7 @@
 #include <vector>
 #include "osmium/osm.hpp"
 #include <Qt>
+#include "RenderEnum.h"
 
 using namespace std;
 using tagPair = pair<string,string>;
@@ -34,5 +35,11 @@ struct wayData
 {
     vector<idType> nodeRefList;
     vector<tagPair> tagList;
+    bool isRelation = false;
+    bool isClosed = false;
+    bool isPolygon = false;
+    polygonType pType = invalid;
+    roadType rType = Invalid;
+
 };
 #endif // MODELDATASTRUCTURE_H

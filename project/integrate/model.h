@@ -22,6 +22,8 @@ class Model
 
     bool m_isFileLoaded;
     string m_filePath;
+
+
     modelData *m_Data;
 
 
@@ -101,10 +103,16 @@ public:
         return m_Data->getMultipolygon();
     }
 
+    void setRelation(idType wayId)
+    {
+        m_Data->setRelation(wayId);
+    }
+
     int64_t m_top;
     int64_t m_left;
     int64_t m_width;
     int64_t m_height;
+
 
 };
 
