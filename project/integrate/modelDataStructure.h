@@ -35,10 +35,11 @@ struct wayData
 {
     vector<idType> nodeRefList;
     vector<tagPair> tagList;
-    bool isRelation;
-    bool isClosed;
-    polygonType pType;
-    roadType rType;
+    bool isRelation = false;
+    bool isClosed = false;
+    bool isPolygon = false;
+    polygonType pType = invalid;
+    roadType rType = Invalid;
 
 };
 #endif // MODELDATASTRUCTURE_H

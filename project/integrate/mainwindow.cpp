@@ -51,12 +51,15 @@ void MainWindow::loadFile(string filePath)
 
     start = clock();
     scene->addPolyItem();
+    scene->addRoadItem();
+//    scene->addAllItem();
 
     t = (clock() - start + 0.0)/CLOCKS_PER_SEC;
     std::cout << "time used for rendering the map: " << t << "s" << std::endl;
 
     m_mapView->setScene(scene->getScene());
 
+    m_mapView->setBackgroundBrush(QBrush(QColor(210,210,210)));
 //    m_mapView->scale(2,2);
 
     m_mapView->setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
@@ -64,7 +67,10 @@ void MainWindow::loadFile(string filePath)
     QLayout *map = layout();
     map->addWidget(m_mapView);
     this->setLayout(map);
-
+    idType test = 2408266091;
+    std::cout << "tring to get the node location for id: 2408266091" << std::endl;
+    auto loc = m_model->getNodeLoaction(test);
+    std::cout << "the location is: " << loc.x() << "::" << loc.y() << std::endl;
 //    m_mapView->update();
 
 //    this->update();

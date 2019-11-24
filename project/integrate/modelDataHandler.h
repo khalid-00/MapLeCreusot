@@ -30,35 +30,16 @@ class modelDataHandler : public osmium::handler::Handler
 
     void getTagsAndType(std::vector<tagPair>& tagStore, const osmium::TagList& tagList, wayData& wayD)
     {
+        bool nonPolyFlag = false;
         for(const auto& tag:tagList)
         {
             string tempKey = tag.key();
             string tempValue = tag.value();
-            if(wayD.isClosed)
+
+            if(tempKey == "highway")
             {
-                if(tempKey == "building" || tempKey == "tourism" || tempKey == "man_made")
-                    wayD.pType = building;
-                else if(tempKey == "leisure" || tempKey == "amenity")
-                    wayD.pType = leisure;
-                else if(tempKey == "waterway")
-                    wayD.pType = water;
-                else if(tempKey == "landuse")
-                {
-                    if(tempValue == "water")
-                        wayD.pType = water;
-                    else if(tempValue == "grass" || tempValue == "grassland" || tempValue == "wood")
-                        wayD.pType = grass;
-                }
-                else if(tempKey == "natural")
-                {
-                    if(tempValue == "water")
-                        wayD.pType = water;
-                    if(tempValue == "scrub")
-                        wayD.pType = grass;
-                }
-            }
-            else if(tempKey == "highway")
-            {
+                nonPolyFlag = true;
+                wayD.isPolygon = false;
                 if (tempValue == "footway")
                     wayD.rType = Footway;
                 else if(tempValue == "motorway")
@@ -79,6 +60,44 @@ class modelDataHandler : public osmium::handler::Handler
                     wayD.rType = Unclassified;
                 else
                     wayD.rType = Invalid;
+            }
+            else if(tempKey == "boundary" || tempKey == "barrier")
+            {
+                wayD.isPolygon = false;
+                nonPolyFlag = true;
+            }
+            else if(wayD.isClosed)
+            {
+                if(!nonPolyFlag)
+                    wayD.isPolygon = true;
+                if(tempKey == "building" || tempKey == "tourism" || tempKey == "man_made" || tempKey == "area" || tempKey == "old_building")
+                    wayD.pType = building;
+                else if(tempKey == "leisure" || tempKey == "amenity")
+                    wayD.pType = leisure;
+                else if(tempKey == "waterway")
+                    wayD.pType = water;
+                else if(tempKey == "landuse")
+                {
+                    if(tempValue == "water")
+                        wayD.pType = water;
+                    else if(tempValue == "grass" || tempValue == "grassland" || tempValue == "wood" || tempValue == "heath" || tempValue == "farmland")
+                        wayD.pType = grass;
+                    else if(tempValue == "industrial")
+                        wayD.pType = industrial;
+                    else if(tempValue == "residential")
+                        wayD.pType = residential;
+                    else if(tempValue == "retail")
+                        wayD.pType = commercial;
+                    else if(tempValue == "meadow" || tempValue == "forest")
+                        wayD.pType = forest;
+                }
+                else if(tempKey == "natural")
+                {
+                    if(tempValue == "water")
+                        wayD.pType = water;
+                    if(tempValue == "scrub" || tempValue == "heath")
+                        wayD.pType = grass;
+                }
             }
             tagStore.emplace_back(std::make_pair(tempKey,tempValue));
         }
@@ -120,6 +139,7 @@ public:
 
 
             temp.isClosed = ways.is_closed();
+            temp.isRelation = false;
 
 //            getTags(temp.tagList, ways.tags());
 

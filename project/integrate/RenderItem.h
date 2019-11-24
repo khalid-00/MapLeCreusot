@@ -3,11 +3,15 @@
 
 #include <QGraphicsPolygonItem>
 #include <QGraphicsPathItem>
+#include <QGraphicsLayoutItem>
 #include <QPen>
 #include <QPainter>
 #include <vector>
 #include <string>
 #include "modelDataHandler.h"
+#include <QMouseEvent>
+#include <QGraphicsView>
+#include <QGraphicsSceneMouseEvent>
 
 //================================ use color reference from P0267_RefImpl
 static QColor getPolygonColor(polygonType type)
@@ -20,26 +24,26 @@ static QColor getPolygonColor(polygonType type)
     case grass:
         return QColor(197, 236, 148);
     case forest:
-        return QColor(158, 201, 141);
+        return QColor(46, 139, 87);
     case industrial:
         return QColor(223, 197, 220);
     case leisure:
-        return QColor(50, 100, 100);
+        return QColor(189, 252, 193);
     case railway:
-        return QColor(223, 197, 220);
+        return QColor(193, 193, 193);
     case commercial:
         return QColor(233, 195, 196);
     case residential:
-        return QColor(0, 209, 0);
+        return QColor(209, 209, 209);
     default:
-        return QColor(200, 200, 200);
+        return QColor(100, 100, 100);
 
     }
 }
 
 static QColor getPathColor(roadType type)
 {
-    switch( type) {
+    switch(type) {
         case Motorway:      return QColor{226, 122, 143};
         case Trunk:         return QColor{245, 161, 136};
         case Primary:       return QColor{249, 207, 144};
@@ -101,6 +105,7 @@ class Multipolygon : public QGraphicsPolygonItem
 
     polygonType m_PolygonType;    //this will determin the z-value
     QColor m_brushColor;
+    idType m_wayId;
 
 public:
     Multipolygon(){}
@@ -115,13 +120,61 @@ public:
 
         m_PolygonType = type;
         m_brushColor = getPolygonColor(m_PolygonType);
+
 //        setZValue(m_PolygonType);
+    }
+    void setId(idType id)
+    {
+        m_wayId = id;
+    }
+    void mousePressEvent(QGraphicsSceneMouseEvent *event)
+    {
+//        this->setSelected(true);
+        if(event->button() == Qt::RightButton)
+            std::cout << "selected item id: " << m_wayId << std::endl;
+        else
+            QGraphicsItem::mousePressEvent(event);
+
+    }
+
+};
+
+class Road : public QGraphicsPolygonItem
+{
+    roadType m_rtype;
+    QColor m_RoadStyle;
+    idType m_wayId;
+    QPen m_pen;
+
+public:
+    Road(){}
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
+    QWidget *widget) override
+    {
+        painter->setPen(m_pen);
+        painter->drawPolyline(this->polygon());
+    }
+    void setId(idType id)
+    {
+        m_wayId = id;
+    }
+
+    void setPenStyle(roadType rType)
+    {
+        m_pen.setBrush(getPathColor(rType));
+        m_pen.setWidth(getPathWidth(rType)+3.0);
+    }
+
+    void mousePressEvent(QGraphicsSceneMouseEvent *event)
+    {
+//        this->setSelected(true);
+        if(event->button() == Qt::RightButton)
+            std::cout << "selected item id: " << m_wayId << std::endl;
+        else
+            QGraphicsItem::mousePressEvent(event);
+
     }
 };
 
-class Roads : public QGraphicsLineItem
-{
-
-};
 
 #endif // RENDERITEM_H

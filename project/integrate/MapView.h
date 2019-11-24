@@ -10,11 +10,18 @@
 #define MIN_SCALE 0.0002
 #define ZOOM_STEP 1.2
 
+#include <QMouseEvent>
+#include <QGraphicsView>
+
 class MapView : public QGraphicsView
 {
 private:
     qreal m_scale;
 
+    void mousePressEvent(QMouseEvent *event)
+    {
+        QGraphicsView::mousePressEvent(event);
+    }
 
     void wheelEvent(QWheelEvent *event)
     {
