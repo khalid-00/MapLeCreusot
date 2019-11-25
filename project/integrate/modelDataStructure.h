@@ -22,6 +22,7 @@ struct relationData
 {
     vector<relationMember> memberList;
     vector<tagPair> tagList;
+    bool isPolygon = false;
 };
 
 struct nodeData

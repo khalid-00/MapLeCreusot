@@ -36,11 +36,8 @@ class SceneBuilder
         //loop over the nodelist for form a multpolygon item
         QPolygonF polygon;
 
-//        for(uint64_t i = 0; i != nodeRefList.size(); i++)
-//            std::cout << nodeRefList[i] << std::endl;
         for(vector<idType>::iterator it = nodeRefList.begin();it != nodeRefList.end()-1;it++)
         {
-//            std::cout << it << std::endl;
             auto point = projection(m_model->getNodeLoaction(*(it)).lon(), m_model->getNodeLoaction(*(it)).lat());
             polygon << point;
         }
@@ -56,11 +53,8 @@ class SceneBuilder
     {
         QPolygonF polygon;
         auto nodeRefList = way.nodeRefList;
-//        for(uint64_t i = 0; i != nodeRefList.size(); i++)
-//            std::cout << nodeRefList[i] << std::endl;
         for(vector<idType>::iterator it = nodeRefList.begin();it != nodeRefList.end();it++)
         {
-//            std::cout << it << std::endl;
             auto point = projection(m_model->getNodeLoaction(*(it)).lon(), m_model->getNodeLoaction(*(it)).lat());
             polygon << point;
         }
@@ -85,6 +79,7 @@ class SceneBuilder
         }
 //        Multipolygon *polyItem = new Multipolygon;
         Road *roadItem = new Road;
+//        roadItem->setZValue(static_cast<int>(way.rType) + 10);
         roadItem->setId(wayId);
         roadItem->setPenStyle(way.rType);
         roadItem->setPolygon(polyLine);
@@ -99,23 +94,34 @@ class SceneBuilder
     }
 
 
+    void buildPolygonFromWay(wayData way)
+    {
+
+    }
+
 //    void buildRelation(relationData relation)
 //    {
 //        vector<relationMember>::iterator it;
-//        QPolygonF polygon;
-//        for(it = relation.memberList.begin(); it != relation.memberList.end(); it ++)
+//        QPolygonF polygonInner, polygonOuter;
+//        if(relation.isPolygon)
 //        {
-//            if(it->type == osmium::item_type::way)
+//            for(it = relation.memberList.begin(); it != relation.memberList.end(); it ++)
 //            {
-//                auto wayId = it->ref;
-//                auto way = m_model->getWayData(wayId);
-//                auto refList = way.nodeRefList;
-//                m_model->setRelation(wayId);
-//                for(vector<idType>::iterator nod = nodeRefList.begin();nod != nodeRefList.end();nod++)
+//                if(it->type == osmium::item_type::way)
 //                {
-//        //            std::cout << it << std::endl;
-//                    auto point = projection(m_model->getNodeLoaction(*(nod)).lon(), m_model->getNodeLoaction(*(nod)).lat());
-//                    polyLine << point;
+//                    auto wayId = it->ref;
+//                    auto way = m_model->getWayData(wayId);
+//                    auto refList = way.nodeRefList;
+//                    m_model->setRelation(wayId);
+//                    for(vector<idType>::iterator nod = nodeRefList.begin();nod != nodeRefList.end();nod++)
+//                    {
+//                        auto point = projection(m_model->getNodeLoaction(*(nod)).lon(), m_model->getNodeLoaction(*(nod)).lat());
+//                        polyLine << point;
+//                    }
+//                }
+//                else if(it->type == osmium::item_type::relation)
+//                {
+
 //                }
 //            }
 //        }
@@ -179,8 +185,8 @@ public:
     void drawRoute(std::vector<idType> refList)
     {
         m_route = new Road;
-        QPolygonF polyLine = new QPolygon;
-        for(vector<idType>::iterator it = nodeRefList.begin();it != nodeRefList.end();it++)
+        QPolygonF polyLine;
+        for(vector<idType>::iterator it = refList.begin();it != refList.end();it++)
         {
 //            std::cout << it << std::endl;
             auto point = projection(m_model->getNodeLoaction(*(it)).lon(), m_model->getNodeLoaction(*(it)).lat());
