@@ -52,6 +52,7 @@ void MainWindow::loadFile(string filePath)
     start = clock();
     scene->addPolyItem();
     scene->addRoadItem();
+//    scene->drawRoute(); // send your route list here, it will draw
 //    scene->addAllItem();
 
     t = (clock() - start + 0.0)/CLOCKS_PER_SEC;

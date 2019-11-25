@@ -28,6 +28,7 @@ class SceneBuilder
     Model *m_model;
     vector<Multipolygon*> m_polygonList;
     vector<Road*> m_RoadList;
+    Road *m_route;
     // m_roadList, m_pointList;
 
     void buildMutipolygonFromWay(vector<idType> nodeRefList)
@@ -97,6 +98,7 @@ class SceneBuilder
 
     }
 
+
 //    void buildRelation(relationData relation)
 //    {
 //        vector<relationMember>::iterator it;
@@ -125,6 +127,7 @@ public:
     {
         m_scene = new QGraphicsScene;
         m_model = model;
+        m_route = nullptr;
 //        getInitScale();
 //        QPolygon test;
 //        test << QPoint(1,1);
@@ -171,6 +174,25 @@ public:
             if(!way.isPolygon)
                 buildRoad(way, it->first);
         }
+    }
+
+    void drawRoute(std::vector<idType> refList)
+    {
+        m_route = new Road;
+        QPolygonF polyLine = new QPolygon;
+        for(vector<idType>::iterator it = nodeRefList.begin();it != nodeRefList.end();it++)
+        {
+//            std::cout << it << std::endl;
+            auto point = projection(m_model->getNodeLoaction(*(it)).lon(), m_model->getNodeLoaction(*(it)).lat());
+            polyLine << point;
+        }
+        m_route->setPolygon(polyLine);
+        m_scene->addItem(m_route);
+    }
+
+    void cancelRoute()
+    {
+        delete m_route;
     }
 
     void addRelationItem()
