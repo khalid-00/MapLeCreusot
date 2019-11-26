@@ -16,6 +16,7 @@
 #include <QLine>
 #include "projection.h"
 #include <QGraphicsItem>
+#include <QString>
 
 
 using namespace std;
@@ -28,6 +29,8 @@ class SceneBuilder
     Model *m_model;
     vector<Multipolygon*> m_polygonList;
     vector<Road*> m_RoadList;
+    vector<QGraphicsTextItem *> m_PointText;
+    vector<QGraphicsEllipseItem *> m_Point;
     Road *m_route;
     // m_roadList, m_pointList;
 
@@ -87,17 +90,18 @@ class SceneBuilder
         m_scene->addItem(roadItem);
     }
 
-    void markDrawn(idType wayId)
-    {
-        m_model->getWayData(wayId);
+//    void markDrawn(idType wayId)
+//    {
+//        m_model->getWayData(wayId);
 
-    }
+//    }
 
 
-    void buildPolygonFromWay(wayData way)
-    {
+//    void buildPolygonFromWay(wayData way)
+//    {
 
-    }
+//    }
+
 
 //    void buildRelation(relationData relation)
 //    {
@@ -184,7 +188,10 @@ public:
 
     void drawRoute(std::vector<idType> refList)
     {
-        m_route = new Road;
+        if(m_route != nullptr)
+            m_route = new Road;
+        else
+            m_route->setVisible(true);
         QPolygonF polyLine;
         for(vector<idType>::iterator it = refList.begin();it != refList.end();it++)
         {
@@ -193,12 +200,39 @@ public:
             polyLine << point;
         }
         m_route->setPolygon(polyLine);
+        m_route->setZValue(200);
         m_scene->addItem(m_route);
+    }
+
+    void drawPointText()
+    {
+        auto nodeMap = m_model->getNodeMap();
+        for(auto it = nodeMap.begin();it != nodeMap.end();it ++)
+        {
+            auto node = it -> second;
+            auto tagList = node.tagList;
+            for(const auto &tag:tagList)
+            {
+                if(tag.first == "name")
+                {
+                    QGraphicsTextItem *Text = new QGraphicsTextItem;
+//                    QGraphicsEllipseItem *Point = new QGraphicsEllipseItem;
+                    string name = tag.second;
+                    Text->setPlainText(QString::fromStdString(name));
+                    auto geoPos = m_model->getNodeLoaction(it -> first);
+                    auto pos = projection(geoPos.lon(), geoPos.lat());
+                    Text->setPos(pos);
+                    Text->setZValue(100);
+                    m_PointText.emplace_back(Text);
+                    m_scene->addItem(Text);
+                }
+            }
+        }
     }
 
     void cancelRoute()
     {
-        delete m_route;
+       m_route->setVisible(false);
     }
 
     void addRelationItem()

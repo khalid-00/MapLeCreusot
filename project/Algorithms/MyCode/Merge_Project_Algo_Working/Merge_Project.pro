@@ -18,7 +18,7 @@ INCLUDEPATH += \
 
 LIBS += -lz\
         -pthread
-LIBS += -L$$PWD/./ -lboost_graph-vc140-mt
+#LIBS += -L$$PWD/./ -lboost_graph-vc140-mt
 
 HEADERS += \
     GraphBuilder.h \

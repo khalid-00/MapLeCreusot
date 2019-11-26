@@ -39,7 +39,8 @@ INCLUDEPATH += \
     $$PWD/protozero/include
 
 LIBS += -lz\
-        -pthread
+        -pthread\
+        -lexpat
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -7,7 +7,7 @@
 
 
 #define MAX_SCALE 10
-#define MIN_SCALE 0.0002
+#define MIN_SCALE 0.0001
 #define ZOOM_STEP 1.2
 
 #include <QMouseEvent>
@@ -49,7 +49,7 @@ private:
 public:
     MapView()
     {
-        m_scale = 0.01;
+        m_scale = 0.001;
     }
     ~MapView(){}
 };

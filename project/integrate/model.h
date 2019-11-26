@@ -5,6 +5,7 @@
 #include <osmium/osm.hpp>
 #include <osmium/index/map/flex_mem.hpp>
 #include <osmium/io/pbf_input.hpp>
+//#include <osmium/io/xml_input.hpp>
 #include <osmium/visitor.hpp>
 #include <modeldata.h>
 //class Model

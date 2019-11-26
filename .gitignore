@@ -3,4 +3,4 @@ data
 schedule/Deng/database/*.user
 project/build*
 project/integrate/*.user
-project/Alogrithms/MyCode/build*
+project/Algorithms/MyCode/build*

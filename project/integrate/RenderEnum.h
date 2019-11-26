@@ -1,7 +1,7 @@
 #ifndef RENDERENUM_H
 #define RENDERENUM_H
-enum polygonType {invalid, water, grass, forest, industrial, building, leisure, railway, commercial, residential};
+enum polygonType {residential, invalid, commercial, water, grass, forest, leisure, industrial, building, railway};
 
-enum roadType { Invalid, Unclassified, Service, Residential,
-            Tertiary, Secondary, Primary, Trunk, Motorway, Footway };
+enum roadType { Invalid, Unclassified, Service, Residential, Footway, Trunk, Motorway,
+            Tertiary, Secondary, Primary, Railway };
 #endif // RENDERENUM_H

@@ -44,6 +44,7 @@ static QColor getPolygonColor(polygonType type)
 static QColor getPathColor(roadType type)
 {
     switch(type) {
+        case Railway:       return QColor{100, 100, 100};
         case Motorway:      return QColor{226, 122, 143};
         case Trunk:         return QColor{245, 161, 136};
         case Primary:       return QColor{249, 207, 144};
@@ -60,6 +61,7 @@ static QColor getPathColor(roadType type)
 static float getPathWidth(roadType type)
 {
     switch( type ) {
+        case Railway:       return 6.f;
         case Motorway:      return 6.f;
         case Trunk:         return 6.f;
         case Primary:       return 5.f;
@@ -72,31 +74,6 @@ static float getPathWidth(roadType type)
         default:            return 1.f;
     }
 }
-
-//io2d::brush m_BackgroundFillBrush{ io2d::rgba_color{238, 235, 227} };
-
-//    io2d::brush m_BuildingFillBrush{ io2d::rgba_color{208, 197, 190} };
-//    io2d::brush m_BuildingOutlineBrush{ io2d::rgba_color{181, 167, 154} };
-//    io2d::stroke_props m_BuildingOutlineStrokeProps{1.f};
-
-//    io2d::brush m_LeisureFillBrush{ io2d::rgba_color{189, 252, 193} };
-//    io2d::brush m_LeisureOutlineBrush{ io2d::rgba_color{160, 248, 162} };
-//    io2d::stroke_props m_LeisureOutlineStrokeProps{1.f};
-
-//    io2d::brush m_WaterFillBrush{ io2d::rgba_color{155, 201, 215} };
-
-//    io2d::brush m_RailwayStrokeBrush{ io2d::rgba_color{93,93,93} };
-//    io2d::brush m_RailwayDashBrush{ io2d::rgba_color::white };
-//    io2d::dashes m_RailwayDashes{0.f, {3.f, 3.f}};
-//    float m_RailwayOuterWidth = 3.f;
-//    float m_RailwayInnerWidth = 2.f;
-
-//    struct RoadRep {
-//        io2d::brush brush{io2d::rgba_color::black};
-//        io2d::dashes dashes{};
-//        float metric_width = 1.f;
-//    };
-//=================================================================================================
 
 
 // test for drawing multipolygon in relations
@@ -121,7 +98,7 @@ public:
         m_PolygonType = type;
         m_brushColor = getPolygonColor(m_PolygonType);
 
-//        setZValue(m_PolygonType);
+        setZValue(type);
     }
     void setId(idType id)
     {
@@ -151,6 +128,7 @@ public:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
     QWidget *widget) override
     {
+        m_pen.setCapStyle(Qt::RoundCap);
         painter->setPen(m_pen);
         painter->drawPolyline(this->polygon());
     }
@@ -163,6 +141,7 @@ public:
     {
         m_pen.setBrush(getPathColor(rType));
         m_pen.setWidth(getPathWidth(rType)+3.0);
+        setZValue(leisure + static_cast<int>(rType) * 0.1);
     }
 
     void mousePressEvent(QGraphicsSceneMouseEvent *event)

@@ -30,7 +30,7 @@ int main()
   clock_t start, stop;
   start = clock();
 
-  const string filePath = "G:/QT/Projects/database/Le_Creusot.osm.pbf";
+  const string filePath = "/home/dj/git/cpp_project/data/Le_Creusot.pbf";
 
   Model mapModel;
 

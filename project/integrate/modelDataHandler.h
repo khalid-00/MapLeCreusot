@@ -61,6 +61,12 @@ class modelDataHandler : public osmium::handler::Handler
                 else
                     wayD.rType = Invalid;
             }
+            else if(tempKey == "railway")
+            {
+                wayD.isPolygon = false;
+                nonPolyFlag = true;
+                wayD.rType = Railway;
+            }
             else if(tempKey == "boundary" || tempKey == "barrier")
             {
                 wayD.isPolygon = false;
