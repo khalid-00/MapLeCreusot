@@ -25,9 +25,9 @@
 
 ### DataBase
 
-- [ ] Update features for rendering
-  - [ ] Extract and catagorized the multipolygon into different types
-  - [ ] Extract and catagorized the path into different types
+- [x] Update features for rendering
+  - [x] Extract and catagorized the multipolygon into different types
+  - [x] Extract and catagorized the path into different types
   
 - [ ] help update the database for routing if needed
 
@@ -35,24 +35,31 @@
 
 Displaying:
 
-- [ ] Construct the **QGraphicItem** for differet types
-- [ ] Specify the rendering style for different types of **QGraphicItem**
+- [x] Construct the **QGraphicItem** for differet types
+- [x] Specify the rendering style for different types of **QGraphicItem**
 
 ## What I am going to do for 23/11 - 30/11
 
 ### DataBase
 
-- [ ] Implement the mercator projection for better display
+- [x] Implement the mercator projection for better display
 
 ### Rendering
 
 Displaying:
 
 - [ ] Drawing the path we get from **Belal**
-- [ ] Displaying names for independent point, marking the name of the places.
+- [ ] ~~Displaying names for independent point, marking the name of the places.~~
 
 Interaction:
 
 - [ ] Item selection when the user click on the item.
+  - the entry is implemented
+- [ ] right click menu | Demo is implemented
+  - [ ] place searching
+    - [ ] By type
+    - [ ] By name
+  - [ ] place selecting for routing
+- [ ] `pin-point` object for place highlight
 
 ## Try to release the Alpha before Dec

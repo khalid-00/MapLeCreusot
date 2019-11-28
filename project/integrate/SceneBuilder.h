@@ -44,9 +44,7 @@ class SceneBuilder
             auto point = projection(m_model->getNodeLoaction(*(it)).lon(), m_model->getNodeLoaction(*(it)).lat());
             polygon << point;
         }
-//        Multipolygon *polyItem = new Multipolygon;
         Multipolygon *polyItem = new Multipolygon;
-//        polyItem->setFlag(QGraphicsItem::ItemIsSelectable);
         polyItem->setPolygon(polygon);
         m_polygonList.emplace_back(polyItem);
         m_scene->addItem(polyItem);
@@ -63,7 +61,6 @@ class SceneBuilder
         }
         Multipolygon *polyItem = new Multipolygon;
         polyItem->setId(wayId);
-//        polyItem->setFlag(QGraphicsItem::ItemIsSelectable);
         polyItem->setPolygon(polygon);
         polyItem->setPolyType(way.pType);
         m_polygonList.emplace_back(polyItem);
@@ -76,60 +73,16 @@ class SceneBuilder
         auto nodeRefList = way.nodeRefList;
         for(vector<idType>::iterator it = nodeRefList.begin();it != nodeRefList.end();it++)
         {
-//            std::cout << it << std::endl;
             auto point = projection(m_model->getNodeLoaction(*(it)).lon(), m_model->getNodeLoaction(*(it)).lat());
             polyLine << point;
         }
-//        Multipolygon *polyItem = new Multipolygon;
         Road *roadItem = new Road;
-//        roadItem->setZValue(static_cast<int>(way.rType) + 10);
         roadItem->setId(wayId);
         roadItem->setPenStyle(way.rType);
         roadItem->setPolygon(polyLine);
         m_RoadList.emplace_back(roadItem);
         m_scene->addItem(roadItem);
     }
-
-//    void markDrawn(idType wayId)
-//    {
-//        m_model->getWayData(wayId);
-
-//    }
-
-
-//    void buildPolygonFromWay(wayData way)
-//    {
-
-//    }
-
-
-//    void buildRelation(relationData relation)
-//    {
-//        vector<relationMember>::iterator it;
-//        QPolygonF polygonInner, polygonOuter;
-//        if(relation.isPolygon)
-//        {
-//            for(it = relation.memberList.begin(); it != relation.memberList.end(); it ++)
-//            {
-//                if(it->type == osmium::item_type::way)
-//                {
-//                    auto wayId = it->ref;
-//                    auto way = m_model->getWayData(wayId);
-//                    auto refList = way.nodeRefList;
-//                    m_model->setRelation(wayId);
-//                    for(vector<idType>::iterator nod = nodeRefList.begin();nod != nodeRefList.end();nod++)
-//                    {
-//                        auto point = projection(m_model->getNodeLoaction(*(nod)).lon(), m_model->getNodeLoaction(*(nod)).lat());
-//                        polyLine << point;
-//                    }
-//                }
-//                else if(it->type == osmium::item_type::relation)
-//                {
-
-//                }
-//            }
-//        }
-//    }
 
 
 public:
@@ -138,12 +91,6 @@ public:
         m_scene = new QGraphicsScene;
         m_model = model;
         m_route = nullptr;
-//        getInitScale();
-//        QPolygon test;
-//        test << QPoint(1,1);
-//        test << QPoint(1,30);
-//        test << QPoint(30,40);
-//        m_scene->addPolygon(test);
     }
 
     ~SceneBuilder()
@@ -188,7 +135,7 @@ public:
 
     void drawRoute(std::vector<idType> refList)
     {
-        if(m_route != nullptr)
+        if(m_route == nullptr)
             m_route = new Road;
         else
             m_route->setVisible(true);
@@ -235,10 +182,14 @@ public:
        m_route->setVisible(false);
     }
 
-    void addRelationItem()
-    {
-
-    }
+//    void getItemByPos()
+//    {
+//        osmium::Location test = m_model->getNodeLoaction(1703604687);
+//        auto pos = projection(test.lon(), test.lat());
+//        QTransform empty;
+//        auto item = m_scene->itemAt(pos,empty);
+//        std::cout << item->isVisible() << std::endl;
+//    }
 
 };
 

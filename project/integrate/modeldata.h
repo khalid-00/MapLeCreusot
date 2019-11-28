@@ -4,22 +4,40 @@
 #include <osmium/osm.hpp>
 #include <string>
 #include <modelDataStructure.h>
-
+#include <boost/algorithm/string.hpp>
 #include <osmium/index/map/flex_mem.hpp>
 #include <modelDataHandler.h>
+
+using namespace std;
 
 class modelData
 {
     using locationType = osmium::index::map::FlexMem<osmium::unsigned_object_id_type, osmium::Location>;
-    using tagPair = std::pair<std::string,std::string>;
+    using tagPair = pair<string,string>;
     using idType = osmium::unsigned_object_id_type;
     locationType m_NodesLocation;
-    std::map<idType, nodeData> m_NodeMap;
-    std::map<idType, wayData> m_WayMap;
-    std::map<idType, relationData> m_RelationMap;
-    std::map<idType, vector<idType>> m_Multipolygon;
+    map<idType, nodeData> m_NodeMap;
+    map<idType, wayData> m_WayMap;
+    map<idType, relationData> m_RelationMap;
+    map<idType, vector<idType>> m_Multipolygon;
+    vector<catagoryData> m_Amenity;
 
     friend class modelDataHandler;
+
+
+    vector<string> findName(vector<tagPair> &tags)
+    {
+        vector<string> tempVec;
+        for(auto it = tags.begin(); it != tags.end(); it ++)
+        {
+            if(it->first.find("name") != string::npos)
+            {
+                tempVec.emplace_back(boost::algorithm::to_lower_copy(it->second));
+            }
+        }
+        return tempVec;
+    }
+
 
 public:
     modelData(){}
@@ -64,12 +82,59 @@ public:
         return m_Multipolygon;
     }
 
-    void setRelation(idType wayId)
+    template <typename T>
+    void buildAmenityCatagory(const T &data)
     {
-        auto way = m_WayMap.at(wayId);
-        way.isRelation = true;
-        m_WayMap[wayId] = way;
+        vector<tagPair> tags = data.tagList;
+        if(tags.size() != 0)
+        {
+            for(auto it = tags.begin(); it != tags.end(); it ++)
+            {
+                if(it->first == "amenity")
+                {
+                    catagoryData temp;
+
+                    temp.id = data.id;
+                    temp.itemType = data.osmType;
+                    temp.type = boost::algorithm::to_lower(it->second);
+                    temp.name = findName(tags);
+                    m_Amenity.emplace_back(temp);
+                }
+            }
+        }
     }
+
+
+    //return a vector of catagory data
+    vector<catagoryData> searchAmenityByName(string name)
+    {
+        vector<catagoryData> result;
+        for(auto it = m_Amenity.begin(); it != m_Amenity.end(); it ++)
+        {
+            for(auto it2 = it->name.begin(); it2 != it->name.end(); it2 ++)
+            {
+                if(it2->find(name) != string::npos)
+                {
+                    result.emplace_back(*it);
+                    break;
+                }
+            }
+        }
+        return result;
+    }
+
+//    vector<catagoryData> searchAmenityByType(string type)
+//    {
+//        vector<catagoryData> result;
+//        for(auto it = m_Amenity.begin(); it != m_Amenity.end(); it ++)
+//        {
+//            if(it->type.find(boost::algorithm::to_lower(type)) != string::npos)
+//                result.emplace_back(*it);
+//        }
+//        return result;
+//    }
+
+
 };
 
 #endif // MODELDATA_H

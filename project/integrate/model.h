@@ -8,6 +8,7 @@
 //#include <osmium/io/xml_input.hpp>
 #include <osmium/visitor.hpp>
 #include <modeldata.h>
+#include <boost/algorithm/string.hpp>
 //class Model
 //{
 //public:
@@ -23,6 +24,7 @@ class Model
 
     bool m_isFileLoaded;
     string m_filePath;
+
 
 
     modelData *m_Data;
@@ -47,6 +49,7 @@ class Model
         osmium::apply(reader, handler);
         reader.close();
     }
+
 
 public:
     Model()
@@ -104,10 +107,10 @@ public:
         return m_Data->getMultipolygon();
     }
 
-    void setRelation(idType wayId)
-    {
-        m_Data->setRelation(wayId);
-    }
+//    void setRelation(idType wayId)
+//    {
+//        m_Data->setRelation(wayId);
+//    }
 
     int64_t m_top;
     int64_t m_left;

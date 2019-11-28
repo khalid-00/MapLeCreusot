@@ -12,6 +12,8 @@
 #include <QMouseEvent>
 #include <QGraphicsView>
 #include <QGraphicsSceneMouseEvent>
+#include <QGraphicsSceneContextMenuEvent>
+#include <QMenu>
 
 //================================ use color reference from P0267_RefImpl
 static QColor getPolygonColor(polygonType type)
@@ -75,23 +77,37 @@ static float getPathWidth(roadType type)
     }
 }
 
-
 // test for drawing multipolygon in relations
-class Multipolygon : public QGraphicsPolygonItem
+class Multipolygon : public QGraphicsItem/*QGraphicsPolygonItem*/
 {
 
     polygonType m_PolygonType;    //this will determin the z-value
     QColor m_brushColor;
     idType m_wayId;
+    QPolygonF m_poly;
 
 public:
     Multipolygon(){}
+    ~Multipolygon(){}
+    enum { Type = UserType + 1 };
+
+    int type() const
+    {
+       // Enable the use of qgraphicsitem_cast with this item.
+       return Type;
+    }
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
                QWidget *widget) override
     {
         painter->setBrush(m_brushColor);
-        painter->drawPolygon(this->polygon());
+        painter->drawPolygon(this->m_poly);
     }
+
+    QRectF boundingRect() const
+    {
+        return m_poly.boundingRect();
+    }
+
     void setPolyType(polygonType type)
     {
 
@@ -104,15 +120,37 @@ public:
     {
         m_wayId = id;
     }
-    void mousePressEvent(QGraphicsSceneMouseEvent *event)
-    {
-//        this->setSelected(true);
-        if(event->button() == Qt::RightButton)
-            std::cout << "selected item id: " << m_wayId << std::endl;
-        else
-            QGraphicsItem::mousePressEvent(event);
 
+    idType getId()
+    {
+        return m_wayId;
     }
+
+//    void mousePressEvent(QGraphicsSceneMouseEvent *event)
+//    {
+//        if(event->button() == Qt::RightButton)
+//        {
+//            std::cout << "selected item id: " << m_wayId << std::endl;
+//            auto pos = this->scenePos();
+//            std::cout << "pos of the item is: " << this->scenePos().x() << ", " << this->scenePos().y() << std::endl;
+//        }
+//        else
+//            QGraphicsItem::mousePressEvent(event);
+//    }
+    void setPolygon(QPolygonF poly)
+    {
+        m_poly = poly;
+    }
+
+//    void contextMenuEvent(QGraphicsSceneContextMenuEvent *event)
+//    {
+
+//        QMenu menu;
+//        menu.addAction("Action 1");
+//        menu.addAction("Action 2");
+//        QAction *a = menu.exec(event->screenPos());
+//        qDebug("User clicked %s", qPrintable(a->text()));
+//    }
 
 };
 
@@ -125,12 +163,17 @@ class Road : public QGraphicsPolygonItem
 
 public:
     Road(){}
+
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
     QWidget *widget) override
     {
         m_pen.setCapStyle(Qt::RoundCap);
         painter->setPen(m_pen);
         painter->drawPolyline(this->polygon());
+    }
+    idType const getId()
+    {
+        return m_wayId;
     }
     void setId(idType id)
     {
@@ -144,15 +187,15 @@ public:
         setZValue(leisure + static_cast<int>(rType) * 0.1);
     }
 
-    void mousePressEvent(QGraphicsSceneMouseEvent *event)
-    {
-//        this->setSelected(true);
-        if(event->button() == Qt::RightButton)
-            std::cout << "selected item id: " << m_wayId << std::endl;
-        else
-            QGraphicsItem::mousePressEvent(event);
+//    void mousePressEvent(QGraphicsSceneMouseEvent *event)
+//    {
+////        this->setSelected(true);
+//        if(event->button() == Qt::RightButton)
+//            std::cout << "selected item id: " << m_wayId << std::endl;
+//        else
+//            QGraphicsItem::mousePressEvent(event);
 
-    }
+//    }
 };
 
 

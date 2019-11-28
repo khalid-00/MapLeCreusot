@@ -23,13 +23,13 @@ struct relationData
     vector<relationMember> memberList;
     vector<tagPair> tagList;
     bool isPolygon = false;
+    osmium::item_type osmType = osmium::item_type::relation;
 };
 
 struct nodeData
 {
     vector<tagPair> tagList;
-//    qreal x_part; // x = (x_size) * 2 ^ zoomlevel
-//    qreal y_part;
+    osmium::item_type osmType = osmium::item_type::node;
 };
 
 struct wayData
@@ -41,6 +41,15 @@ struct wayData
     bool isPolygon = false;
     polygonType pType = invalid;
     roadType rType = Invalid;
-
+    osmium::item_type osmType = osmium::item_type::way;
 };
+
+struct catagoryData
+{
+    idType id;
+    osmium::item_type itemType;
+    vector<string> name;
+    string type;
+};
+
 #endif // MODELDATASTRUCTURE_H

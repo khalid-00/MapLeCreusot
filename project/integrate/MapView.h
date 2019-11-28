@@ -4,7 +4,10 @@
 #include <QMouseEvent>
 #include <QWheelEvent>
 #include <iostream>
-
+#include <QGraphicsItem>
+#include "RenderItem.h"
+#include <iostream>
+#include <QContextMenuEvent>
 
 #define MAX_SCALE 10
 #define MIN_SCALE 0.0001
@@ -20,7 +23,36 @@ private:
 
     void mousePressEvent(QMouseEvent *event)
     {
-        QGraphicsView::mousePressEvent(event);
+        if(event->button() == Qt::LeftButton)
+            QGraphicsView::mousePressEvent(event);
+        else if(event->button() == Qt::RightButton)
+        {
+            auto pos = event->pos();
+            auto scenePos = mapToScene(pos);
+            std::cout << "mouse press" << std::endl;
+//            std::cout << "position from mapview is " << pos.x() << ", " << pos.y() << std::endl;
+            auto item = this->scene()->itemAt(scenePos, QTransform());
+            if(qgraphicsitem_cast<Multipolygon *>(item))
+            {
+                auto casted = qgraphicsitem_cast<Multipolygon *>(item);
+                std::cout << "type cast and selection success, with id num = " << casted->getId() << std::endl;
+            }
+            QGraphicsView::mousePressEvent(event);
+        }
+        else
+            QGraphicsView::mousePressEvent(event);
+    }
+
+    void contextMenuEvent(QContextMenuEvent *event)
+    {
+        std::cout << "menu pop out" << std::endl;
+
+        QMenu menu;
+        menu.addAction("Action 1");
+        menu.addAction("Action 2");
+        QAction *a = menu.exec(event->globalPos());
+        if(a != nullptr)
+            qDebug("User clicked %s", qPrintable(a->text()));
     }
 
     void wheelEvent(QWheelEvent *event)

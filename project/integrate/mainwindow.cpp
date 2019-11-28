@@ -54,7 +54,7 @@ void MainWindow::loadFile(string filePath)
     start = clock();
     scene->addPolyItem();
     scene->addRoadItem();
-    scene->drawPointText();
+//    scene->drawPointText();
 //    scene->drawRoute(); // send your route list here, it will draw
 //    scene->addAllItem();
 
@@ -94,6 +94,19 @@ void MainWindow::viewSizeAdjust(QResizeEvent *event)
     newWidth = event->size().width();
     newHeight = event->size().height() - m_mapView->pos().y();
     m_mapView->setGeometry(QRect(0,m_mapView->pos().y(),newWidth,newHeight));
+    osmium::Location test = m_model->getNodeLoaction(1703604687);
+    auto pos = projection(test.lon(), test.lat());
+    QTransform empty;
+    QGraphicsItem *testitem = m_mapView->scene()->itemAt(pos, empty);
+
+    //============== example code for retreiving an object base on position ============
+    Multipolygon *casttest = new Multipolygon;
+    std::cout << qgraphicsitem_cast<Multipolygon *>(testitem) << std::endl;
+    std::cout <<"item type num: " << testitem->type() << std::endl;
+    std::cout << "type for Multipoligon is " << casttest->type() << std::endl;
+    std::cout << "the id of the way is " << casttest->getId() << std::endl;
+    //==================================================================================
+
 }
 
 //void MainWindow::wheelEvent(QWheelEvent *event)
