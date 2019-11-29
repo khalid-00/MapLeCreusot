@@ -21,6 +21,7 @@ public:
     ~MainWindow();
 
 private:
+    vector <idType> mypath;
     bool m_leftMousePressed;
     Ui::MainWindow *ui;
     MapView *m_mapView;

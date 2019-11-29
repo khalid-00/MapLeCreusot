@@ -11,6 +11,8 @@
 #include "MapView.h"
 #include <QVBoxLayout>
 #include <QLayout>
+#include <mygraphbuilder.h>
+#include <myalgorithm.h>
 
 using namespace std;
 
@@ -28,7 +30,23 @@ MainWindow::MainWindow(QWidget *parent)
 //    loadFile("/home/dj/git/cpp_project/data/small.xml");
 //    loadFile("/home/dj/git/cpp_project/data/test.xml");
     loadFile("/home/dj/git/cpp_project/data/Le_Creusot.pbf");
+    //  loadFile("G:/QT/Projects/database/Le_Creusot.osm.pbf");
     m_scale = 1;
+    //===========================================================
+    MyGraphBuilder builder(*m_model);
+    builder.generateGraph();
+    builder.printGraph();
+    cout<<"Graph was Built Done!"<<endl;
+    //===========================================================
+    //Example:
+    idType x = 2495160628 , y = 2495160680; // 2495160680 iut ; 6739123642 someplace; 1545694404 aldi
+    MyAlgorithm algo(builder.getGraph(),builder.getGraphMap(), x); //x = 1387258667 is a Start Node id
+    cout<<"\nAlgorithm Worked Done!"<<endl;
+    //algo.PrintRawData();
+    mypath = algo.getShortPath(builder.getGraphMap(),y); //y = 1387258368 is Target Node id
+    algo.PrintPath();
+    cout<<"\nShortest Path Done!"<<endl;
+    //============================================================
 
 }
 
@@ -54,6 +72,9 @@ void MainWindow::loadFile(string filePath)
     start = clock();
     scene->addPolyItem();
     scene->addRoadItem();
+    //-------------------------------------------------------------------
+    scene->drawRoute(mypath); // send your route list here, it will draw
+    //-------------------------------------------------------------------
 //    scene->drawPointText();
 //    scene->drawRoute(); // send your route list here, it will draw
 //    scene->addAllItem();
