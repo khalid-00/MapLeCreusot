@@ -17,7 +17,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    myalgorithm.cpp \
+    mygraphbuilder.cpp
 
 HEADERS += \
     MapView.h \
@@ -29,6 +31,8 @@ HEADERS += \
     modelDataHandler.h \
     modelDataStructure.h \
     modeldata.h \
+    myalgorithm.h \
+    mygraphbuilder.h \
     projection.h
 
 FORMS += \
