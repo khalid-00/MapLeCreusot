@@ -1,3 +1,8 @@
+/*
+* @author Deng Jianning
+* @contact Jianning_Deng@etu.u-bourgogne.fr
+* @date  30-11-2019
+*/
 #ifndef MODELDATASTRUCTURE_H
 #define MODELDATASTRUCTURE_H
 #include <string>

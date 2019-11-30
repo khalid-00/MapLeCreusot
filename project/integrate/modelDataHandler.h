@@ -1,3 +1,8 @@
+/*
+* @author Deng Jianning
+* @contact Jianning_Deng@etu.u-bourgogne.fr
+* @date  30-11-2019
+*/
 #ifndef MODELDATAHANDLER_H
 #define MODELDATAHANDLER_H
 

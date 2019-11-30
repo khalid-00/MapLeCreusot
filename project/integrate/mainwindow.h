@@ -1,3 +1,8 @@
+/*
+* @author Deng Jianning
+* @contact Jianning_Deng@etu.u-bourgogne.fr
+* @date  30-11-2019
+*/
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
@@ -34,6 +39,17 @@ private:
     void resizeEvent(QResizeEvent *event);
     void viewSizeAdjust(QResizeEvent *event);
 //    void wheelEvent(QWheelEvent *event);
+
+signals:
+    void drawRoute(vector<idType> route);
+    void sendSearchName(QString name);
+    void changeToSearchPlace();
+    void changeToInit();
+    void changeToSearch();
+
+public slots:
+    void getRoutePath(idType src, idType dest);
+    void getSearchName();
 
 };
 #endif // MAINWINDOW_H

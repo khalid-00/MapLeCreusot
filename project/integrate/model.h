@@ -1,3 +1,9 @@
+/*
+* @author Deng Jianning
+* @contact Jianning_Deng@etu.u-bourgogne.fr
+* @date  30-11-2019
+*/
+
 #ifndef MODEL_H
 #define MODEL_H
 #include <modelDataStructure.h>
@@ -107,7 +113,25 @@ public:
         return m_Data->getMultipolygon();
     }
 
+    void buildAmenityCatalog()
+    {
+        m_Data->buildAmenityCatagory();
+    }
 
+    vector<catagoryData> searchAmenityByName(string name)
+    {
+        return m_Data->searchAmenityByName(name);
+    }
+
+    vector<catagoryData> searchAmenityByType(string name)
+    {
+        return m_Data->searchAmenityByType(name);
+    }
+
+    bool isAmenityTypeExist(string name)
+    {
+        return m_Data->isAmenityTypeExist(name);
+    }
 
     int64_t m_top;
     int64_t m_left;

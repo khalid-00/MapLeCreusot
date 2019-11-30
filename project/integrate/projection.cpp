@@ -1,4 +1,9 @@
-#include "projects.h"
+/*
+* @author Deng Jianning
+* @contact Jianning_Deng@etu.u-bourgogne.fr
+* @date  30-11-2019
+*/
+#include "projection.h"
 #include <QPoint>
 
 #define PI           3.14159265358979323846
@@ -51,4 +56,9 @@ inline double lat_to_y(double lat) { // not constexpr because math functions are
 QPointF projection(double lon, double lat)
 {
     return QPointF(lon_to_x(lon), -lat_to_y(lat));  // reverse the y position to make north in the upper side
+}
+
+QPointF projection(osmium::Location loc)
+{
+    return QPointF(lon_to_x(loc.lon()), -lat_to_y(loc.lat()));
 }

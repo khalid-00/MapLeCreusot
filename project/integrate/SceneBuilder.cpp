@@ -1,3 +1,8 @@
+/*
+* @author Deng Jianning
+* @contact Jianning_Deng@etu.u-bourgogne.fr
+* @date  30-11-2019
+*/
 #include "SceneBuilder.h"
 
 
@@ -116,6 +121,7 @@ void SceneBuilder::drawRoute(std::vector<idType> refList)
         polyLine << point;
     }
     m_route->setPolygon(polyLine);
+    // temporary z-value to make sure the route stays at the top of the view
     m_route->setZValue(200);
     m_scene->addItem(m_route);
 }
@@ -139,7 +145,7 @@ void SceneBuilder::drawPointText()
                 auto pos = projection(geoPos.lon(), geoPos.lat());
                 Text->setPos(pos);
                 Text->setZValue(100);
-                m_PointText.emplace_back(Text);
+                m_textContainer.emplace_back(Text);
                 m_scene->addItem(Text);
             }
         }
@@ -155,41 +161,130 @@ void SceneBuilder::setSource(Multipolygon *item)
 {
 
     QPointF centerPos = item->boundingRect().center();
-    m_source = new Pin(Pin::pinType::source);
+
+    m_source = new Pin(item->getId(), Pin::pinType::source);
     m_source->setPos(centerPos);
+
+    auto rect = m_scene->sceneRect();
+
     m_scene->addItem(m_source);
+
+    m_scene->setSceneRect(rect);
     std::cout << "setSource slot connected" << std::endl;
 }
 
 void SceneBuilder::setDest(Multipolygon *item)
 {
     QPointF centerPos = item->boundingRect().center();
-    m_source = new Pin(Pin::pinType::dest);
-    m_source->setPos(centerPos);
-    m_scene->addItem(m_source);
+
+    m_dest = new Pin(item->getId(), Pin::pinType::dest);
+    m_dest->setPos(centerPos);
+
+    auto rect = m_scene->sceneRect();
+
+    m_scene->addItem(m_dest);
+
+    m_scene->setSceneRect(rect);
     std::cout << "setDestination slot connected" << std::endl;
 }
 
-void SceneBuilder::searchPlace()
+bool SceneBuilder::searchPlace(QString name)
 {
     std::cout << "searchPlace slot connected" << std::endl;
+
+    // search the name in the m_model
+    // get a list of catagory data
+    string key = name.toLower().toStdString();
+
+    vector<catagoryData> resultType;
+
+    if(m_model->isAmenityTypeExist(key))
+    {
+        resultType = m_model->searchAmenityByType(key);
+    }
+
+    vector<catagoryData> resultName = m_model->searchAmenityByName(key);
+
+    vector<catagoryData> result = resultType;
+
+    result.insert(result.end(), resultName.begin(), resultName.end());
+
+    // check if it is empty
+    if(result.size() == 0)
+        return false;
+    else
+    {
+        for(auto it = result.begin(); it != result.end(); it ++)
+        {
+            if(it->itemType == osmium::item_type::node)
+            {
+                auto geoPos = this->m_model->getNodeLoaction(it->id);
+                auto pos = projection(geoPos.lon(), geoPos.lat());
+                auto item = m_scene->itemAt(pos, QTransform());
+                if(qgraphicsitem_cast<Multipolygon *>(item))
+                {
+                    auto casted = qgraphicsitem_cast<Multipolygon *>(item);
+                    drawPin(casted->getId(), casted->boundingRect().center());
+                    drawText(it->name[0], item->boundingRect().center());
+                }
+            }
+            else
+            {
+                auto way = this->m_model->getWayData(it->id);
+                QPolygonF tempPoly;
+                auto nodeRefList = way.nodeRefList;
+                for(vector<idType>::iterator it = nodeRefList.begin();it != nodeRefList.end();it++)
+                {
+                    auto point = projection(m_model->getNodeLoaction(*(it)));
+                    tempPoly << point;
+                }
+
+                drawPin(it->id, tempPoly.boundingRect().center());
+                drawText(it->name[0], tempPoly.boundingRect().center());
+                //drawText();
+            }
+        }
+        return true;
+    }
+
+
 }
 
 void SceneBuilder::cancel()
 {
-    deletePin(m_source);
-    deletePin(m_dest);
-    deletePin(m_PinContainer);
+    if(m_source != nullptr)
+    {
+        delete m_source;
+        m_source = nullptr;
+    }
+    if(m_dest != nullptr)
+    {
+        delete m_dest;
+        m_dest = nullptr;
+    }
+    deleteContainer(m_pinContainer);
+    deleteContainer(m_textContainer);
+
     std::cout << "cancel slot connected" << std::endl;
 }
 
-void SceneBuilder::deletePin(Pin *p)
+void SceneBuilder::getSrcDestId()
 {
-    if(p != nullptr)
-        delete p;
+    if(m_source == nullptr || m_dest == nullptr)
+        emit routeFailed();
+    else
+    {
+        emit routeSrcAndDest(m_source->getId(), m_dest->getId());
+    }
 }
 
-void SceneBuilder::deletePin(vector<Pin *> &vp)
+void SceneBuilder::slotDrawRoute(vector<idType> route)
+{
+    this->drawRoute(route);
+}
+
+template<typename T>
+void SceneBuilder::deleteContainer(T &vp)
 {
     for(auto it = vp.begin(); it != vp.end(); it ++)
     {
@@ -198,6 +293,38 @@ void SceneBuilder::deletePin(vector<Pin *> &vp)
             delete (*it);
         }
     }
+    vp.clear();
 }
+
+void SceneBuilder::drawText(string text, QPointF pos)
+{
+    QGraphicsTextItem *temp = new QGraphicsTextItem;
+    temp->setPlainText(QString::fromStdString(text));
+    temp->setPos(pos);
+
+    QFont f;
+    f.setPointSizeF(16.0);
+    temp->setFont(f);
+    temp->setZValue(50);
+    temp->setFlag(QGraphicsItem::ItemIgnoresTransformations,true);
+    m_scene->addItem(temp);
+    m_textContainer.emplace_back(temp);
+}
+
+void SceneBuilder::drawPin(idType id, QPointF pos)
+{
+    Pin *temp = new Pin(id);
+
+    temp->setPos(pos);
+    auto rect = m_scene->sceneRect();
+
+    m_scene->addItem(temp);
+    m_pinContainer.emplace_back(temp);
+
+    m_scene->setSceneRect(rect);
+}
+
+
+
 
 

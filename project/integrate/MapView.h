@@ -1,3 +1,8 @@
+/*
+* @author Deng Jianning
+* @contact Jianning_Deng@etu.u-bourgogne.fr
+* @date  30-11-2019
+*/
 #ifndef MAPVIEW_H
 #define MAPVIEW_H
 #include <QGraphicsView>
@@ -10,7 +15,7 @@
 #include <QContextMenuEvent>
 
 #define MAX_SCALE 10
-#define MIN_SCALE 0.0001
+#define MIN_SCALE 0.00000001
 #define ZOOM_STEP 1.2
 
 #include <QMouseEvent>
@@ -21,12 +26,14 @@ class MapView : public QGraphicsView
 {
     Q_OBJECT
 private:
-    enum userState{init, sourceSel, destSel, routing, search};
+    enum userState{init, sourceSel, destSel, routing, search, null};
     qreal m_scale;
     Multipolygon* m_selectedItem;
     bool m_isBuilding;
     userState m_state;
     QPoint m_pressPos;
+    idType m_srcId;
+    idType m_destId;
 
     void mousePressEvent(QMouseEvent *event);
 
@@ -39,7 +46,11 @@ signals:
     void setDest(Multipolygon *item);
     void searchPlace();
     void canecl(); //delete all temporary render item
+    void makeRoute();
 
+public slots:
+    void changeToSearch();
+    void changeToInit();
 
 public:
     MapView();

@@ -1,5 +1,10 @@
 /*
-Use code from libosmium projection.hpp fast projection
+* @author Deng Jianning
+* @contact Jianning_Deng@etu.u-bourgogne.fr
+* @date  30-11-2019
+*/
+/*
+Use code from libosmium projection.hpp for fast projection
 */
 
 #ifndef PROJECTION_H
@@ -7,6 +12,7 @@ Use code from libosmium projection.hpp fast projection
 #include <Qt>
 #include <QPoint>
 #include <math.h>
+#include "osmium/osm.hpp"
 
 
 inline constexpr double deg_to_rad(double degree) noexcept;
@@ -18,5 +24,7 @@ inline double lat_to_y_with_tan(double lat);
 inline double lat_to_y(double lat);
 
 QPointF projection(double lon, double lat);
+
+QPointF projection(osmium::Location loc);
 
 #endif // PROJECTION_H

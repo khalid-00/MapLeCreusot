@@ -1,3 +1,8 @@
+/*
+* @author Deng Jianning
+* @contact Jianning_Deng@etu.u-bourgogne.fr
+* @date  30-11-2019
+*/
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "model.h"
@@ -13,6 +18,8 @@
 #include <QLayout>
 #include <mygraphbuilder.h>
 #include <myalgorithm.h>
+#include <QInputDialog>
+#include <QMessageBox>
 
 using namespace std;
 
@@ -30,15 +37,31 @@ MainWindow::MainWindow(QWidget *parent)
 //    ui->graphicsView->setDragMode(QGraphicsView::ScrollHandDrag);
 //    loadFile("/home/dj/git/cpp_project/data/small.xml");
 //    loadFile("/home/dj/git/cpp_project/data/test.xml");
-    loadFile("/home/dj/git/cpp_project/data/Le_Creusot.pbf");
     //  loadFile("G:/QT/Projects/database/Le_Creusot.osm.pbf");
+
+    //m_scale is on longer used, relative code will be deleted soon
     m_scale = 1;
+
+    QLayout *map = layout();
+    map->addWidget(m_mapView);
+    this->setLayout(map);
 
 //    connecting signals and slots for UI
     connect(m_mapView, &MapView::setSource, m_sceneBuilder, &SceneBuilder::setSource);
     connect(m_mapView, &MapView::setDest, m_sceneBuilder, &SceneBuilder::setDest);
-    connect(m_mapView, &MapView::searchPlace, m_sceneBuilder, &SceneBuilder::searchPlace);
+    connect(this, &MainWindow::sendSearchName, m_sceneBuilder, &SceneBuilder::searchPlace);
+    connect(m_mapView, &MapView::searchPlace, this, &MainWindow::getSearchName);
     connect(m_mapView, &MapView::canecl, m_sceneBuilder, &SceneBuilder::cancel);
+    connect(m_mapView, &MapView::makeRoute, m_sceneBuilder, &SceneBuilder::getSrcDestId);
+    connect(m_sceneBuilder, &SceneBuilder::routeSrcAndDest, this, &MainWindow::getRoutePath);
+    connect(this, &MainWindow::changeToInit, m_mapView, &MapView::changeToInit);
+    connect(this, &MainWindow::changeToSearch, m_mapView, &MapView::changeToSearch);
+//    connect(this, )
+
+    // this function should be connected to the UI tool bar
+    // I keep this here just for debug
+    // just comment this line when Belal finish the tool bar
+    loadFile("/home/dj/git/cpp_project/data/Le_Creusot.pbf");
 
 }
 
@@ -51,31 +74,39 @@ MainWindow::~MainWindow()
 void MainWindow::loadFile(string filePath)
 {
 
+    // =================== load file ==========================
     clock_t start = clock();
     m_model->setFilePath(filePath);
     auto mpMap = m_model->getMPMap();
-    std::cout << "number of multipolygon found: " << mpMap.size()/*m_model->getMPMap().size()*/ << std::endl;
+    std::cout << "number of multipolygon found: " << mpMap.size() << std::endl;
 
     float_t t = (clock() - start + 0.0)/CLOCKS_PER_SEC;
     std::cout << "time used for loading file: " << t << "s" << std::endl;
+    emit changeToInit();
 
-
+    // =================== render map ==========================
     start = clock();
+
     m_sceneBuilder->addPolyItem();
     m_sceneBuilder->addRoadItem();
+//    m_sceneBuilder->drawPointText();
 
     t = (clock() - start + 0.0)/CLOCKS_PER_SEC;
     std::cout << "time used for rendering the map: " << t << "s" << std::endl;
 
+    // ============ generate catalog for searching =============
+    start = clock();
+
+    m_model->buildAmenityCatalog();
+
+    t = (clock() - start + 0.0)/CLOCKS_PER_SEC;
+    std::cout << "time used for generating the catalog: " << t << "s" << std::endl;
+
     m_mapView->setScene(m_sceneBuilder->getScene());
 
     m_mapView->setBackgroundBrush(QBrush(QColor(230,230,230)));
-//    m_mapView->scale(2,2);
 
     m_mapView->setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
-    QLayout *map = layout();
-    map->addWidget(m_mapView);
-    this->setLayout(map);
 
 }
 
@@ -91,30 +122,50 @@ void MainWindow::viewSizeAdjust(QResizeEvent *event)
     newWidth = event->size().width();
     newHeight = event->size().height() - m_mapView->pos().y();
     m_mapView->setGeometry(QRect(0,m_mapView->pos().y(),newWidth,newHeight));
-    osmium::Location test = m_model->getNodeLoaction(1703604687);
-    auto pos = projection(test.lon(), test.lat());
-    QTransform empty;
-    QGraphicsItem *testitem = m_mapView->scene()->itemAt(pos, empty);
-
-    //============== example code for retreiving an object base on position ============
-    Multipolygon *casttest = new Multipolygon;
-    std::cout << qgraphicsitem_cast<Multipolygon *>(testitem) << std::endl;
-    std::cout <<"item type num: " << testitem->type() << std::endl;
-    std::cout << "type for Multipoligon is " << casttest->type() << std::endl;
-    std::cout << "the id of the way is " << casttest->getId() << std::endl;
-    //==================================================================================
-
 }
 
-//void MainWindow::wheelEvent(QWheelEvent *event)
-//{
-//    if(event->delta()>0)
-//    {
-//        ui->graphicsView->scale(1.25,1.25);
-//    }
-//    else if(event->delta() < 0)
-//    {
-//        ui->graphicsView->scale(0.75,0.75);
-//    }
-//    ui->graphicsView->update();
-//}
+// place belal's routing function in this slot
+void MainWindow::getRoutePath(idType src, idType dest)
+{
+    vector<idType> route;
+    // belal's function to get path, and assigned it to route vector;
+
+    emit drawRoute(route);
+}
+
+void MainWindow::getSearchName()
+{
+    bool ok;
+
+    QString text = QInputDialog::getText(this, tr("Search"),
+                                        tr("place name:"), QLineEdit::Normal,
+                                        "aldi", &ok);
+
+    std::cout << text.toStdString() << std::endl;
+
+    if(ok && text.size() != 0)
+    {
+        //do all the things in sceneBuilder and then decide if we should change to Search state;
+        if(m_sceneBuilder->searchPlace(text))
+        {
+            emit changeToSearch();
+
+            //qmsgBox for debug
+            QMessageBox msgBox;
+            msgBox.setText("found!");
+            msgBox.setInformativeText(text);
+            msgBox.exec();
+        }
+        else
+        {
+            emit changeToInit();
+
+            //qmsgBox for debug
+            QMessageBox msgBox;
+            msgBox.setText("didn't find the place named:");
+            msgBox.setInformativeText(text);
+            msgBox.exec();
+        }
+    }
+}
+

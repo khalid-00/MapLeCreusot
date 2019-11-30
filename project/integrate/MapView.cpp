@@ -1,3 +1,8 @@
+/*
+* @author Deng Jianning
+* @contact Jianning_Deng@etu.u-bourgogne.fr
+* @date  30-11-2019
+*/
 #include "MapView.h"
 
 void MapView::mousePressEvent(QMouseEvent *event)
@@ -8,7 +13,6 @@ void MapView::mousePressEvent(QMouseEvent *event)
     {
         auto pos = event->pos();
         auto scenePos = mapToScene(pos);
-        std::cout << "mouse press" << std::endl;
 //            std::cout << "position from mapview is " << pos.x() << ", " << pos.y() << std::endl;
         auto item = this->scene()->itemAt(scenePos, QTransform());
         if(qgraphicsitem_cast<Multipolygon *>(item))
@@ -25,9 +29,7 @@ void MapView::mousePressEvent(QMouseEvent *event)
 
 void MapView::contextMenuEvent(QContextMenuEvent *event)
 {
-    std::cout << "menu pop out" << std::endl;
-
-    //================= UI state control ============
+    //================= UI FSM ==============
     QMenu menu;
     if(m_state == init)
     {
@@ -51,7 +53,7 @@ void MapView::contextMenuEvent(QContextMenuEvent *event)
     }
     else if(m_state == search || m_state == routing)
         menu.addAction("cancel");
-    if(m_state != search && m_state != routing)
+    if(m_state != search && m_state != routing && m_state != null)
         menu.addAction("search place");
 
     QAction *a = menu.exec(event->globalPos());
@@ -61,7 +63,10 @@ void MapView::contextMenuEvent(QContextMenuEvent *event)
         {
             emit setSource(m_selectedItem);
             if(m_state == destSel)
+            {
                 m_state = routing;
+                emit makeRoute();
+            }
             if(m_state == init)
                 m_state = sourceSel;
         }
@@ -69,18 +74,25 @@ void MapView::contextMenuEvent(QContextMenuEvent *event)
         {
             emit setDest(m_selectedItem);
             if(m_state == sourceSel)
+            {
                 m_state = routing;
+                emit makeRoute();
+            }
             if(m_state == init)
                 m_state = destSel;
         }
         else if(a->text() == "search place")
         {
             emit searchPlace();
-            m_state = search;
+//            m_state = init;
+            // reset the state to init, state will be changed to search when user input is valid
+            // state changed in slot: changeToSearch
         }
         else if(a->text() == "cancel")
         {
             emit canecl();
+            m_srcId = 0;
+            m_destId = 0;
             m_state = init;
         }
     }
@@ -110,15 +122,28 @@ void MapView::wheelEvent(QWheelEvent *event)
             m_scale *= 1/ZOOM_STEP;
         }
     }
-//        this->update();
+
+}
+
+void MapView::changeToSearch()
+{
+    m_state = search;
+    std::cout << "state changed to search" << std::endl;
+}
+
+void MapView::changeToInit()
+{
+    //set state to init when file is loaded
+    m_state = init;
+    std::cout << "state changed to init" << std::endl;
 }
 
 MapView::MapView()
 {
     m_scale = 0.001;
-    m_isBuilding = true;
+    m_isBuilding = false;
     m_pressPos = QPoint(0,0);
-    m_state = init;
+    m_state = null;
 }
 
 MapView::~MapView(){}

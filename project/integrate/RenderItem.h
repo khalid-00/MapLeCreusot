@@ -1,3 +1,8 @@
+/*
+* @author Deng Jianning
+* @contact Jianning_Deng@etu.u-bourgogne.fr
+* @date  30-11-2019
+*/
 #ifndef RENDERITEM_H
 #define RENDERITEM_H
 
@@ -14,6 +19,7 @@
 #include <QGraphicsSceneMouseEvent>
 #include <QGraphicsSceneContextMenuEvent>
 #include <QMenu>
+#include <iostream>
 
 //================================ use color reference from P0267_RefImpl
 static QColor getPolygonColor(polygonType type)
@@ -181,15 +187,20 @@ public:
 class Pin : public QGraphicsItem
 {
     QPolygonF m_poly;
+    QPointF m_bias;
     QColor m_brushColor;
+    idType m_Id;
 
 public:
 
     enum pinType {source, dest, search};
-    Pin(pinType type = search)
+    Pin(idType wayID, pinType type = search)
     {
-        m_poly << QPointF(-5,-10) << QPointF(5,-10) << QPointF(5,-5)
+
+        m_poly << QPointF(-5,-10)<< QPointF(5,-10) << QPointF(5,-5)
                << QPointF(0,0) << QPointF(-5,-5);
+        m_bias = QPointF(0,0);
+        m_Id = wayID;
         switch(type)
         {
         case search:
@@ -220,11 +231,25 @@ public:
 
     }
 
+    void setBias(QPointF bias)
+    {
+        m_bias = bias;
+
+//        this->setPos(0,0);
+        for(auto it = m_poly.begin(); it != m_poly.end(); it++)
+            *(it) += m_bias;
+        return;
+    }
+
     QRectF boundingRect() const
     {
         return m_poly.boundingRect();
     }
 
+    idType getId()
+    {
+        return m_Id;
+    }
 
 };
 
