@@ -24,6 +24,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     m_mapView = new MapView();
+    m_sceneBuilder = new SceneBuilder(m_model);
     m_mapView->setDragMode(QGraphicsView::ScrollHandDrag);
     m_mapView->setGeometry(QRect(0,50,100,100));
 //    ui->graphicsView->setDragMode(QGraphicsView::ScrollHandDrag);
@@ -32,21 +33,12 @@ MainWindow::MainWindow(QWidget *parent)
     loadFile("/home/dj/git/cpp_project/data/Le_Creusot.pbf");
     //  loadFile("G:/QT/Projects/database/Le_Creusot.osm.pbf");
     m_scale = 1;
-    //===========================================================
-    MyGraphBuilder builder(*m_model);
-    builder.generateGraph();
-    builder.printGraph();
-    cout<<"Graph was Built Done!"<<endl;
-    //===========================================================
-    //Example:
-    idType x = 2495160628 , y = 2495160680; // 2495160680 iut ; 6739123642 someplace; 1545694404 aldi
-    MyAlgorithm algo(builder.getGraph(),builder.getGraphMap(), x); //x = 1387258667 is a Start Node id
-    cout<<"\nAlgorithm Worked Done!"<<endl;
-    //algo.PrintRawData();
-    mypath = algo.getShortPath(builder.getGraphMap(),y); //y = 1387258368 is Target Node id
-    algo.PrintPath();
-    cout<<"\nShortest Path Done!"<<endl;
-    //============================================================
+
+//    connecting signals and slots for UI
+    connect(m_mapView, &MapView::setSource, m_sceneBuilder, &SceneBuilder::setSource);
+    connect(m_mapView, &MapView::setDest, m_sceneBuilder, &SceneBuilder::setDest);
+    connect(m_mapView, &MapView::searchPlace, m_sceneBuilder, &SceneBuilder::searchPlace);
+    connect(m_mapView, &MapView::canecl, m_sceneBuilder, &SceneBuilder::cancel);
 
 }
 
@@ -67,39 +59,23 @@ void MainWindow::loadFile(string filePath)
     float_t t = (clock() - start + 0.0)/CLOCKS_PER_SEC;
     std::cout << "time used for loading file: " << t << "s" << std::endl;
 
-    SceneBuilder *scene = new SceneBuilder(m_model);
 
     start = clock();
-    scene->addPolyItem();
-    scene->addRoadItem();
-    //-------------------------------------------------------------------
-    scene->drawRoute(mypath); // send your route list here, it will draw
-    //-------------------------------------------------------------------
-//    scene->drawPointText();
-//    scene->drawRoute(); // send your route list here, it will draw
-//    scene->addAllItem();
+    m_sceneBuilder->addPolyItem();
+    m_sceneBuilder->addRoadItem();
 
     t = (clock() - start + 0.0)/CLOCKS_PER_SEC;
     std::cout << "time used for rendering the map: " << t << "s" << std::endl;
 
-    m_mapView->setScene(scene->getScene());
+    m_mapView->setScene(m_sceneBuilder->getScene());
 
     m_mapView->setBackgroundBrush(QBrush(QColor(230,230,230)));
 //    m_mapView->scale(2,2);
 
     m_mapView->setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
-//    m_mapView->setBackgroundBrush(Qt::yellow);
     QLayout *map = layout();
     map->addWidget(m_mapView);
     this->setLayout(map);
-//    m_mapView->update();
-
-//    this->update();
-//    ui->graphicsView->setScene(scene->getScene());
-
-//    ui->graphicsView->scale(1,1);
-
-//    ui->graphicsView->setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
 
 }
 

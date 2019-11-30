@@ -7,6 +7,7 @@
 #include <string>
 #include <MapView.h>
 #include <QVBoxLayout>
+#include "SceneBuilder.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,6 +26,7 @@ private:
     bool m_leftMousePressed;
     Ui::MainWindow *ui;
     MapView *m_mapView;
+    SceneBuilder *m_sceneBuilder;
 //    QVBoxLayout *m_layoutView;
     Model *m_model;
     qreal m_scale;

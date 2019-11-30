@@ -107,10 +107,7 @@ public:
         return m_Data->getMultipolygon();
     }
 
-//    void setRelation(idType wayId)
-//    {
-//        m_Data->setRelation(wayId);
-//    }
+
 
     int64_t m_top;
     int64_t m_left;

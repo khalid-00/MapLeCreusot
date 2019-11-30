@@ -99,6 +99,8 @@ public:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
                QWidget *widget) override
     {
+        Q_UNUSED(option);
+        Q_UNUSED(widget);
         painter->setBrush(m_brushColor);
         painter->drawPolygon(this->m_poly);
     }
@@ -125,32 +127,15 @@ public:
     {
         return m_wayId;
     }
-
-//    void mousePressEvent(QGraphicsSceneMouseEvent *event)
-//    {
-//        if(event->button() == Qt::RightButton)
-//        {
-//            std::cout << "selected item id: " << m_wayId << std::endl;
-//            auto pos = this->scenePos();
-//            std::cout << "pos of the item is: " << this->scenePos().x() << ", " << this->scenePos().y() << std::endl;
-//        }
-//        else
-//            QGraphicsItem::mousePressEvent(event);
-//    }
     void setPolygon(QPolygonF poly)
     {
         m_poly = poly;
     }
 
-//    void contextMenuEvent(QGraphicsSceneContextMenuEvent *event)
-//    {
-
-//        QMenu menu;
-//        menu.addAction("Action 1");
-//        menu.addAction("Action 2");
-//        QAction *a = menu.exec(event->screenPos());
-//        qDebug("User clicked %s", qPrintable(a->text()));
-//    }
+    polygonType getPolyType()
+    {
+        return m_PolygonType;
+    }
 
 };
 
@@ -167,11 +152,14 @@ public:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
     QWidget *widget) override
     {
+
+        Q_UNUSED(option);
+        Q_UNUSED(widget);
         m_pen.setCapStyle(Qt::RoundCap);
         painter->setPen(m_pen);
         painter->drawPolyline(this->polygon());
     }
-    idType const getId()
+    idType getId()
     {
         return m_wayId;
     }
@@ -187,15 +175,57 @@ public:
         setZValue(leisure + static_cast<int>(rType) * 0.1);
     }
 
-//    void mousePressEvent(QGraphicsSceneMouseEvent *event)
-//    {
-////        this->setSelected(true);
-//        if(event->button() == Qt::RightButton)
-//            std::cout << "selected item id: " << m_wayId << std::endl;
-//        else
-//            QGraphicsItem::mousePressEvent(event);
+};
 
-//    }
+
+class Pin : public QGraphicsItem
+{
+    QPolygonF m_poly;
+    QColor m_brushColor;
+
+public:
+
+    enum pinType {source, dest, search};
+    Pin(pinType type = search)
+    {
+        m_poly << QPointF(-5,-10) << QPointF(5,-10) << QPointF(5,-5)
+               << QPointF(0,0) << QPointF(-5,-5);
+        switch(type)
+        {
+        case search:
+            m_brushColor = QColor(10, 150, 10);
+            break;
+        case source:
+            m_brushColor = QColor(50, 150, 255);
+            break;
+        case dest:
+            m_brushColor = QColor(255, 70, 70);
+            break;
+        default:
+            m_brushColor = QColor(50, 150, 255);
+        }
+        this->setZValue(10);
+        this->setScale(2.5);
+        QGraphicsItem::setFlag(QGraphicsItem::ItemIgnoresTransformations,true);
+    }
+    ~Pin(){}
+
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
+               QWidget *widget) override
+    {
+        Q_UNUSED(option);
+        Q_UNUSED(widget);
+        painter->setBrush(m_brushColor);
+        painter->drawPolygon(this->m_poly);
+
+    }
+
+    QRectF boundingRect() const
+    {
+        return m_poly.boundingRect();
+    }
+
+
 };
 
 
