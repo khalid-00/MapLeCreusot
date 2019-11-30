@@ -20,7 +20,7 @@ SOURCES += \
     SceneBuilder.cpp \
     main.cpp \
     mainwindow.cpp \
-    projection.cpp
+    projection.cpp \
     myalgorithm.cpp \
     mygraphbuilder.cpp
 
