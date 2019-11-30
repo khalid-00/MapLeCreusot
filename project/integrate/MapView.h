@@ -15,7 +15,7 @@
 #include <QContextMenuEvent>
 
 #define MAX_SCALE 10
-#define MIN_SCALE 0.00000001
+#define MIN_SCALE 0.0001
 #define ZOOM_STEP 1.2
 
 #include <QMouseEvent>
