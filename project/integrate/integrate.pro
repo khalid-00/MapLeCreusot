@@ -21,6 +21,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     projection.cpp
+    myalgorithm.cpp \
+    mygraphbuilder.cpp
 
 HEADERS += \
     MapView.h \
@@ -32,6 +34,8 @@ HEADERS += \
     modelDataHandler.h \
     modelDataStructure.h \
     modeldata.h \
+    myalgorithm.h \
+    mygraphbuilder.h \
     projection.h
 
 FORMS += \
