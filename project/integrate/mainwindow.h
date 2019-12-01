@@ -13,7 +13,7 @@
 #include <MapView.h>
 #include <QVBoxLayout>
 #include "SceneBuilder.h"
-
+#include <shortpath.h>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -27,7 +27,6 @@ public:
     ~MainWindow();
 
 private:
-    vector <idType> mypath;
     bool m_leftMousePressed;
     Ui::MainWindow *ui;
     MapView *m_mapView;

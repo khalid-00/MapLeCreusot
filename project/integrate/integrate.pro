@@ -22,7 +22,8 @@ SOURCES += \
     mainwindow.cpp \
     projection.cpp \
     myalgorithm.cpp \
-    mygraphbuilder.cpp
+    mygraphbuilder.cpp \
+    shortpath.cpp
 
 HEADERS += \
     MapView.h \
@@ -36,7 +37,8 @@ HEADERS += \
     modeldata.h \
     myalgorithm.h \
     mygraphbuilder.h \
-    projection.h
+    projection.h \
+    shortpath.h
 
 FORMS += \
     mainwindow.ui
@@ -53,3 +55,10 @@ LIBS += -lz\
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/./ -lexpat
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/./ -lexpat
+else:unix: LIBS += -L$$PWD/./ -lexpat
+
+INCLUDEPATH += $$PWD/.
+DEPENDPATH += $$PWD/.

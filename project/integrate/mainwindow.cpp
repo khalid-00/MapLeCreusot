@@ -16,8 +16,6 @@
 #include "MapView.h"
 #include <QVBoxLayout>
 #include <QLayout>
-#include <mygraphbuilder.h>
-#include <myalgorithm.h>
 #include <QInputDialog>
 #include <QMessageBox>
 
@@ -89,8 +87,38 @@ void MainWindow::loadFile(string filePath)
 
     m_sceneBuilder->addPolyItem();
     m_sceneBuilder->addRoadItem();
-//    m_sceneBuilder->drawPointText();
-
+    //===================================================================
+    //start
+    //-----------------------------------
+    // My Places
+    Path MyPlaces ;
+    //auto iter = MyPlaces.begin();
+    MyPlaces.push_back(1545694404); //1 Aldi
+    MyPlaces.push_back(1544558355); //2 Restaurant Le Fut
+    MyPlaces.push_back(1455348628); //3 place schnider
+    MyPlaces.push_back(1540689869); //4 Acacias
+    MyPlaces.push_back(442028765);  //5 IUT
+    MyPlaces.push_back(1387416514); //6 Train Station (Gare du Creusot)
+    MyPlaces.push_back(1829507841); //7 Carrefour
+    MyPlaces.push_back(2019043458); //8 Condorcet
+    MyPlaces.push_back(2258325836); //9 Hospital Creusot
+    MyPlaces.push_back(1544079469); //10 BNP PariBank
+    MyPlaces.push_back(889114982); //11 Action Store
+    MyPlaces.push_back(1540689876);//12 El-Loco Cafe
+    MyPlaces.push_back(2244694498);//13 Residence Jean Monnent
+    MyPlaces.push_back(1540680545);//14 Crous Office & Restaurant
+    MyPlaces.push_back(4846313478);//15 Euro Lav(Laundry)
+    MyPlaces.push_back(1540689863);//16 Pharmacie des Acacias
+    MyPlaces.push_back(1544558417);//17 centre medico scolaire (Medical school)
+    MyPlaces.push_back(1544558167);//18 Driving School
+    MyPlaces.push_back(2019027442);//19 Le Poste
+    MyPlaces.push_back(6269205284);//20 McDonald's
+    //-----------------------------------
+    ShortPath route(MyPlaces.at(3),MyPlaces.at(18),*m_model);
+    Path anypath =route.getYourPath();
+    m_sceneBuilder->drawRoute(anypath);// send your route list here, it will draw
+    //End
+    //===================================================================
     t = (clock() - start + 0.0)/CLOCKS_PER_SEC;
     std::cout << "time used for rendering the map: " << t << "s" << std::endl;
 
