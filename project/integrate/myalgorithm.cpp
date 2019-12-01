@@ -13,7 +13,7 @@ using namespace boost;
 
 MyAlgorithm::MyAlgorithm()// Default constructor
 {
-  graph_t MyGraph2;
+  //graph_t MyGraph2;
   cout<<"\nDear User This Algorithm Needs Graph to Work with!\n";
 }
 //===========================================================================
@@ -76,6 +76,9 @@ Path MyAlgorithm::getShortPath(GraphMap AnyGraphMap,idType destination2) {
     }
   cout<<"\nThis Node is Unreachable...\n";
   ResetShortPath();
+  // if No path return Acacias Node as single Node in Path, so the Program Doesn't Crush
+  ShortPath.emplace_back(1540689869);
+  return ShortPath;
   //throw std::runtime_error("Unreachable");
 }
 

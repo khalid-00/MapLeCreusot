@@ -17,7 +17,7 @@ using namespace boost;
 /////////////////////////////////////////////////
 MyGraphBuilder::MyGraphBuilder() // default Constructor
 {
-  Model OurModel;
+  //Model OurModel;
   cout<<"\nDear User Be Careful This is Empty Graph !\n";
   //==========================================================
 } // end of Default Constructor
