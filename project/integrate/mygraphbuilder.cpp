@@ -95,6 +95,8 @@ void MyGraphBuilder::generateGraph() {
               // assign idType values to the idmap
               //idmap[IdMapIndex] = VertexID;
               IdMapIndex++;
+              // Fill BelalMap
+              BelalMap.insert({VertexID,IdMapIndex});
               if(NodesOfWayIndex == 0) Node1 = IdMapIndex;
               else {
                   Node2 = IdMapIndex ;
@@ -102,8 +104,6 @@ void MyGraphBuilder::generateGraph() {
                   add_edge(Node1, Node2,dist,MyGraph);
                   add_edge(Node2, Node1,dist,MyGraph);
                   Node1 = Node2 ;
-                  // Fill BelalMap
-                  BelalMap.insert({VertexID,IdMapIndex});
                 } // end else
             }//end of outer if
           //--------------------------------------------------------------------

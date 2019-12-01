@@ -20,35 +20,49 @@ QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
-    Q_OBJECT
+  Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
-
+  MainWindow(QWidget *parent = nullptr);
+  ~MainWindow();
 private:
-    bool m_leftMousePressed;
-    Ui::MainWindow *ui;
-    MapView *m_mapView;
-    SceneBuilder *m_sceneBuilder;
-//    QVBoxLayout *m_layoutView;
-    Model *m_model;
-    qreal m_scale;
-    void loadFile(string );
-    void resizeEvent(QResizeEvent *event);
-    void viewSizeAdjust(QResizeEvent *event);
-//    void wheelEvent(QWheelEvent *event);
+  //=============================================
+  //Start
+  vector<pair<QString,idType>> MyPlaces ;
+  void fill_MyPlaces();
+  //Initilaization of the Sourse Node, and Destination Node
+  idType SourceS = 1540689869;
+  idType DestinationD = 2019043458;//1544558413;
+  //End
+  //=============================================
+  bool m_leftMousePressed;
+  Ui::MainWindow *ui;
+  MapView *m_mapView;
+  SceneBuilder *m_sceneBuilder;
+  //    QVBoxLayout *m_layoutView;
+  Model *m_model;
+  qreal m_scale;
+  void loadFile(string );
+  void resizeEvent(QResizeEvent *event);
+  void viewSizeAdjust(QResizeEvent *event);
+  //    void wheelEvent(QWheelEvent *event);
 
 signals:
-    void drawRoute(vector<idType> route);
-    void sendSearchName(QString name);
-    void changeToSearchPlace();
-    void changeToInit();
-    void changeToSearch();
+  void drawRoute(Path route);
+  void sendSearchName(QString name);
+  void changeToSearchPlace();
+  void changeToInit();
+  void changeToSearch();
 
 public slots:
-    void getRoutePath(idType src, idType dest);
-    void getSearchName();
+  void getRoutePath(idType src, idType dest);
+  void getSearchName();
 
+private slots:
+  void on_Source_QB_activated(const QString &arg1);
+  void on_Destination_QB_activated(const QString &arg1);
+  void on_Navigate_Button_clicked();
+  void on_actionQuit_triggered();
+  void on_action_Open_File_triggered();
 };
 #endif // MAINWINDOW_H
