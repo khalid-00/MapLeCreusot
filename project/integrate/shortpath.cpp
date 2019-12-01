@@ -1,3 +1,9 @@
+/////////////////////////////////////////////////////////////////
+/// ShortPath.cpp Belal Hmedan - 2019                         ///
+/// Belal_Hmedan@etu.u-bourgogne.fr                           ///
+/// This Class intends to Get the Shortest Path of Vertices   ///
+/// Using Other Classes Built Before                          ///
+/////////////////////////////////////////////////////////////////
 #include <shortpath.h>
 //=============================================================
 // Default Constructor
