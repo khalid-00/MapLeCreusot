@@ -179,8 +179,6 @@ void MainWindow::getRoutePath(idType src, idType dest)
 //============================= to do ===================================
 
 //=======================================================================
-
-
 void MainWindow::getSearchName()
 {
     bool ok;
@@ -253,11 +251,14 @@ void MainWindow::on_actionQuit_triggered()
 {
     QApplication::quit();
 }
+//-----------------------------------------------------------------
+void MainWindow::on_Cancel_Navigation_clicked()
+{
+  Path anypath;
+  anypath.push_back(1545694404);
+  m_sceneBuilder->drawRoute(anypath);
+}
 //End
 //=================================================================
-
-
-
-
 
 
