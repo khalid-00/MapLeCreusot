@@ -16,21 +16,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    MapView.cpp \
     SceneBuilder.cpp \
     main.cpp \
     mainwindow.cpp \
+    mapview.cpp \
     projection.cpp \
     myalgorithm.cpp \
     mygraphbuilder.cpp \
     shortpath.cpp
 
 HEADERS += \
-    MapView.h \
     RenderEnum.h \
     RenderItem.h \
     SceneBuilder.h \
     mainwindow.h \
+    mapview.h \
     model.h \
     modelDataHandler.h \
     modelDataStructure.h \

@@ -3,7 +3,7 @@
 * @contact Jianning_Deng@etu.u-bourgogne.fr
 * @date  30-11-2019
 */
-#include "MapView.h"
+#include "mapview.h"
 
 void MapView::mousePressEvent(QMouseEvent *event)
 {
@@ -33,10 +33,13 @@ void MapView::contextMenuEvent(QContextMenuEvent *event)
     QMenu menu;
     if(m_state == init)
     {
+
         if(m_isBuilding)
         {
             menu.addAction("select as source place");
             menu.addAction("select as destiantion place");
+            //======== this is set for debug ============
+            menu.addAction("get building id");
             m_isBuilding = false;
         }
     }
@@ -59,6 +62,11 @@ void MapView::contextMenuEvent(QContextMenuEvent *event)
     QAction *a = menu.exec(event->globalPos());
     if(a != nullptr)
     {
+        //=========== this is set for debug ==========
+        if(a->text() == "get building id")
+        {
+            std::cout << "the id of the building:" << m_selectedItem->getId() << std::endl;
+        }
         if(a->text() == "select as source place")
         {
             emit setSource(m_selectedItem);
@@ -138,7 +146,7 @@ void MapView::changeToInit()
     std::cout << "state changed to init" << std::endl;
 }
 
-MapView::MapView()
+MapView::MapView(QWidget *parent) : QGraphicsView(parent)
 {
     m_scale = 0.001;
     m_isBuilding = false;

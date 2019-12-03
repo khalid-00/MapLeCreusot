@@ -120,6 +120,7 @@ void SceneBuilder::drawRoute(std::vector<idType> refList)
         auto point = projection(m_model->getNodeLoaction(*(it)).lon(), m_model->getNodeLoaction(*(it)).lat());
         polyLine << point;
     }
+
     m_route->setPolygon(polyLine);
     // temporary z-value to make sure the route stays at the top of the view
     m_route->setZValue(200);

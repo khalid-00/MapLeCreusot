@@ -21,6 +21,7 @@
 #include <QMouseEvent>
 #include <QGraphicsView>
 #include <QObject>
+#include <QWidget>
 
 class MapView : public QGraphicsView
 {
@@ -53,7 +54,7 @@ public slots:
     void changeToInit();
 
 public:
-    MapView();
+    MapView(QWidget *parent = nullptr);
 
     ~MapView();
 };

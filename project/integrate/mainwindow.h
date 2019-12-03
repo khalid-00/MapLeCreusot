@@ -10,7 +10,7 @@
 #include "model.h"
 #include <QGraphicsView>
 #include <string>
-#include <MapView.h>
+#include <mapview.h>
 #include <QVBoxLayout>
 #include "SceneBuilder.h"
 #include <shortpath.h>
@@ -45,6 +45,7 @@ private:
   void loadFile(string );
   void resizeEvent(QResizeEvent *event);
   void viewSizeAdjust(QResizeEvent *event);
+  void sendCancelRoute();
   //    void wheelEvent(QWheelEvent *event);
 
 signals:
@@ -53,6 +54,7 @@ signals:
   void changeToSearchPlace();
   void changeToInit();
   void changeToSearch();
+  void cancelRoute();
 
 public slots:
   void getRoutePath(idType src, idType dest);
