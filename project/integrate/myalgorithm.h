@@ -29,6 +29,7 @@ class MyAlgorithm
 private:
   graph_t MyGraph2;
   unsigned int src;
+  bool emptyFlag = 1;
   vector <unsigned int> predecessors; // Vector to Store predecessors
   vector <double> distances;    // Vector of Edge Weights(Distances)
   vector <idType> ShortPath;   // My Shortest Path is a Vector of Vertices
@@ -44,6 +45,7 @@ public:
   Path getShortPath(GraphMap , idType);
   // function to get the Graph
   graph_t getGraph();
+  bool getFlag();
   //===============================================
   // Mutators
   void setGraph(graph_t);

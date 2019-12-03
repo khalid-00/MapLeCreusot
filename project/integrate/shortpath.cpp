@@ -23,7 +23,11 @@ ShortPath::ShortPath(idType Source1,idType Destination1, Model mModel)
   MyAlgorithm algo(builder.getGraph(),builder.getGraphMap(), Source_ID); //Start Node id
   //cout<<"\nAlgorithm Worked Done!"<<endl;
   //algo.PrintRawData();
-  setMyPath(algo.getShortPath(builder.getGraphMap(),Destination_ID)); // Target Node id
+  if (algo.getFlag()){
+       setMyPath(algo.getShortPath(builder.getGraphMap(),Destination_ID));
+    }
+  else cout << "please enter valid node\t"<<endl;
+  // Target Node id
   //-------------------------------------------------------------------
   //  printMyPath();
   //  cout<<"Path Size\t"<<mypath.size()<<endl;
