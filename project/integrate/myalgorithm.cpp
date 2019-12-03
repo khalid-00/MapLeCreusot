@@ -78,6 +78,7 @@ Path MyAlgorithm::getShortPath(GraphMap AnyGraphMap,idType destination2) {
   ResetShortPath();
   // if No path return Acacias Node as single Node in Path, so the Program Doesn't Crush
   ShortPath.emplace_back(1540689869);
+  emptyFlag = 0;
   return ShortPath;
   //throw std::runtime_error("Unreachable");
 }
@@ -85,6 +86,10 @@ Path MyAlgorithm::getShortPath(GraphMap AnyGraphMap,idType destination2) {
 // function to call the Graph
 graph_t MyAlgorithm::getGraph(){
   return MyGraph2;
+}
+// function to set empty flag
+bool MyAlgorithm::getFlag(){
+  return emptyFlag;
 }
 //===========================================================================
 // Mutators
