@@ -50,13 +50,8 @@ MainWindow::MainWindow(QWidget *parent)
   m_scale = 1;
 
   QLayout *map = layout();
-//  auto layout = new QVBoxLayout();
-//  layout->addWidget(MapWidget);
-  //ui->MapFrame->setLayout();
-  ui->MapWidget->setLayout(map);
   map->addWidget(m_mapView);
-  m_mapView->lower();
-  //this->setLayout(map);
+  this->setLayout(map);
 
   //    connecting signals and slots for UI
   connect(m_mapView, &MapView::setSource, m_sceneBuilder, &SceneBuilder::setSource);
@@ -239,15 +234,15 @@ void MainWindow::on_Navigate_Button_clicked()
 //-----------------------------------------------------------------
 void MainWindow::on_action_Open_File_triggered()
 {
-QString FileName = QFileDialog::getOpenFileName(this,tr("Open File"),"C://","OSM File (*.pbf)" );
-//cout << "File Name \t"<< FileName.toStdString() <<endl;
-string FilePath2 = FileName.toStdString();
-loadFile(FilePath2);
+  QString FileName = QFileDialog::getOpenFileName(this,tr("Open File"),"C://","OSM File (*.pbf)" );
+  //cout << "File Name \t"<< FileName.toStdString() <<endl;
+  string FilePath2 = FileName.toStdString();
+  loadFile(FilePath2);
 }
 //-----------------------------------------------------------------
 void MainWindow::on_actionQuit_triggered()
 {
-     QApplication::quit();
+  QApplication::quit();
 }
 //End
 //=================================================================
