@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>720</x>
-      <y>10</y>
+      <y>30</y>
       <width>401</width>
-      <height>241</height>
+      <height>261</height>
      </rect>
     </property>
     <property name="title">
@@ -340,6 +340,19 @@
       <string>                         Source</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="Cancel_Navigation">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>230</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Canncel</string>
+     </property>
+    </widget>
    </widget>
    <widget class="MapView" name="map">
     <property name="geometry">
@@ -358,7 +371,7 @@
      <x>0</x>
      <y>0</y>
      <width>1135</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuMenu">

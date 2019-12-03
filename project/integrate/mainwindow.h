@@ -31,8 +31,8 @@ private:
   vector<pair<QString,idType>> MyPlaces ;
   void fill_MyPlaces();
   //Initilaization of the Sourse Node, and Destination Node
-  idType SourceS = 1540689869;
-  idType DestinationD = 2019043458;//1544558413;
+  idType SourceS = 1545694404;
+  idType DestinationD = 1545694404;
   //End
   //=============================================
   bool m_leftMousePressed;
@@ -66,5 +66,6 @@ private slots:
   void on_Navigate_Button_clicked();
   void on_actionQuit_triggered();
   void on_action_Open_File_triggered();
+  void on_Cancel_Navigation_clicked();
 };
 #endif // MAINWINDOW_H
