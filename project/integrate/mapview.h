@@ -26,8 +26,15 @@
 class MapView : public QGraphicsView
 {
     Q_OBJECT
-private:
+
+public:
+    MapView(QWidget *parent = nullptr);
+
     enum userState{init, sourceSel, destSel, routing, search, null};
+
+    ~MapView();
+
+private:
     qreal m_scale;
     Multipolygon* m_selectedItem;
     bool m_isBuilding;
@@ -52,11 +59,9 @@ signals:
 public slots:
     void changeToSearch();
     void changeToInit();
+    void changeToRoute();
+    userState getUserState();
 
-public:
-    MapView(QWidget *parent = nullptr);
-
-    ~MapView();
 };
 
 

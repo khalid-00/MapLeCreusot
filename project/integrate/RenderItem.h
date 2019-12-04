@@ -52,6 +52,7 @@ static QColor getPolygonColor(polygonType type)
 static QColor getPathColor(roadType type)
 {
     switch(type) {
+    case Route:         return QColor{255, 0, 0};
         case Railway:       return QColor{100, 100, 100};
         case Motorway:      return QColor{226, 122, 143};
         case Trunk:         return QColor{245, 161, 136};
@@ -69,6 +70,7 @@ static QColor getPathColor(roadType type)
 static float getPathWidth(roadType type)
 {
     switch( type ) {
+        case Route:         return 7.f;
         case Railway:       return 6.f;
         case Motorway:      return 6.f;
         case Trunk:         return 6.f;
@@ -159,8 +161,8 @@ public:
     QWidget *widget) override
     {
 
-        Q_UNUSED(option);
-        Q_UNUSED(widget);
+        Q_UNUSED(option)
+        Q_UNUSED(widget)
         m_pen.setCapStyle(Qt::RoundCap);
         painter->setPen(m_pen);
         painter->drawPolyline(this->polygon());
@@ -179,6 +181,10 @@ public:
         m_pen.setBrush(getPathColor(rType));
         m_pen.setWidth(getPathWidth(rType)+3.0);
         setZValue(leisure + static_cast<int>(rType) * 0.1);
+        if(rType == Route)
+        {
+//            QGraphicsItem::setFlag(QGraphicsItem::ItemIgnoresTransformations,true);
+        }
     }
 
 };
@@ -219,13 +225,13 @@ public:
         this->setScale(2.5);
         QGraphicsItem::setFlag(QGraphicsItem::ItemIgnoresTransformations,true);
     }
-    ~Pin(){}
+    ~Pin() override{}
 
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
                QWidget *widget) override
     {
-        Q_UNUSED(option);
-        Q_UNUSED(widget);
+        Q_UNUSED(option)
+        Q_UNUSED(widget)
         painter->setBrush(m_brushColor);
         painter->drawPolygon(this->m_poly);
 
@@ -241,7 +247,7 @@ public:
         return;
     }
 
-    QRectF boundingRect() const
+    QRectF boundingRect() const override
     {
         return m_poly.boundingRect();
     }

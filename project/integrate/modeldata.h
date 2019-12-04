@@ -11,7 +11,7 @@
 #include <modelDataStructure.h>
 #include <boost/algorithm/string.hpp>
 #include <osmium/index/map/flex_mem.hpp>
-#include <modelDataHandler.h>
+//#include <modelDataHandler.h>
 #include <set>
 
 using namespace std;
@@ -147,7 +147,13 @@ public:
 
     bool isAmenityTypeExist(string name)
     {
-        return (m_AmenityType.count(name) != 0);
+        for(auto it = m_AmenityType.begin(); it != m_AmenityType.end(); it ++)
+        {
+            if(it->find(name) != string::npos)
+                return true;
+        }
+        return false;
+//        return (m_AmenityType.count(name) != 0);
 
     }
 

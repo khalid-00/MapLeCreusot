@@ -123,6 +123,7 @@ void SceneBuilder::drawRoute(std::vector<idType> refList)
 
     m_route->setPolygon(polyLine);
     // temporary z-value to make sure the route stays at the top of the view
+    m_route->setPenStyle(Route);
     m_route->setZValue(200);
     m_scene->addItem(m_route);
 }
@@ -153,10 +154,10 @@ void SceneBuilder::drawPointText()
     }
 }
 
-void SceneBuilder::cancelRoute()
-{
-    m_route->setVisible(false);
-}
+//void SceneBuilder::cancelRoute()
+//{
+//    m_route->setVisible(false);
+//}
 
 void SceneBuilder::setSource(Multipolygon *item)
 {
@@ -225,8 +226,17 @@ bool SceneBuilder::searchPlace(QString name)
                 if(qgraphicsitem_cast<Multipolygon *>(item))
                 {
                     auto casted = qgraphicsitem_cast<Multipolygon *>(item);
-                    drawPin(casted->getId(), casted->boundingRect().center());
-                    drawText(it->name[0], item->boundingRect().center());
+
+                    // avoid drawing multiple text and pin
+                    auto test = m_scene->itemAt(item->boundingRect().center(), QTransform());
+                    if(qgraphicsitem_cast<Multipolygon *>(test))
+                    {
+                        drawPin(casted->getId(), casted->boundingRect().center());
+                        if(it->name.size() != 0)
+                            drawText(it->name[0], item->boundingRect().center());
+                        else if(it->type.size() != 0)
+                            drawText(it->type, item->boundingRect().center());
+                    }
                 }
             }
             else
@@ -240,8 +250,15 @@ bool SceneBuilder::searchPlace(QString name)
                     tempPoly << point;
                 }
 
-                drawPin(it->id, tempPoly.boundingRect().center());
-                drawText(it->name[0], tempPoly.boundingRect().center());
+                auto test = m_scene->itemAt(tempPoly.boundingRect().center(), QTransform());
+                if(qgraphicsitem_cast<Multipolygon *>(test))
+                {
+                    drawPin(it->id, tempPoly.boundingRect().center());
+                    if(it->name.size() != 0)
+                        drawText(it->name[0], tempPoly.boundingRect().center());
+                    else if(it->type.size() != 0)
+                        drawText(it->type, tempPoly.boundingRect().center());
+                }
                 //drawText();
             }
         }
@@ -265,6 +282,11 @@ void SceneBuilder::cancel()
     }
     deleteContainer(m_pinContainer);
     deleteContainer(m_textContainer);
+    if(m_route != nullptr)
+    {
+        delete m_route;
+        m_route = nullptr;
+    }
 
     std::cout << "cancel slot connected" << std::endl;
 }

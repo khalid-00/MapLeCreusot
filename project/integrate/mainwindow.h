@@ -55,6 +55,7 @@ signals:
   void changeToInit();
   void changeToSearch();
   void cancelRoute();
+  void changeToRoute();
 
 public slots:
   void getRoutePath(idType src, idType dest);

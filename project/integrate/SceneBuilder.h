@@ -81,7 +81,7 @@ public:
     void drawPointText();
 
 
-    void cancelRoute();
+//    void cancelRoute();
 
 public slots:
     void setSource(Multipolygon* item);

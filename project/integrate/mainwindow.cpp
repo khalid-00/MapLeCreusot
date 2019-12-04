@@ -65,7 +65,11 @@ MainWindow::MainWindow(QWidget *parent)
     connect(m_sceneBuilder, &SceneBuilder::routeSrcAndDest, this, &MainWindow::getRoutePath);
     connect(this, &MainWindow::changeToInit, m_mapView, &MapView::changeToInit);
     connect(this, &MainWindow::changeToSearch, m_mapView, &MapView::changeToSearch);
+    connect(this, &MainWindow::changeToRoute, m_mapView, &MapView::changeToRoute);
+
+    //=========== cancel the drawing of the routing and change the state ==========
     connect(this, &MainWindow::cancelRoute, m_mapView, &MapView::changeToInit);
+    connect(this, &MainWindow::cancelRoute, m_sceneBuilder, &SceneBuilder::cancel);
     //    connect(this, )
 
     // this function should be connected to the UI tool bar
@@ -80,7 +84,8 @@ MainWindow::~MainWindow()
     delete ui;
     delete m_model;
 }
-//=====================================================================================
+
+//========================== edited by belal for Routing ==================================
 //Start
 void MainWindow::fill_MyPlaces(){
     MyPlaces.push_back(make_pair("Aldi Store",1545694404)); //1 Aldi
@@ -106,6 +111,8 @@ void MainWindow::fill_MyPlaces(){
 }
 //End
 //=====================================================================================
+
+
 void MainWindow::loadFile(string filePath)
 {
 
@@ -167,18 +174,11 @@ void MainWindow::viewSizeAdjust(QResizeEvent *event)
 // place belal's routing function in this slot
 void MainWindow::getRoutePath(idType src, idType dest)
 {
-    Path route;
-    ShortPath routeObj(src,dest,*m_model);
-    route = routeObj.getYourPath();
-    // belal's function to get path, and assigned it to route vector;
+//    this entry is deactivated because routing algorithm will crash if it can't find a route
+    emit cancelRoute();
 
-    emit drawRoute(route);
 }
 
-// place belal's routing cancel function here to emit the cancel signal
-//============================= to do ===================================
-
-//=======================================================================
 void MainWindow::getSearchName()
 {
     bool ok;
@@ -214,7 +214,8 @@ void MainWindow::getSearchName()
         }
     }
 }
-//=================================================================
+
+//===================== edited by Belal to add extra UI =========================
 //start
 void MainWindow::on_Source_QB_activated(const QString &arg1)
 {
@@ -234,9 +235,18 @@ void MainWindow::on_Destination_QB_activated(const QString &arg1)
 //-----------------------------------------------------------------
 void MainWindow::on_Navigate_Button_clicked()
 {
-    ShortPath route(SourceS,DestinationD,*m_model);
-    Path anypath = route.getYourPath();
-    m_sceneBuilder->drawRoute(anypath);
+    //edited by deng, added if statement to avoid crash
+    if(m_mapView->getUserState() != MapView::userState::null)
+    {
+        ShortPath route(SourceS,DestinationD,*m_model);
+        // added by deng to merge this to UI FSM
+        emit cancelRoute();
+        Path anypath = route.getYourPath();
+        m_sceneBuilder->drawRoute(anypath);
+        // added by deng to merge this to UI FSM
+        emit changeToRoute();
+
+    }
 }
 //-----------------------------------------------------------------
 void MainWindow::on_action_Open_File_triggered()
@@ -254,9 +264,14 @@ void MainWindow::on_actionQuit_triggered()
 //-----------------------------------------------------------------
 void MainWindow::on_Cancel_Navigation_clicked()
 {
-  Path anypath;
-  anypath.push_back(1545694404);
-  m_sceneBuilder->drawRoute(anypath);
+//  Path anypath;
+//  anypath.push_back(1545694404);
+//  m_sceneBuilder->drawRoute(anypath);
+
+    // edited by deng, to do this in a more systematic way
+    // avoid crashes before loading file
+    if(m_mapView->getUserState() != MapView::userState::null)
+        emit cancelRoute();
 }
 //End
 //=================================================================
