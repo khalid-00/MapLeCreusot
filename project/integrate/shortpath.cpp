@@ -40,10 +40,10 @@ ShortPath::~ShortPath(){}//Destructor
 Model ShortPath::getModel(){return OurModel;}
 idType ShortPath::getSource(){return Source_ID;}
 idType ShortPath::getDestination(){return Destination_ID;}
-vector <idType> ShortPath::getYourPath(){return mypath;}
+Path ShortPath::getYourPath(){return mypath;}
 //----------------------------------------------------------------
 //Mutator
-void ShortPath::setMyPath(vector<idType> ThePath){mypath = ThePath;}
+void ShortPath::setMyPath(Path ThePath){mypath = ThePath;}
 void ShortPath::setSource(idType Src){Source_ID = Src;}
 void ShortPath::setDestination(idType Des){Destination_ID = Des;}
 void ShortPath::setModel(Model YourModel){OurModel = YourModel;}
