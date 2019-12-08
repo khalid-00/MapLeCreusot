@@ -1,0 +1,158 @@
+PWD C:\Users\B_Homaidan\Desktop\Report
+INPUT C:\Users\B_Homaidan\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
+INPUT Report.tex
+OUTPUT Report.log
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\book.cls
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\book.cls
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\bk10.clo
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\bk10.clo
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\switch.def
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-english\english.ldf
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-english\english.ldf
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-english\english.ldf
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\txtbabel.def
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\makeidx.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\makeidx.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\index\index.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\index\index.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datetime\datetime.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datetime\datetime.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fmtcount.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fmtcount.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fcprefix.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fcprefix.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fcnumparser.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fcnumparser.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fc-english.def
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fc-english.def
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datetime\datetime-defaults.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datetime\datetime-defaults.sty
+OUTPUT Report.idx
+INPUT Report.aux
+INPUT Report.aux
+OUTPUT Report.aux
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr6.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+OUTPUT Report.pdf
+INPUT C:\Users\B_Homaidan\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT Report.toc
+INPUT Report.toc
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+OUTPUT Report.toc
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT GUI_NoMap.JPG
+INPUT .\GUI_NoMap.JPG
+INPUT .\GUI_NoMap.JPG
+INPUT .\GUI_NoMap.JPG
+INPUT .\GUI_NoMap.JPG
+INPUT GUI_Map0.JPG
+INPUT .\GUI_Map0.JPG
+INPUT .\GUI_Map0.JPG
+INPUT .\GUI_Map0.JPG
+INPUT .\GUI_Map0.JPG
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsl10.tfm
+INPUT GUI_Map1.JPG
+INPUT .\GUI_Map1.JPG
+INPUT .\GUI_Map1.JPG
+INPUT .\GUI_Map1.JPG
+INPUT .\GUI_Map1.JPG
+INPUT GUI_Map2.JPG
+INPUT .\GUI_Map2.JPG
+INPUT .\GUI_Map2.JPG
+INPUT .\GUI_Map2.JPG
+INPUT .\GUI_Map2.JPG
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmti10.tfm
+INPUT Report.aux
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsl10.pfb
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsl10.pfb
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti10.pfb
+INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti10.pfb

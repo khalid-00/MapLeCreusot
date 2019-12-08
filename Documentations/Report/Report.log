@@ -1,0 +1,430 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.3)  8 DEC 2019 17:59
+entering extended mode
+**./Report.tex
+(Report.tex
+LaTeX2e <2018-12-01>
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\book.cls
+"
+Document Class: book 2018/09/03 v1.4i Standard LaTeX document class
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\bk10.clo
+"
+File: bk10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsma
+th.sty"
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amste
+xt.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsge
+n.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbs
+y.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+)
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsop
+n.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks15
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\grap
+hicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyv
+al.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\grap
+hics.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig
+.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\
+graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\
+pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel
+.sty"
+Package: babel 2019/09/27 3.34 The Babel package
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\switc
+h.def"
+File: switch.def 2019/09/27 3.34 Babel switching mechanism
+)
+*************************************
+* Local config file bblopts.cfg used
+*
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopts
+.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-english
+\english.ldf"
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel
+.def"
+File: babel.def 2019/09/27 3.34 Babel common definitions
+\babel@savecnt=\count101
+\U@D=\dimen114
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtba
+bel.def")
+\bbl@dirlevel=\count102
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\makeidx.
+sty"
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/index\index.s
+ty"
+Package: index 2004/01/20 v4.2beta Improved index support (dmj)
+\@indexbox=\insert199
+\indexproofstyle=\toks20
+
+
+LaTeX Warning: Command \markboth  has changed.
+               Check if current package is valid.
+
+
+LaTeX Warning: Command \markright  has changed.
+               Check if current package is valid.
+
+)
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/datetime\date
+time.sty"
+Package: datetime 2015/03/20 v2.60 Date Time Package
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoo
+lbox.sty"
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count103
+)
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fmtcount\fmtc
+ount.sty"
+Package: fmtcount 2017/12/24 v3.05
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.s
+ty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xkeyval\xkeyv
+al.sty"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xke
+yval.tex"
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkv
+utils.tex"
+\XKV@toks=\toks21
+\XKV@tempa@toks=\toks22
+)
+\XKV@depth=\count104
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fmtcount\fcpr
+efix.sty"
+Package: fcprefix 2012/09/28
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fmtcount\fcnu
+mparser.sty"
+Package: fcnumparser 2017/06/15
+\fc@digit@counter=\count105
+))
+\c@padzeroesN=\count106
+\fc@tmpcatcode=\count107
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fmtcount\fc-e
+nglish.def"
+File: fc-english.def 2016/01/12
+)
+\@DT@modctr=\count108
+\@ordinalctr=\count109
+\@orgargctr=\count110
+\@strctr=\count111
+\@tmpstrctr=\count112
+\@DT@loopN=\count113
+\@DT@X=\count114
+)
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/datetime\date
+time-defaults.sty"
+Package: datetime-defaults 2013/09/10
+)
+\@day=\count115
+\@month=\count116
+\@year=\count117
+\c@HOUR=\count118
+\c@HOURXII=\count119
+\c@MINUTE=\count120
+\c@TOHOUR=\count121
+\c@TOMINUTE=\count122
+\c@SECOND=\count123
+\currenthour=\count124
+\currentminute=\count125
+\currentsecond=\count126
+Package datetime Info: No datetime.cfg file found, using default settings on in
+put line 308.
+\@dtctr=\count127
+\dayofyear=\count128
+\dayofweek=\count129
+LaTeX Info: Redefining \today on input line 736.
+\dt@a=\toks23
+\dt@b=\toks24
+)
+\idxtitle@default=\toks25
+\tf@default=\write3
+\openout3 = `Report.idx'.
+
+Package index Info: Writing index file Report.idx on input line 13.
+ (Report.aux)
+\openout1 = `Report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\s
+upp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count130
+\scratchdimen=\dimen115
+\scratchbox=\box29
+\nofMPsegments=\count131
+\nofMParguments=\count132
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count133
+\MPscratchDim=\dimen116
+\MPnumerator=\count134
+\makeMPintoPDFobject=\count135
+\everyMPtoPDFconversion=\toks27
+)
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epst
+opdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\in
+fwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfe
+xt.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kv
+definekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\lt
+xcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvop
+tions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kv
+setkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\et
+excmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\if
+luatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+))))
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pd
+ftexcmds.sty"
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\if
+pdf.sty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+) [1
+
+
+{C:/Users/B_Homaidan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (Repor
+t.toc)
+\tf@toc=\write4
+\openout4 = `Report.toc'.
+
+ [2
+
+] [3
+
+]
+Chapter 1.
+
+Overfull \hbox (4.87965pt too wide) in paragraph at lines 39--39
+[]\OT1/cmr/bx/n/14.4 Completeness of the Project (Sup-ported Fea-
+ []
+
+[4
+
+]
+Chapter 2.
+[5
+
+]
+<GUI_NoMap.JPG, id=22, 686.565pt x 413.1435pt>
+File: GUI_NoMap.JPG Graphic file (type jpg)
+<use GUI_NoMap.JPG>
+Package pdftex.def Info: GUI_NoMap.JPG  used on input line 81.
+(pdftex.def)             Requested size: 207.0021pt x 124.5618pt.
+<GUI_Map0.JPG, id=23, 685.3605pt x 414.348pt>
+File: GUI_Map0.JPG Graphic file (type jpg)
+<use GUI_Map0.JPG>
+Package pdftex.def Info: GUI_Map0.JPG  used on input line 90.
+(pdftex.def)             Requested size: 207.0021pt x 125.14624pt.
+
+Underfull \vbox (badness 1629) has occurred while \output is active []
+
+ [6 <./GUI_NoMap.JPG>]
+<GUI_Map1.JPG, id=28, 685.3605pt x 414.348pt>
+File: GUI_Map1.JPG Graphic file (type jpg)
+<use GUI_Map1.JPG>
+Package pdftex.def Info: GUI_Map1.JPG  used on input line 97.
+(pdftex.def)             Requested size: 207.0021pt x 125.14624pt.
+<GUI_Map2.JPG, id=29, 684.75826pt x 414.95026pt>
+File: GUI_Map2.JPG Graphic file (type jpg)
+<use GUI_Map2.JPG>
+Package pdftex.def Info: GUI_Map2.JPG  used on input line 104.
+(pdftex.def)             Requested size: 207.0021pt x 125.43578pt.
+ [7 <./GUI_Map0.JPG> <./GUI_Map1.JPG> <./GUI_Map2.JPG>] [8]
+Chapter 3.
+[9
+
+]
+Chapter 4.
+[10
+
+] [11
+
+] (Report.aux) ) 
+Here is how much of TeX's memory you used:
+ 3924 strings out of 492895
+ 56176 string characters out of 3121400
+ 152832 words of memory out of 3000000
+ 7759 multiletter control sequences out of 15000+200000
+ 11241 words of font info for 40 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,6n,37p,1001b,221s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/B_Homaidan/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmbx10.pfb><C:/Users/B_Homaidan/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/B_Homaidan/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/
+B_Homaidan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+12.pfb><C:/Users/B_Homaidan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr8.pfb><C:/Users/B_Homaidan/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/B_Homaidan/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Report.pdf (11 pages, 761365 bytes).
+PDF statistics:
+ 70 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+
