@@ -9,6 +9,15 @@
 \usepackage{makeidx}
 \usepackage{index}
 \usepackage{datetime}
+\usepackage{erewhon}
+\usepackage{lipsum}
+\usepackage{lettrine}
+\usepackage{GoudyIn}
+\usepackage[x11names]{xcolor} 
+%=============================================================
+\renewcommand{\LettrineFontHook}{\color{VioletRed4}\GoudyInfamily{}}
+\LettrineTextFont{\itshape}
+\setcounter{DefaultLines}{3}%
 %=============================================================
 \makeindex
 %=============================================================
@@ -17,7 +26,7 @@
 \newdateformat{monthdayyeardate}{
 	\monthname[\THEMONTH]~\THEDAY, \THEYEAR}
 %=============================================================
-% Begining of The Document
+% Beginning of The Document
 %=============================================================
 \begin{document}
 \author{Belal Hmedan \& Deng Jianning\\University Bourgogne}
@@ -32,12 +41,34 @@
 %=============================================================
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction} \markboth{INTRODUCTION}{}
-This is an Introduction
+\lettrine{B}{uilding} an Offline Map Software is a challenging project, because it requires a good knowledge in Geography, Mathematics, Graph Theory, and Computer Science.
+\\At the very beginning of such project many questions must be asked, such as: \\Which places should the Map covers? For which application the Map will be used?
+Which Information is necessary, and Which Information is useless so it can be \\Filtered, so total amount of Data will be reduced.
+\\This Project is a try to answer some of many questions that any computer science Student will ask while starting this kind of projects. Maybe we didn't answer all The questions because of time limit, but we hope that this project will be useful For Other students to get some answers , and to get the fastest way between two Locations, That's why we selected 20 Locations carefully to satisfy the daily needs Of Students like Universities, Cool Restaurant, Pharmacy, Hospital, Shopping Centers, Students Residences, etc.
+\\This project with all cool features and nice looking objects, is nothing more than "Hello Map", because Cartography is a great science developing everyday for both Civil and military use, and everyday there is changes on our planet leads to changes On the Map, starting from Environmental changes, and not ending by Human-Made changes. 
+
 %=============================================================
 \chapter{Project Description}
+%=============================================================
 \section{Goal of the Project}
-\section{Completeness of the Project (Supported Features)}
-\section{Dependencies and References}
+The goal of this project is to develop a software to locate (and rate) various buildings, such as schools, university buildings, major offices, hospitals, various shops, cool restaurants, streets, roads, parks, and other interesting points in Le-Creusot.
+The key idea is to develop a software to visualize Le-Creusot, its streets, some
+buildings, roads, and parks, in which the user can perform several actions, such as asking for an itinerary between two (or passing through more) points.
+%=============================================================
+\section{Completeness of the Project}
+%-------------------------------------------------------------
+\subsection{Place Locating}
+Twenty locations were provided on this project, and there is ability to add many other places due to requirements, but user can't add places, only programmer.
+User's privilege on this stage of the project is limited to chose only from a list of those twenty places.
+% Deng can say something here.
+%-------------------------------------------------------------
+\subsection{Place Rating}
+This Feature isn't added yet, but it maybe available in next releases.
+%-------------------------------------------------------------
+\subsection{Routing}
+Routing in this stage only by foot, expanding travel Methods to car, bicycle, and Train is possible in the following releases. 
+%=============================================================
+\section{Dependencies}
 Apart from STL, I’m using Boost Graph Library (BGL), which in turn depends on other Boost Library: Property Map, which in turn depends on other Boost Libraries, so I included the whole Boost Libraries at once.
 \section{Data Sets Introduction}
 %=============================================================
@@ -67,7 +98,10 @@ This Class is just to reduce amount of code in the main window, it doesn’t do 
 
 %=============================================================
 \section{Data Manipulation}
+
+%=============================================================
 \section{Rendering}
+
 %============================================================
 \section{Routing}
 Routing on this approach is just on foot, it’s possible to add more transport methods later using Tag filtering, building different transport maps, Vertices, and Edges, but unfortunately time was short for this project ! .
@@ -91,7 +125,7 @@ After you select your Map, the Software loads the map File showing the Map.
 %\includegraphics[width=.6\textwidth,natwidth=1200,natheight=700]{GUI_Map0.JPG}
 \end{center}
 %------------------------------------------------------------
-The Dropdown lists Source, and Destination contains 20 places for each of them, All on Le Creusot City, where you can select your start point, and destination.
+The Drop-down lists Source, and Destination contains 20 places for each of them, All on Le Creusot City, where you can select your start point, and destination.
 %------------------------------------------------------------
 \begin{center}
 \includegraphics[width=.6\textwidth]{GUI_Map1.JPG}
@@ -108,25 +142,51 @@ by clicking on Navigate Button, the Shortest Path will be drawn by Red , so you 
 Cancel button is to hide that path, and you can choose again your start point and target, so your path again will be drawn for you.
 To Finish, you can select (Menu - Quit) to exit the Software.
 %=============================================================
-\section{problems during implementation:}
-%=============================================================
+\section{Difficulties during implementation:}
 There is two kind of Difficulties here:
-\subsection{Problems we got rid of it:} 
+%-------------------------------------------------------------
+\subsection{Difficulties we got rid of it:} 
+%*************************************************************
 \subsubsection{First Difficulty was CMake didn’t find some libraries:}
 specially Boost Library, later we excluded Cmake, we depended on Headers only to implement our plan.
+%*************************************************************
 \subsubsection{Second Difficulty was that Edges can’t be built using idType Nodes:} the solution for that was mapping the idType Nodes to unsigned int indexes through a map, so each node has ID, and Vertex Number.
+%*************************************************************
 \subsubsection{Third one is Redundancy of Nodes in different Ways:} the solution was to compare each node of way to the map we built as solution to problem1.2, so if the node already found, we don’t add it to our map, instead we just call it and get Node index.
-
+%-------------------------------------------------------------
 \subsection{Difficulties we can solve, but it needs more time:}
+%*************************************************************
 \subsubsection{1.Supporting Different Travel Method.}
+%*************************************************************
 \subsubsection{2.Building Directional Graph instead of Bidirectional one.}
+%*************************************************************
 \subsubsection{3.Adding Reviews, and stars options to the GUI.}
+%*************************************************************
 \subsubsection{4.Adding locations on the Map.}
+%-------------------------------------------------------------
+\subsection{Unexpected Difficulties}
+Losing member of the team at critical time of the project doubled the responsibilities to do more than what we have already planned to do, and make us work under pressure in some parts of the project which we didn't have ideas about it before.
 %=============================================================
 \chapter{Project Management}
+%=============================================================
 \section{Overview of the Project Planning}
+We Received the Project on 30Th of September,it took us about 2 weeks to team up in a group of 3 students, then we started The Research for the Project since 15Th of October, Research for this project took 3 weeks until 6Th of November, There was many choices, and due to strict conditions such as: the Project should work under different operating systems, we excluded promising solutions such as "Libsmscout" which was easy to use Library with advanced features, but it doesn't work on Windows, only Linux, that lead us to more complicated choices such as "Libosmium" and "Boost" Libraries.
+The Implementation started on the 6Th of November, each student worked on different part of the project: "Data Manipulation and Map Rendering" for Deng, "Shortest Path Algorithm" for Belal, and "Graphical User Interface" for Our Third Partner.
+Ten Days later At 16Th of November Deng Proposed Three Solutions for dealing with the Project:
+\\ \textbf{}Solution 1: Using one-for-all library.
+\\ \textbf{}Solution 2: Using OSM data access library.
+\\ \textbf{}Solution 3: Display the map using Image.
+At that Point Belal and Deng Agreed on the Second Solution, because we want to propose something different and more advanced than the Image.
+Our Partner preferred to go on different Direction with Image Solution, so we had to work on the project as a team of two members only !.
+Following the advice to "Expect what is Unexpected " we reduced the project size and features so we can finish it before Deadline.
+A week later, on 24Th of November we had our first working project with Minimum features available, a week later on the 1st of December We did a simple GUI to deal with our Map.
+Writing The Documentation took a week until 7Th of December, and Writing the Report in Latex took another week up to 14Th of December, so We did it on time.
+
+%-------------------------------------------------------------
 \section{Work Schedules}
+%*************************************************************
 \subsection{Plans VS Actual}
+%-------------------------------------------------------------
 \section{Conclusion}
 %=============================================================
 \chapter{Summary}
