@@ -1,264 +1,224 @@
-PWD D:\Saudi_CV\Vibot\Semster_1\1-Software_Engineering\Project\cpp_project\Documentations\Report
-INPUT C:\Users\B_Homaidan\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT Report.tex
-OUTPUT Report.log
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\book.cls
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\book.cls
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\bk10.clo
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\bk10.clo
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\switch.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-english\english.ldf
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-english\english.ldf
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-english\english.ldf
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\txtbabel.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\makeidx.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\makeidx.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\index\index.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\index\index.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datetime\datetime.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datetime\datetime.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fmtcount.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fmtcount.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fcprefix.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fcprefix.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fcnumparser.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fcnumparser.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fc-english.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fc-english.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datetime\datetime-defaults.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datetime\datetime-defaults.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\erewhon\erewhon.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\erewhon\erewhon.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ly1\ly1enc.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ly1\ly1enc.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ly1enc.dfu
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ly1enc.dfu
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmr8t.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\textcomp.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\textcomp.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1enc.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1enc.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1enc.dfu
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1enc.dfu
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mweights\mweights.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mweights\mweights.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mweights\mweights.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fontaxes\fontaxes.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fontaxes\fontaxes.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fontaxes\fontaxes.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\expl3-code.tex
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\expl3-code.tex
-INPUT .\nul:.tex
-INPUT .\nul:.tex
-INPUT .\nul:.tex
-INPUT .\nul:.tex
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\unicode-data\UnicodeData.txt
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\unicode-data\UnicodeData.txt
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\l3deprecation.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\l3deprecation.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lipsum\lipsum.ltd.tex
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lipsum\lipsum.ltd.tex
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lettrine\lettrine.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lettrine\lettrine.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\minifp\minifp.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\minifp\minifp.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lettrine\lettrine.cfg
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lettrine\lettrine.cfg
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\cfr-initials\GoudyIn.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\cfr-initials\GoudyIn.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\initials\GoudyIn.fd
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\x11nam.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\x11nam.def
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmrc8t.tfm
-OUTPUT Report.idx
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\erewhon\t1erewhon-tlf.fd
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\erewhon\t1erewhon-tlf.fd
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Regular-tlf-t1.tfm
-INPUT Report.aux
-INPUT Report.aux
-OUTPUT Report.aux
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ly1\ly1ptm.fd
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ly1\ly1ptm.fd
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Regular-tlf-t1.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Bold-tlf-t1.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Regular-tlf-t1.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr8.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr6.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi12.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi8.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi6.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Regular-tlf-t1.tfm
-OUTPUT Report.pdf
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\erewhon\Erewhon-Bold-tlf-t1.vf
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Bold-tlf-t1--base.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\erewhon\Erewhon-Regular-tlf-t1.vf
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Regular-tlf-t1--base.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\erewhon\Erewhon-Regular-tlf-t1.vf
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Regular-tlf-t1--base.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Regular-tlf-t1.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Bold-tlf-t1.tfm
-INPUT Report.toc
-INPUT Report.toc
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Bold-tlf-t1.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-OUTPUT Report.toc
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\erewhon\Erewhon-Bold-tlf-t1.vf
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Bold-tlf-t1--base.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\erewhon\Erewhon-Bold-tlf-t1.vf
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Bold-tlf-t1--base.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\erewhon\Erewhon-Regular-tlf-t1.vf
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Regular-tlf-t1--base.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Regular-tlf-sc-t1.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\initials\GoudyIn.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\initials\GoudyIn.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\initials\GoudyIn.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\erewhon\Erewhon-Regular-tlf-sc-t1.vf
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Regular-tlf-sc-t1--base.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Regular-tlf-t1.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Bold-tlf-t1.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Regular-tlf-t1.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Bold-tlf-t1.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Bold-tlf-t1.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\erewhon\Erewhon-Bold-tlf-t1.vf
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Bold-tlf-t1--base.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\erewhon\Erewhon-Bold-tlf-t1.vf
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Bold-tlf-t1--base.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\erewhon\Erewhon-Bold-tlf-t1.vf
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Bold-tlf-t1--base.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-RegularSlanted-tlf-t1.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\erewhon\Erewhon-RegularSlanted-tlf-t1.vf
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-RegularSlanted-tlf-t1--base.tfm
-INPUT GUI_NoMap.JPG
-INPUT .\GUI_NoMap.JPG
-INPUT .\GUI_NoMap.JPG
-INPUT .\GUI_NoMap.JPG
-INPUT .\GUI_NoMap.JPG
-INPUT GUI_Map0.JPG
-INPUT .\GUI_Map0.JPG
-INPUT .\GUI_Map0.JPG
-INPUT .\GUI_Map0.JPG
-INPUT .\GUI_Map0.JPG
-INPUT GUI_Map1.JPG
-INPUT .\GUI_Map1.JPG
-INPUT .\GUI_Map1.JPG
-INPUT .\GUI_Map1.JPG
-INPUT .\GUI_Map1.JPG
-INPUT GUI_Map2.JPG
-INPUT .\GUI_Map2.JPG
-INPUT .\GUI_Map2.JPG
-INPUT .\GUI_Map2.JPG
-INPUT .\GUI_Map2.JPG
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Italic-tlf-t1.tfm
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\erewhon\Erewhon-Italic-tlf-t1.vf
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\erewhon\Erewhon-Italic-tlf-t1--base.tfm
-INPUT Report.aux
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\enc\dvips\erewhon\zut1_iwqvab.enc
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\enc\dvips\erewhon\zut1_5aq3nb.enc
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\erewhon\Erewhon-Bold.pfb
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\erewhon\Erewhon-Bold.pfb
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\erewhon\Erewhon-Italic.pfb
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\erewhon\Erewhon-Italic.pfb
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\erewhon\Erewhon-Regular.pfb
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\erewhon\Erewhon-Regular.pfb
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\erewhon\Erewhon-RegularSlanted.pfb
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\erewhon\Erewhon-RegularSlanted.pfb
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\initials\GoudyIn.pfb
-INPUT C:\Users\B_Homaidan\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\initials\GoudyIn.pfb
+PWD /home/dj/git/cpp_project/Documentations/Report
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT /home/dj/git/cpp_project/Documentations/Report/Report.tex
+OUTPUT /home/dj/git/cpp_project/Documentations/Report/Report.log
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/index/index.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/index/index.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/datetime/datetime.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/datetime/datetime.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/fmtcount/fmtcount.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/fmtcount/fmtcount.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcprefix.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcprefix.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/fmtcount/fc-english.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/fmtcount/fc-english.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/datetime/datetime-defaults.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/datetime/datetime-defaults.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/erewhon/erewhon.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/erewhon/erewhon.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/ly1/ly1enc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/ly1/ly1enc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/mweights/mweights.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/mweights/mweights.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/mweights/mweights.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/fontaxes/fontaxes.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/fontaxes/fontaxes.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/fontaxes/fontaxes.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/lettrine/lettrine.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/lettrine/lettrine.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/lettrine/lettrine.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/lettrine/lettrine.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/cfr-initials/GoudyIn.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/cfr-initials/GoudyIn.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/initials/GoudyIn.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/x11nam.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/x11nam.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmrc8t.tfm
+OUTPUT /home/dj/git/cpp_project/Documentations/Report/Report.idx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/erewhon/T1erewhon-TLF.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/erewhon/T1erewhon-TLF.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Regular-tlf-t1.tfm
+INPUT /home/dj/git/cpp_project/Documentations/Report/Report.aux
+INPUT /home/dj/git/cpp_project/Documentations/Report/Report.aux
+OUTPUT /home/dj/git/cpp_project/Documentations/Report/Report.aux
+INPUT /usr/share/texlive/texmf-dist/tex/latex/ly1/ly1ptm.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/ly1/ly1ptm.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Regular-tlf-t1.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Bold-tlf-t1.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Regular-tlf-t1.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Regular-tlf-t1.tfm
+OUTPUT /home/dj/git/cpp_project/Documentations/Report/Report.pdf
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/erewhon/Erewhon-Bold-tlf-t1.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Bold-tlf-t1--base.tfm
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/erewhon/Erewhon-Regular-tlf-t1.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Regular-tlf-t1--base.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/erewhon/Erewhon-Regular-tlf-t1.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Regular-tlf-t1--base.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Regular-tlf-t1.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Bold-tlf-t1.tfm
+INPUT /home/dj/git/cpp_project/Documentations/Report/Report.toc
+INPUT /home/dj/git/cpp_project/Documentations/Report/Report.toc
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Bold-tlf-t1.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+OUTPUT /home/dj/git/cpp_project/Documentations/Report/Report.toc
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/erewhon/Erewhon-Bold-tlf-t1.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Bold-tlf-t1--base.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/erewhon/Erewhon-Bold-tlf-t1.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Bold-tlf-t1--base.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/erewhon/Erewhon-Regular-tlf-t1.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Regular-tlf-t1--base.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Regular-tlf-sc-t1.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/initials/GoudyIn.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/initials/GoudyIn.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/initials/GoudyIn.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/erewhon/Erewhon-Regular-tlf-sc-t1.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Regular-tlf-sc-t1--base.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Regular-tlf-t1.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Bold-tlf-t1.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Regular-tlf-t1.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Bold-tlf-t1.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Bold-tlf-t1.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/erewhon/Erewhon-Bold-tlf-t1.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Bold-tlf-t1--base.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/erewhon/Erewhon-Bold-tlf-t1.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Bold-tlf-t1--base.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/erewhon/Erewhon-Bold-tlf-t1.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Bold-tlf-t1--base.tfm
+INPUT /home/dj/git/cpp_project/Documentations/Report/GUI_NoMap.JPG
+INPUT /home/dj/git/cpp_project/Documentations/Report/GUI_NoMap.JPG
+INPUT /home/dj/git/cpp_project/Documentations/Report/GUI_NoMap.JPG
+INPUT /home/dj/git/cpp_project/Documentations/Report/GUI_Map0.JPG
+INPUT /home/dj/git/cpp_project/Documentations/Report/GUI_Map0.JPG
+INPUT /home/dj/git/cpp_project/Documentations/Report/GUI_Map0.JPG
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-RegularSlanted-tlf-t1.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/erewhon/Erewhon-RegularSlanted-tlf-t1.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-RegularSlanted-tlf-t1--base.tfm
+INPUT /home/dj/git/cpp_project/Documentations/Report/GUI_Map1.JPG
+INPUT /home/dj/git/cpp_project/Documentations/Report/GUI_Map1.JPG
+INPUT /home/dj/git/cpp_project/Documentations/Report/GUI_Map1.JPG
+INPUT /home/dj/git/cpp_project/Documentations/Report/GUI_Map2.JPG
+INPUT /home/dj/git/cpp_project/Documentations/Report/GUI_Map2.JPG
+INPUT /home/dj/git/cpp_project/Documentations/Report/GUI_Map2.JPG
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Italic-tlf-t1.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/erewhon/Erewhon-Italic-tlf-t1.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/erewhon/Erewhon-Italic-tlf-t1--base.tfm
+INPUT /home/dj/git/cpp_project/Documentations/Report/Report.aux
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/erewhon/zut1_5gd3w7.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/erewhon/zut1_7onvyn.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/erewhon/zut1_geqeyh.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/erewhon/Erewhon-Bold.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/erewhon/Erewhon-Italic.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/erewhon/Erewhon-Regular.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/erewhon/Erewhon-RegularSlanted.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/initials/GoudyIn.pfb

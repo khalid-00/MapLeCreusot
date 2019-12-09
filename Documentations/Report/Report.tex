@@ -14,6 +14,7 @@
 \usepackage{lettrine}
 \usepackage{GoudyIn}
 \usepackage[x11names]{xcolor} 
+\usepackage{indentfirst}
 %=============================================================
 \renewcommand{\LettrineFontHook}{\color{VioletRed4}\GoudyInfamily{}}
 \LettrineTextFont{\itshape}
@@ -41,25 +42,56 @@
 %=============================================================
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction} \markboth{INTRODUCTION}{}
-\lettrine{B}{uilding} an Offline Map Software is a challenging project, because it requires a good knowledge in Geography, Mathematics, Graph Theory, and Computer Science.
-\\At the very beginning of such project many questions must be asked, such as: \\Which places should the Map covers? For which application the Map will be used?
-Which Information is necessary, and Which Information is useless so it can be \\Filtered, so total amount of Data will be reduced.
-\\This Project is a try to answer some of many questions that any computer science Student will ask while starting this kind of projects. Maybe we didn't answer all The questions because of time limit, but we hope that this project will be useful For Other students to get some answers , and to get the fastest way between two Locations, That's why we selected 20 Locations carefully to satisfy the daily needs Of Students like Universities, Cool Restaurant, Pharmacy, Hospital, Shopping Centers, Students Residences, etc.
-\\This project with all cool features and nice looking objects, is nothing more than "Hello Map", because Cartography is a great science developing everyday for both Civil and military use, and everyday there is changes on our planet leads to changes On the Map, starting from Environmental changes, and not ending by Human-Made changes. 
+\lettrine{B}{uilding} an Offline Map Software is a challenging project, 
+because it requires a good knowledge in Geography, Mathematics, 
+Graph Theory, and Computer Science.\\\\
+
+At the very beginning of such project many questions must be asked, such as: 
+What places should the Map covers? For which application the Map will be used?
+Which Information is necessary, and which information is useless so it can be 
+filtered, so total amount of Data will be reduced.\\\\
+
+This Project is a try to answer some of many questions that any computer 
+science Student will ask while starting this kind of projects. Maybe we 
+didn't answer all The questions because of time limit, but we hope that 
+this project will be useful For Other students to get some answers , and 
+to get the fastest way between two Locations, That's why we selected 20 
+Locations carefully to satisfy the daily needs Of Students like Universities, 
+Cool Restaurant, Pharmacy, Hospital, Shopping Centers, Students Residences, etc.\\\\
+
+This project with all cool features and nice looking objects, is nothing more 
+than "Hello Map", because Cartography is a great science developing everyday 
+for both Civil and military use, and everyday there is changes on our planet 
+leads to changes On the Map, starting from Environmental changes, and not ending 
+by Human-Made changes. 
 
 %=============================================================
 \chapter{Project Description}
 %=============================================================
 \section{Goal of the Project}
-The goal of this project is to develop a software to locate (and rate) various buildings, such as schools, university buildings, major offices, hospitals, various shops, cool restaurants, streets, roads, parks, and other interesting points in Le-Creusot.
-The key idea is to develop a software to visualize Le-Creusot, its streets, some
-buildings, roads, and parks, in which the user can perform several actions, such as asking for an itinerary between two (or passing through more) points.
+
+% \begin{enumerate}
+% 	\item The first item
+% 	\item The second item
+% 	\item The third etc 
+% \end{enumerate}
+
+The goal of this project is to develop a software to show the whole picture of Le Creusot city. 
+Apart from that, it also locates various amenities, such as schools, university 
+buildings, major offices, hospitals, various shops, cool restaurants, streets, roads, parks, 
+and other interesting points in Le-Creusot. With this map, user can search, rate and comment 
+for the places of interests and do routing to get there. I the follow section, a more clearly picture
+of the goals and achievements of this picture will be shown.
+
 %=============================================================
 \section{Completeness of the Project}
 %-------------------------------------------------------------
 \subsection{Place Locating}
-Twenty locations were provided on this project, and there is ability to add many other places due to requirements, but user can't add places, only programmer.
-User's privilege on this stage of the project is limited to chose only from a list of those twenty places.
+
+
+
+% Twenty locations were provided on this project, and there is ability to add many other places due to requirements, but user can't add places, only programmer.
+% User's privilege on this stage of the project is limited to chose only from a list of those twenty places.
 % Deng can say something here.
 %-------------------------------------------------------------
 \subsection{Place Rating}
@@ -71,6 +103,13 @@ Routing in this stage only by foot, expanding travel Methods to car, bicycle, an
 \section{Dependencies}
 Apart from STL, I’m using Boost Graph Library (BGL), which in turn depends on other Boost Library: Property Map, which in turn depends on other Boost Libraries, so I included the whole Boost Libraries at once.
 \section{Data Sets Introduction}
+
+
+
+
+
+
+
 %=============================================================
 \chapter{Code Design and Structure}
 %=============================================================

@@ -1,36 +1,36 @@
 \babel@toc {english}{}
-\contentsline {chapter}{Introduction}{3}% 
-\contentsline {chapter}{\numberline {1}Project Description}{4}% 
-\contentsline {section}{\numberline {1.1}Goal of the Project}{4}% 
-\contentsline {section}{\numberline {1.2}Completeness of the Project}{4}% 
-\contentsline {subsection}{\numberline {1.2.1}Place Locating}{4}% 
-\contentsline {subsection}{\numberline {1.2.2}Place Rating}{4}% 
-\contentsline {subsection}{\numberline {1.2.3}Routing}{4}% 
-\contentsline {section}{\numberline {1.3}Dependencies}{4}% 
-\contentsline {section}{\numberline {1.4}Data Sets Introduction}{5}% 
-\contentsline {chapter}{\numberline {2}Code Design and Structure}{6}% 
-\contentsline {section}{\numberline {2.1}Algorithm and Shortest Path Design}{6}% 
-\contentsline {subsection}{\numberline {2.1.1} MyGraphBuilder Class:}{6}% 
-\contentsline {subsection}{\numberline {2.1.2} MyAlgorithm Class:}{6}% 
-\contentsline {subsection}{\numberline {2.1.3} ShortPath Class:}{7}% 
-\contentsline {section}{\numberline {2.2}Data Manipulation}{7}% 
-\contentsline {section}{\numberline {2.3}Rendering}{7}% 
-\contentsline {section}{\numberline {2.4}Routing}{7}% 
-\contentsline {section}{\numberline {2.5}GUI}{7}% 
-\contentsline {section}{\numberline {2.6}Difficulties during implementation:}{8}% 
-\contentsline {subsection}{\numberline {2.6.1}Difficulties we got rid of it:}{9}% 
-\contentsline {subsubsection}{First Difficulty was CMake didn\IeC {\textquoteright }t find some libraries:}{9}% 
-\contentsline {subsubsection}{Second Difficulty was that Edges can\IeC {\textquoteright }t be built using idType Nodes:}{9}% 
-\contentsline {subsubsection}{Third one is Redundancy of Nodes in different Ways:}{9}% 
-\contentsline {subsection}{\numberline {2.6.2}Difficulties we can solve, but it needs more time:}{9}% 
-\contentsline {subsubsection}{1.Supporting Different Travel Method.}{9}% 
-\contentsline {subsubsection}{2.Building Directional Graph instead of Bidirectional one.}{9}% 
-\contentsline {subsubsection}{3.Adding Reviews, and stars options to the GUI.}{9}% 
-\contentsline {subsubsection}{4.Adding locations on the Map.}{9}% 
-\contentsline {subsection}{\numberline {2.6.3}Unexpected Difficulties}{9}% 
-\contentsline {chapter}{\numberline {3}Project Management}{10}% 
-\contentsline {section}{\numberline {3.1}Overview of the Project Planning}{10}% 
-\contentsline {section}{\numberline {3.2}Work Schedules}{10}% 
-\contentsline {subsection}{\numberline {3.2.1}Plans VS Actual}{10}% 
-\contentsline {section}{\numberline {3.3}Conclusion}{10}% 
-\contentsline {chapter}{\numberline {4}Summary}{11}% 
+\contentsline {chapter}{Introduction}{3}
+\contentsline {chapter}{\numberline {1}Project Description}{4}
+\contentsline {section}{\numberline {1.1}Goal of the Project}{4}
+\contentsline {section}{\numberline {1.2}Completeness of the Project}{4}
+\contentsline {subsection}{\numberline {1.2.1}Place Locating}{4}
+\contentsline {subsection}{\numberline {1.2.2}Place Rating}{4}
+\contentsline {subsection}{\numberline {1.2.3}Routing}{4}
+\contentsline {section}{\numberline {1.3}Dependencies}{4}
+\contentsline {section}{\numberline {1.4}Data Sets Introduction}{4}
+\contentsline {chapter}{\numberline {2}Code Design and Structure}{5}
+\contentsline {section}{\numberline {2.1}Algorithm and Shortest Path Design}{5}
+\contentsline {subsection}{\numberline {2.1.1} MyGraphBuilder Class:}{5}
+\contentsline {subsection}{\numberline {2.1.2} MyAlgorithm Class:}{5}
+\contentsline {subsection}{\numberline {2.1.3} ShortPath Class:}{6}
+\contentsline {section}{\numberline {2.2}Data Manipulation}{6}
+\contentsline {section}{\numberline {2.3}Rendering}{6}
+\contentsline {section}{\numberline {2.4}Routing}{6}
+\contentsline {section}{\numberline {2.5}GUI}{6}
+\contentsline {section}{\numberline {2.6}Difficulties during implementation:}{7}
+\contentsline {subsection}{\numberline {2.6.1}Difficulties we got rid of it:}{8}
+\contentsline {subsubsection}{First Difficulty was CMake didn’t find some libraries:}{8}
+\contentsline {subsubsection}{Second Difficulty was that Edges can’t be built using idType Nodes:}{8}
+\contentsline {subsubsection}{Third one is Redundancy of Nodes in different Ways:}{8}
+\contentsline {subsection}{\numberline {2.6.2}Difficulties we can solve, but it needs more time:}{8}
+\contentsline {subsubsection}{1.Supporting Different Travel Method.}{8}
+\contentsline {subsubsection}{2.Building Directional Graph instead of Bidirectional one.}{8}
+\contentsline {subsubsection}{3.Adding Reviews, and stars options to the GUI.}{8}
+\contentsline {subsubsection}{4.Adding locations on the Map.}{8}
+\contentsline {subsection}{\numberline {2.6.3}Unexpected Difficulties}{8}
+\contentsline {chapter}{\numberline {3}Project Management}{9}
+\contentsline {section}{\numberline {3.1}Overview of the Project Planning}{9}
+\contentsline {section}{\numberline {3.2}Work Schedules}{9}
+\contentsline {subsection}{\numberline {3.2.1}Plans VS Actual}{9}
+\contentsline {section}{\numberline {3.3}Conclusion}{9}
+\contentsline {chapter}{\numberline {4}Summary}{10}
