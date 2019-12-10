@@ -1,7 +1,7 @@
 %=============================================================
 % Header, Cover, and Preamble
 %=============================================================
-\documentclass[a4paper,english]{book}
+\documentclass[a4paper, 12pt, english]{book}
 %=============================================================
 \usepackage{amsmath} %use package here for formulas, maybe needed
 \usepackage{graphicx} % This for Images
@@ -15,6 +15,24 @@
 \usepackage{GoudyIn}
 \usepackage[x11names]{xcolor} 
 \usepackage{indentfirst}
+\usepackage{enumitem,amssymb}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usetikzlibrary{trees}
+\usepackage[a4paper, inner=1.7cm, outer=2.7cm, top=2cm, bottom=2cm]{geometry}
+
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+\hspace{-2.5pt}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
+
+
 %=============================================================
 \renewcommand{\LettrineFontHook}{\color{VioletRed4}\GoudyInfamily{}}
 \LettrineTextFont{\itshape}
@@ -44,12 +62,12 @@
 \addcontentsline{toc}{chapter}{Introduction} \markboth{INTRODUCTION}{}
 \lettrine{B}{uilding} an Offline Map Software is a challenging project, 
 because it requires a good knowledge in Geography, Mathematics, 
-Graph Theory, and Computer Science.\\\\
+Graph Theory, and Computer Science.\\
 
 At the very beginning of such project many questions must be asked, such as: 
 What places should the Map covers? For which application the Map will be used?
 Which Information is necessary, and which information is useless so it can be 
-filtered, so total amount of Data will be reduced.\\\\
+filtered, so total amount of Data will be reduced.\\
 
 This Project is a try to answer some of many questions that any computer 
 science Student will ask while starting this kind of projects. Maybe we 
@@ -57,7 +75,7 @@ didn't answer all The questions because of time limit, but we hope that
 this project will be useful For Other students to get some answers , and 
 to get the fastest way between two Locations, That's why we selected 20 
 Locations carefully to satisfy the daily needs Of Students like Universities, 
-Cool Restaurant, Pharmacy, Hospital, Shopping Centers, Students Residences, etc.\\\\
+Cool Restaurant, Pharmacy, Hospital, Shopping Centers, Students Residences, etc.\\
 
 This project with all cool features and nice looking objects, is nothing more 
 than "Hello Map", because Cartography is a great science developing everyday 
@@ -68,7 +86,7 @@ by Human-Made changes.
 %=============================================================
 \chapter{Project Description}
 %=============================================================
-\section{Goal of the Project}
+\section{Overview of the Project}
 
 % \begin{enumerate}
 % 	\item The first item
@@ -76,33 +94,125 @@ by Human-Made changes.
 % 	\item The third etc 
 % \end{enumerate}
 
-The goal of this project is to develop a software to show the whole picture of Le Creusot city. 
-Apart from that, it also locates various amenities, such as schools, university 
-buildings, major offices, hospitals, various shops, cool restaurants, streets, roads, parks, 
-and other interesting points in Le-Creusot. With this map, user can search, rate and comment 
-for the places of interests and do routing to get there. I the follow section, a more clearly picture
-of the goals and achievements of this picture will be shown.
+The goal of this project is to develop a software to show the whole picture of Le Creusot city. Apart from that, it also locates various amenities, such as schools, university buildings, major offices, hospitals, various shops, cool restaurants, streets, roads, parks, and other interesting points in Le-Creusot. With this map, user can search, rate and comment for the places of interests and do routing to get there. I the follow section, a more clear picture of the goals and achievements of this picture will be shown. \\
+
+This project would be a great opportunity for us to practice and get a little bit more familiar with the C++. Besides, it's also a chance for us to project management. This two parts of contents will also be explain in the following.
+
+
+
+\section{Dataset Introduction}
+
+In this project, we decide to use OSM(open-street-map) data as the base data. OSM data provides huge amount of detailed but abstract details for users. We choose this dataset because the following advantages:
+
+\begin{enumerate}
+	\item  It provide detailed data base on nodes, ways and relations. Which will be more convenient to implement the Dijkstra's algorithms for routing.
+\end{enumerate}
 
 %=============================================================
 \section{Completeness of the Project}
 %-------------------------------------------------------------
-\subsection{Place Locating}
+% \subsection{Place Locating}
+
+For this release of the application
+
+\begin{enumerate}
+	\item File I/O
+		\begin{todolist}
+			\item[\done] Loaded by the user
+			\item[\wontfix] Modified and saved by the user
+		\end{todolist}
+	\item Map Displaying
+	\begin{todolist}
+		\item[\done] Graphically display the map 
+	\end{todolist}
+	\item Available Location
+	\begin{todolist}
+		\item[\done] Locations required in the reference is available
+		\item[\done] Almost all locations contained in OSM data is available
+	\end{todolist}
+	\item Roads and routing 
+	\begin{todolist}
+		\item[\done] Presenting roads
+		\item[\done] Different kinds of roads are distinguished graphically.
+		\item[\done] Basic routing with 20 places as begining or end
+		\item[\wontfix] Different travel mode
+	\end{todolist}
+	\item Offline
+	\begin{todolist}
+		\item[\done] All the features is based on offline OSM data
+	\end{todolist}
+\end{enumerate}
+
+% % Twenty locations were provided on this project, and there is ability to add many other places due to requirements, but user can't add places, only programmer.
+% % User's privilege on this stage of the project is limited to chose only from a list of those twenty places.
+% % Deng can say something here.
+% %-------------------------------------------------------------
+% \subsection{Place Rating}
+% This Feature isn't added yet, but it maybe available in next releases.
+% %-------------------------------------------------------------
+% \subsection{Routing}
+% Routing in this stage only by foot, expanding travel Methods to car, bicycle, and Train is possible in the following releases. 
+% %=============================================================
 
 
 
-% Twenty locations were provided on this project, and there is ability to add many other places due to requirements, but user can't add places, only programmer.
-% User's privilege on this stage of the project is limited to chose only from a list of those twenty places.
-% Deng can say something here.
-%-------------------------------------------------------------
-\subsection{Place Rating}
-This Feature isn't added yet, but it maybe available in next releases.
-%-------------------------------------------------------------
-\subsection{Routing}
-Routing in this stage only by foot, expanding travel Methods to car, bicycle, and Train is possible in the following releases. 
-%=============================================================
+
 \section{Dependencies}
-Apart from STL, I’m using Boost Graph Library (BGL), which in turn depends on other Boost Library: Property Map, which in turn depends on other Boost Libraries, so I included the whole Boost Libraries at once.
-\section{Data Sets Introduction}
+
+\begin{enumerate}
+	\item {\textbf{Boost}}\\
+	Need to be installed if you don't have it. Follow the installation guide below.
+		\begin{itemize}[noitemsep]
+		\item {\textbf{Windows}} \\
+		\item {\textbf{Ubuntu}} \\
+		If it is not pre-install in your Ubuntu, a single command 
+		should help you do this (for Ubuntu 18.04):
+		\begin{lstlisting}[language=bash]
+$ apt-get install libboost-all-dev
+		\end{lstlisting}
+		\end{itemize}
+	\item {\textbf{Libosmium}} \\
+		This is a header-only library, no need for installation. 
+		Just includ the header files in the project is OK to go.
+		This is already put in the project repository.
+	\item {\textbf{Protozero}} \\
+		This is a header-only library, no need for installation. 
+		Just includ the header files in the project is OK to go.
+		This is already put in the project repository.
+	\item {\textbf{Zlib}} \\
+	Need to be installed if you don't have it. Follow the installation guide below.
+		\begin{itemize}[noitemsep]
+		\item {\textbf{Windows}} \\
+		\item {\textbf{Ubuntu}} \\
+		If it is not pre-install in your Ubuntu, a single command 
+		should help you do this (for Ubuntu 18.04):
+		\begin{lstlisting}[language=bash]
+$ apt-get insatll zlib1g-dev
+		\end{lstlisting}
+		\end{itemize}
+	\item {\textbf{Expat}}\\
+	Need to be installed if you don't have it. Follow the installation guide below.
+	\begin{itemize}[noitemsep]
+	\item {\textbf{Windows}} \\
+	\item {\textbf{Ubuntu}} \\
+	If it is not pre-install in your Ubuntu, a single command 
+	should help you do this (for Ubuntu 18.04):
+	\begin{lstlisting}[language=bash]
+$ apt-get insatll expat
+	\end{lstlisting}
+	\end{itemize}
+	\item {\textbf{PThread}} ( for Linux ) \\
+	Use the following command to install the library
+	sudo apt-get install libpthread-stubs0-dev
+	\begin{lstlisting}[language=bash]
+$ apt-get insatll expat
+	\end{lstlisting}
+	% \end{itemize}
+	
+\end{enumerate}
+
+% Apart from STL, I’m using Boost Graph Library (BGL), which in turn depends on other Boost Library: Property Map, which in turn depends on other Boost Libraries, so I included the whole Boost Libraries at once.
+% \section{Data Sets Introduction}
 
 
 
@@ -112,8 +222,48 @@ Apart from STL, I’m using Boost Graph Library (BGL), which in turn depends on 
 
 %=============================================================
 \chapter{Code Design and Structure}
+%\section{Overview}
+
+
+
+
+\begin{tikzpicture}[grow'=right,level distance=1.25in,sibling distance=.25in]
+\tikzset{edge from parent/.style= 
+	{thick, draw, edge from parent fork right},
+	every tree node/.style=
+	{draw,minimum width=1in,text width=1in,align=center}}
+\Tree 
+[. MainWindow 
+	[.{Data\\Manipulation}
+		[.{model.h } 
+			[.{modeldata.h } ]
+			[.{modeldata-\\handler.h } ]
+			[.{modeldata-\\structure.h } ]
+		]
+	]
+	[.{Routing}
+		[.{mygraph-\\builder.h} ]
+		[.{myalgorithm.h} ]
+		[.{shortpath.h} ]
+	] 
+	[.{UI} 
+		[.{Rendering } 
+			[.{MapView.h} ]
+			[.{RenderEnum.h} ]
+			[.{RenderItem.h} ]
+			[.{SceneBuilder.h} ]
+		]
+		[.{Widget } ]
+	]
+]
+\end{tikzpicture}
+\\
 %=============================================================
-\section{Algorithm and Shortest Path Design}
+\section{Data Manipulation}
+
+%=============================================================
+\section{Algorithm and Routing}
+
 This part of code organized in 3 different Classes, each of them contains Header, and Source File:
 %-------------------------------------------------------------
 \subsection{ MyGraphBuilder Class:}
@@ -135,19 +285,21 @@ In case that there was no path between nodes, the path (Vector) will contain onl
 \subsection{ ShortPath Class:}
 This Class is just to reduce amount of code in the main window, it doesn’t do much, it just takes Source Node, Destination Node, and Model, then it builds the Graph From the Model using MyGraphBuilder Class, and Runs MyAlgorithm Class, and its special Function getShortPath, finally the output is our shortest path.
 
-%=============================================================
-\section{Data Manipulation}
+
 
 %=============================================================
-\section{Rendering}
-
-%============================================================
-\section{Routing}
-Routing on this approach is just on foot, it’s possible to add more transport methods later using Tag filtering, building different transport maps, Vertices, and Edges, but unfortunately time was short for this project ! .
-Isolated Nodes which doesn’t belong to any way are not included in building the Graph, because our purpose is to find a way between two nodes, so I didn’t build the graph with all nodes, only connected nodes which belong to way.
-Euclidean Distance between the Nodes is our way to assign weight to Edges between Nodes, and of course the Way or Path is nothing except group of sequential Edges between connected Nodes.
+% \section{Routing}
+% Routing on this approach is just on foot, it’s possible to add more transport methods later using Tag filtering, building different transport maps, Vertices, and Edges, but unfortunately time was short for this project ! .
+% Isolated Nodes which doesn’t belong to any way are not included in building the Graph, because our purpose is to find a way between two nodes, so I didn’t build the graph with all nodes, only connected nodes which belong to way.
+% Euclidean Distance between the Nodes is our way to assign weight to Edges between Nodes, and of course the Way or Path is nothing except group of sequential Edges between connected Nodes.
 %============================================================
 \section{GUI}
+\subsection{Rendering}
+
+
+
+
+\subsection{Widget}
 Running the Program that will show a window with a Menu and four buttons Source, Destination, Navigate, and Cancel.
 %------------------------------------------------------------
 \begin{center}
@@ -180,6 +332,11 @@ by clicking on Navigate Button, the Shortest Path will be drawn by Red , so you 
 %------------------------------------------------------------
 Cancel button is to hide that path, and you can choose again your start point and target, so your path again will be drawn for you.
 To Finish, you can select (Menu - Quit) to exit the Software.
+
+
+
+
+
 %=============================================================
 \section{Difficulties during implementation:}
 There is two kind of Difficulties here:
@@ -209,7 +366,10 @@ Losing member of the team at critical time of the project doubled the responsibi
 \chapter{Project Management}
 %=============================================================
 \section{Overview of the Project Planning}
-We Received the Project on 30Th of September,it took us about 2 weeks to team up in a group of 3 students, then we started The Research for the Project since 15Th of October, Research for this project took 3 weeks until 6Th of November, There was many choices, and due to strict conditions such as: the Project should work under different operating systems, we excluded promising solutions such as "Libsmscout" which was easy to use Library with advanced features, but it doesn't work on Windows, only Linux, that lead us to more complicated choices such as "Libosmium" and "Boost" Libraries.
+We Received the Project on 30Th of September,it took us about 2 weeks to 
+team up in a group of 3 students, then we started The Research for the 
+Project since 15Th of October, Research for this project took 3 weeks 
+until 6Th of November, There was many choices, and due to strict conditions such as: the Project should work under different operating systems, we excluded promising solutions such as "Libsmscout" which was easy to use Library with advanced features, but it doesn't work on Windows, only Linux, that lead us to more complicated choices such as "Libosmium" and "Boost" Libraries.
 The Implementation started on the 6Th of November, each student worked on different part of the project: "Data Manipulation and Map Rendering" for Deng, "Shortest Path Algorithm" for Belal, and "Graphical User Interface" for Our Third Partner.
 Ten Days later At 16Th of November Deng Proposed Three Solutions for dealing with the Project:
 \\ \textbf{}Solution 1: Using one-for-all library.
@@ -222,8 +382,16 @@ A week later, on 24Th of November we had our first working project with Minimum 
 Writing The Documentation took a week until 7Th of December, and Writing the Report in Latex took another week up to 14Th of December, so We did it on time.
 
 %-------------------------------------------------------------
+
+
+
 \section{Work Schedules}
 %*************************************************************
+
+
+
+
+
 \subsection{Plans VS Actual}
 %-------------------------------------------------------------
 \section{Conclusion}
