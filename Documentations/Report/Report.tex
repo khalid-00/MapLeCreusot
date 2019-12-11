@@ -145,8 +145,12 @@ This project would be a great opportunity for us to practice and get a little bi
 In this project, we decide to use OSM(open-street-map) data as the base data. OSM data provides huge amount of detailed but abstract details for users. We choose this data-set because the following advantages:
 
 \begin{enumerate}
-	\item  It provide detailed data base on nodes, ways and relations. Which will be more convenient to implement the Dijkstra's algorithms for routing.
+	\item It provide detailed data base on nodes, ways and relations. Which will be more convenient to implement the Dijkstra's algorithms for routing.
+	\item With the standard format of database, this application can be applicable for other cities or even countries out of box.
+	\item It is a little bit more complicated, which will help us get more practice.
 \end{enumerate}
+
+Of course, choosing this way to develop the application means more complexity, more time consuming and more difficult to manage the project. But we still go for it because no pay no gain :D
 
 %=============================================================
 \section{Completeness of the Project}
@@ -310,6 +314,17 @@ $ apt-get insatll expat
 \\
 %=============================================================
 \section{Data Manipulation}
+\subsection{Overview}
+This part of code aims to handle the OSM data. We use {\textit{Libosmium}} {\cite{Libosmium}} to load the file and apply basic filtering to the raw data with the code in {\textbf{modelDataHandler.h}}. That is basically a modification from the example of the library. After that, all the data will be loaded on heap using {\textit{std::map}} in the {\textbf{modelData.h}}. The file {\textbf{modelDataStructure.h}} defines the basic type of the OSM element. And {\textbf{model.h}} is the top level package of all the information we read from the file and provide interface for other part of the code to access those data. In the following subsections, I will give detailed explanations for some of those code.
+
+\subsection{ModelData Class}
+
+This class actually contains all available information we get from the OSM file. It is basically a container for several std::map for different kind of data( nodes, ways, relations, etc.) and other supported std::map for place searching. The reason why we load all file in the heap using map is that the interface to access data in {\textit{Libosmium}} is not so convenient. By using the std::map, we can easily access all available with the id of the data. Although it has a drawback that when we load a large file, it would takes a large mount of ram. But since we are now only focus on the city level map, this is not an issue. It also declares to friend {\textbf{modelDataHandler}} so that the OSM file data can be written in the private member of {\textbf{ModelData}}. And the handler will only be called when we load a new file, which ensures the raw data will not be modified again when the loading is finished.
+
+
+\subsection{ModelDataHandler Class}
+
+This class is modified from an example of {\textit{Libosmium}}. It is responsible for extracting data from OSM file while filtering different types of roads and buildings. This class will only be called when the user load a new file.
 
 %=============================================================
 \section{Algorithm and Routing}
@@ -352,8 +367,22 @@ Euclidean distance between the nodes is our way to assign weight to edges betwee
 %============================================================
 \section{GUI}
 %------------------------------------------------------------
+
+\subsection{Overview}
+
+The GUI is composed by two part of the code. One uses a class promoted from {\textbf{QGraphicsView}} for displaying the map and interact with the users. The other one is for menu bars and routing selection as a complementary interaction entry. The interaction allowed with the user is managed by a {\textit{Finite State Machine}} in the class {\textbf{MapView}}. Those details will be well explained in the following of the report.
+
 \subsection{Rendering}
 
+\subsubsection{MapView}
+
+
+
+\subsubsection{SceneBuilder}
+
+
+
+\subsubsection{RenderItem}
 
 
 
@@ -544,6 +573,8 @@ The graphical user interface, travelling methods, and giving more choices to the
 
 %=============================================================
 \begin{thebibliography}{12}
+\bibitem{Libosmium}
+github: https://github.com/osmcode/libosmium
 \bibitem{BGL} 
 Jeremy G. Siek,
 Lie-Quan Lee, Andrew Lumsdaine.

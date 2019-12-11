@@ -44,8 +44,12 @@
 \contentsline {section}{\numberline {1.4}Dependencies}{5}
 \contentsline {chapter}{\numberline {2}Code Design and Structure}{7}
 \contentsline {section}{\numberline {2.1}Data Manipulation}{8}
+\contentsline {subsection}{\numberline {2.1.1}Overview}{8}
+\contentsline {subsection}{\numberline {2.1.2}ModelData Class}{8}
+\contentsline {subsection}{\numberline {2.1.3}ModelDataHandler Class}{8}
 \contentsline {section}{\numberline {2.2}Algorithm and Routing}{8}
 \contentsline {subsection}{\numberline {2.2.1} MyGraphBuilder Class:}{8}
+<<<<<<< HEAD
 \contentsline {subsection}{\numberline {2.2.2} MyAlgorithm Class:}{8}
 \contentsline {subsection}{\numberline {2.2.3} ShortPath Class:}{8}
 \contentsline {section}{\numberline {2.3}GUI}{8}
@@ -69,3 +73,31 @@
 \contentsline {section}{\numberline {3.3}Conclusion}{11}
 \contentsline {chapter}{\numberline {4}Summary}{12}
 >>>>>>> dev
+=======
+\contentsline {subsection}{\numberline {2.2.2} MyAlgorithm Class:}{9}
+\contentsline {subsection}{\numberline {2.2.3} ShortPath Class:}{9}
+\contentsline {section}{\numberline {2.3}GUI}{9}
+\contentsline {subsection}{\numberline {2.3.1}Overview}{9}
+\contentsline {subsection}{\numberline {2.3.2}Rendering}{9}
+\contentsline {subsubsection}{MapView}{9}
+\contentsline {subsubsection}{SceneBuilder}{9}
+\contentsline {subsubsection}{RenderItem}{9}
+\contentsline {subsection}{\numberline {2.3.3}Widget}{9}
+\contentsline {section}{\numberline {2.4}Difficulties during implementation:}{11}
+\contentsline {subsection}{\numberline {2.4.1}Difficulties we got rid of it:}{11}
+\contentsline {subsubsection}{First Difficulty was CMake didn’t find some libraries:}{11}
+\contentsline {subsubsection}{Second Difficulty was that Edges can’t be built using idType Nodes:}{11}
+\contentsline {subsubsection}{Third one is Redundancy of Nodes in different Ways:}{11}
+\contentsline {subsection}{\numberline {2.4.2}Difficulties we can solve, but it needs more time:}{11}
+\contentsline {subsubsection}{1.Supporting Different Travel Method.}{11}
+\contentsline {subsubsection}{2.Building Directional Graph instead of Bidirectional one.}{11}
+\contentsline {subsubsection}{3.Adding Reviews, and stars options to the GUI.}{11}
+\contentsline {subsubsection}{4.Adding locations on the Map.}{11}
+\contentsline {subsection}{\numberline {2.4.3}Unexpected Difficulties}{11}
+\contentsline {chapter}{\numberline {3}Project Management}{12}
+\contentsline {section}{\numberline {3.1}Overview of the Project Planning}{12}
+\contentsline {section}{\numberline {3.2}Work Schedules}{12}
+\contentsline {subsection}{\numberline {3.2.1}Plans VS Actual}{12}
+\contentsline {section}{\numberline {3.3}Conclusion}{12}
+\contentsline {chapter}{\numberline {4}Summary}{13}
+>>>>>>> Update report
