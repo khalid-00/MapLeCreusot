@@ -43,7 +43,7 @@ void MapView::contextMenuEvent(QContextMenuEvent *event)
             menu.addAction("select as source place");
             menu.addAction("select as destiantion place");
             //======== this is set for debug ============
-            menu.addAction("get building id");
+            menu.addAction("show detail");
             m_isBuilding = false;
         }
     }
@@ -67,7 +67,7 @@ void MapView::contextMenuEvent(QContextMenuEvent *event)
     if(a != nullptr)
     {
         //=========== this is set for debug ==========
-        if(a->text() == "get building id")
+        if(a->text() == "show detail")
         {
             std::cout << "the id of the building:" << m_selectedItem->getId() << std::endl;
         }
@@ -103,9 +103,11 @@ void MapView::contextMenuEvent(QContextMenuEvent *event)
         else if(a->text() == "cancel")
         {
             emit canecl();
-            m_srcId = 0;
-            m_destId = 0;
-            m_state = init;
+            changeToInit();
+//            m_srcId = 0;
+//            m_destId = 0;
+//            m_state = init;
+//            m_isBuilding = false;
         }
     }
 

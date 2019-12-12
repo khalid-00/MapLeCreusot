@@ -15,6 +15,8 @@
 #include <osmium/visitor.hpp>
 #include <modeldata.h>
 #include <boost/algorithm/string.hpp>
+#include <QPoint>
+#include "projection.h"
 //class Model
 //{
 //public:
@@ -31,7 +33,11 @@ class Model
     bool m_isFileLoaded;
     string m_filePath;
 
-
+//    int64_t m_top;
+//    int64_t m_left;
+//    int64_t m_right;
+//    int64_t m_bottom;
+    QPointF m_bottomLeft, m_topRight;
 
     modelData *m_Data;
 
@@ -43,11 +49,21 @@ class Model
         modelDataHandler handler(m_Data);
         osmium::io::Reader reader(inputFile, osmium::io::read_meta::no);
 
+
         osmium::io::Header header = reader.header();
-        m_left = header.box().bottom_left().x();
-        m_top = header.box().top_right().y();
-        m_width = m_left - header.box().top_right().x();
-        m_height = m_top - header.box().bottom_left().y();
+//        m_left = header.box().bottom_left().x();
+//        m_top = header.box().top_right().y();
+//        m_right = header.box().top_right().x();
+//        m_bottom = header.box().bottom_left().y();
+
+//        m_left = projection(m_left);
+//        m_top = projection(m_top);
+//        m_right = projection(m_right);
+//        m_bottom = projection(m_bottom);
+
+        m_bottomLeft = projection(header.box().bottom_left());
+        m_topRight = projection(header.box().top_right());
+
         std::cout << header.box().bottom_left().x() << "::"
                   << header.box().top_right().y()
                   << std::endl;
@@ -133,10 +149,11 @@ public:
         return m_Data->isAmenityTypeExist(name);
     }
 
-    int64_t m_top;
-    int64_t m_left;
-    int64_t m_width;
-    int64_t m_height;
+    QPointF getCenter()
+    {
+
+        return (m_bottomLeft + m_topRight)/2;
+    }
 
 
 };

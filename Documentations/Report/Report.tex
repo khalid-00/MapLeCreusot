@@ -17,8 +17,7 @@
 \usepackage{color}
 \usepackage{hyperref}
 \usepackage[x11names]{xcolor} 
-%<<<<<<< HEAD
-%=======
+\usepackage{subcaption}
 \usepackage{indentfirst}
 \usepackage{enumitem,amssymb}
 \usepackage{listings}
@@ -349,42 +348,122 @@ In case that there was no path between nodes, the path (vector) will contain onl
 %-------------------------------------------------------------
 \subsection{ ShortPath Class:}
 This class is just to reduce amount of code in the main window, it doesn’t do much, it just takes source node, destination node, and Model, then it builds the graph from the Model using MyGraphBuilder class, and runs MyAlgorithm class, and its special function getShortPath, finally the output is our shortest path.
-%=============================================================
-%<<<<<<< HEAD
-\section{Data Manipulation}
 
+\subsection{Routing}
+Routing on this approach is just on foot, it's possible to add more transport methods later using tag filtering, building different transport maps, vertices, and edges, but unfortunately time was short for this project !\\
 
-%=============================================================
-\section{Rendering}
-
-
-%============================================================
-\section{Routing}
-Routing on this approach is just on foot, it’s possible to add more transport methods later using tag filtering, building different transport maps, vertices, and edges, but unfortunately time was short for this project ! .
-\\Isolated nodes which doesn’t belong to any way are not included in building the Graph, because our purpose is to find a way between two nodes, so I didn’t build the graph with all nodes, only connected nodes which belong to way.
+Isolated nodes which doesn't belong to any way are not included in building the Graph, because our purpose is to find a way between two nodes, so I didn't build the graph with all nodes, only connected nodes which belong to way.
 Euclidean distance between the nodes is our way to assign weight to edges between nodes, and of course the way or path is nothing except group of sequential edges between connected nodes.
-%>>>>>>> dev
+\subsection{Difficulties during implementation:}
+There is two kind of Difficulties here:
+%-------------------------------------------------------------
+\subsubsection{Difficulties we got rid of it:} 
+%*************************************************************
+\begin{enumerate}
+	\item {\textbf{First difficulty was CMake didn’t find some libraries:}}\\
+	specially Boost Library, later we used qmake.
+	\item {\textbf{Second difficulty was that edges can’t be built using idType nodes:}\\
+		the solution for that was mapping the idType Nodes to unsigned int indexes through a map, so each node has ID, and vertex number.}
+	\item{\textbf{Third one is redundancy of nodes in different Ways:}\\
+		the solution was to compare each node of way to the map we built as solution to
+		problem1.2, so if the node already found, we don’t add it to our map, instead we just call it and get node index.}	
+\end{enumerate}
+%-------------------------------------------------------------
+\subsubsection{Difficulties we can solve, but it needs more time:}
+%*************************************************************
+\begin{enumerate}
+	\item {\textbf{Supporting different travel method.}}
+	\item {\textbf{Building directional graph instead of bidirectional one.}}
+%	\item {\textbf{Adding reviews, and stars options to the GUI.}}
+%	\item {\textbf{Adding locations on the map.}}
+\end{enumerate}
+%-------------------------------------------------------------
+\subsubsection{Unexpected Difficulties}
+Losing member of the team at critical time of the project doubled the responsibilities to do more than what we have already planned to do, and forced us to work under pressure in some parts of the project which we didn't have ideas about it before enough time.
 %============================================================
 \section{GUI}
 %------------------------------------------------------------
 
 \subsection{Overview}
 
-The GUI is composed by two part of the code. One uses a class promoted from {\textbf{QGraphicsView}} for displaying the map and interact with the users. The other one is for menu bars and routing selection as a complementary interaction entry. The interaction allowed with the user is managed by a {\textit{Finite State Machine}} in the class {\textbf{MapView}}. Those details will be well explained in the following of the report.
+The GUI is composed by two part of the code. One uses a class promoted from {\textbf{QGraphicsView}} for displaying the map and interact with the users. The other one is for menu bars and routing selection as a complementary interaction entry. The allowed interactions are managed by a {\textit{Finite State Machine}} in the class {\textbf{MapView}}. Those details will be well explained in the following of the report.
 
 \subsection{Rendering}
 
-\subsubsection{MapView}
+\subsubsection{MapView Class}
 
+This class is a class promoted from {\textbf{QGraphicsView}} which can be considered as the top level class for the rendering. It provides the users a graphical view of the map together with several ways of interactions. I decided to use the {\textbf{QGraphics}} framework because I've seen another open source rendering library {\textit{Marble}} {\cite{Marble}} with this framework. And after google a bit about this, I get to know this frame work can provide smooth graphics dealing with thousands of objects. So I decided to use it and can also get hints from {\textit{Marble}}.
 
+\begin{figure}
+	\includegraphics[width=\linewidth]{./img/rendering.png}
+	\caption{Graphical View}
+	\label{fig:rendering}
+\end{figure}
 
+Figure \ref{fig:rendering} shows the graphical view of a map.\\
+
+The following functions of {\textbf{QGraphicsView}} is overridden to provide the interactions.
+\begin{enumerate}
+	\item {\textbf{wheelEvent(QWheelEvent *);}}
+	
+	This function is overridden to provide scaling of the map with mouse wheel, which is more convenient to the user. The default scaling factor is set to 0.001, ranging from 0.06 to 0.0001 with step at 1.2.	
+	\item {\textbf{mousePressEvent(QMouseEvent *);}}
+	
+	This function enables users to drag the map and to select buildings directly on the map. At the very beginning of this design is thought as an entry for building details, ratings, comments and choosing routing places. But since we don't have time to implement the user rating system and routing algorithms will cause crashes when it failed to find a path, this entry now is hook to an empty operation with a right click menu. 
+	
+	\item {\textbf{contextMenuEvent(QContextMenuEvent *);}}
+	
+	This function will provide users an access to a right click menu, which is controlled by an embedded {\textit{finite state machine}}. The state and transition of the {\textit{finite state machine}} is explained in figure \ref{fig:FSM}.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.7\linewidth]{./img/FSM.png}
+		\caption{FSM}
+		\label{fig:FSM}
+	\end{figure}
+
+	The user state was set to {\textit{Null}} before loading the data file. In this state all the interaction will be disable to avoid segmentation fault. Once the data file is loaded, the state will change to {\textit{Init}} to enable all the interactions. And the state will get changed as the user choose different options in the right click menu. And the option {\textit{cancel}} will reset the state to {\textit{Init}}. This help sort the logic for development. And the visual feedback is shown in figure \ref{fig:rightClickMenu}.
+	\begin{figure}[h!]
+		\centering
+		\begin{subfigure}[b]{0.4\linewidth}
+			\includegraphics[width=\linewidth]{./img/search.png}
+			\caption{Place Searching}
+		\end{subfigure}
+		\begin{subfigure}[b]{0.4\linewidth}
+			\includegraphics[width=\linewidth]{./img/selSrc.png}
+			\caption{Select route source.}
+		\end{subfigure}
+		\begin{subfigure}[b]{0.4\linewidth}
+			\includegraphics[width=\linewidth]{./img/selDest.png}
+			\caption{Select route destination.}
+		\end{subfigure}
+		\caption{Visual feedback for right click menu}
+		\label{fig:rightClickMenu}
+	\end{figure}
+	
+\end{enumerate}
+%\newpage
 \subsubsection{SceneBuilder}
 
-
+This part of code responsible for creating a proper scene for {\textbf{MapView}} to display. It also provides an interface for drawing routes and pins. This class extracts information form the {\textbf{modelData}} to form multi polygons for builds and poly lines for roads and path. 
 
 \subsubsection{RenderItem}
 
+This part of the code is to construct several basic item of the map rendering using {\textbf{QGrphicsItem}}. And in those items, we use enumerators to help set the z-value. The category logic uses ideas from {\textit{IO2D demo: Maps}} {\cite{IO2D}}, but not exactly the same. There're two types of enumerator for polygons and roads, which are specified in {\textbf{renderItemEnum.h}} file. Also, they are rendering styles are based on its type.
 
+\subsection{Difficulties for rendering}
+
+When developing this part of code, you need to have a global view of the whole project. Because this part is the bridge between database, graphical view and user interface. Which means your are dealing all the information you can get in the project. So, if we divide this part to several key points, those are the problems we solved:
+\begin{enumerate}
+	\item filter and categorized the proper element from OSM data for rendering
+	\item properly draw buildings and roads in the {\textit{QGraphics}} framework
+	\item locate the object in the view
+	\item build a right click menu for users
+	\item interaction logic control
+	\item interface for routing algorithm
+	\item visualize the place searching result and place selection
+\end{enumerate}
+
+To achieve those above requires a certain knowledge on OMS database and Qt graphical development. Since both of them are pretty new to us, we need to spend more time to read and learn. And that results in a more difficult project management.
 
 \subsection{Widget}
 Running the program that will show a window with a Menu and four buttons source, destination, navigate, and cancel.
@@ -420,39 +499,12 @@ by clicking on navigate button, the shortest path will be drawn by red , so you 
 Cancel button is to hide that path, and you can choose again your start point and target, so your path again will be drawn for you.
 To finish, you can select (Menu - Quit) to exit the software.
 %=============================================================
-\section{Difficulties during implementation:}
-There is two kind of Difficulties here:
-%-------------------------------------------------------------
-\subsection{Difficulties we got rid of it:} 
-%*************************************************************
-\begin{enumerate}
-\item {\textbf{First difficulty was CMake didn’t find some libraries:}}\\
-specially Boost Library, later we used qmake.
-\item {\textbf{Second difficulty was that edges can’t be built using idType nodes:}\\
-the solution for that was mapping the idType Nodes to unsigned int indexes through a map, so each node has ID, and vertex number.}
-\item{\textbf{Third one is redundancy of nodes in different Ways:}\\
-the solution was to compare each node of way to the map we built as solution to
-problem1.2, so if the node already found, we don’t add it to our map, instead we just call it and get node index.}	
-\end{enumerate}
-%-------------------------------------------------------------
-\subsection{Difficulties we can solve, but it needs more time:}
-%*************************************************************
-\begin{enumerate}
-\item {\textbf{Supporting different travel method.}}
-\item {\textbf{Building directional graph instead of bidirectional one.}}
-\item {\textbf{Adding reviews, and stars options to the GUI.}}
-\item {\textbf{Adding locations on the map.}}
-\end{enumerate}
-%-------------------------------------------------------------
-\subsection{Unexpected Difficulties}
-Losing member of the team at critical time of the project doubled the responsibilities to do more than what we have already planned to do, and forced us to work under pressure in some parts of the project which we didn't have ideas about it before enough time.
+
 %=============================================================
 \chapter{Project Management}
 %=============================================================
 \section{Overview of the Project Planning}
-%<<<<<<< HEAD
-%We Received the Project on 30Th of September,it took us about 2 weeks to team up in a group of 3 students, then we started The Research for the Project since 15Th of October, Research for this project took 3 weeks until 6Th of November, There was many choices, and due to strict conditions such as: the Project should work under different operating systems, we excluded promising solutions such as "Libsmscout" which was easy to use Library with advanced features, but it doesn't work on Windows, only Linux, that lead us to more complicated choices such as "Libosmium" and "Boost" Libraries.
-%=======
+
 We Received the Project on 30Th of September,it took us about 2 weeks to 
 team up in a group of 3 students, then we started The Research for the 
 Project since 15Th of October, Research for this project took 3 weeks 
@@ -575,6 +627,10 @@ The graphical user interface, travelling methods, and giving more choices to the
 \begin{thebibliography}{12}
 \bibitem{Libosmium}
 github: https://github.com/osmcode/libosmium
+\bibitem{Marble}
+website: https://marble.kde.org/index.php
+\bibitem{IO2D}
+website: https://kazakov.life/2018/06/07/io2d-demo-maps/
 \bibitem{BGL} 
 Jeremy G. Siek,
 Lie-Quan Lee, Andrew Lumsdaine.

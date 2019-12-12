@@ -131,13 +131,7 @@ void MainWindow::loadFile(string filePath)
 
     m_sceneBuilder->addPolyItem();
     m_sceneBuilder->addRoadItem();
-    //===================================================================
-    //start
-    //ShortPath route(MyPlaces.at(3).second,MyPlaces.at(18).second,*m_model);
-    //Path anypath = route.getYourPath();
-    //m_sceneBuilder->drawRoute(anypath);// send your route list here, it will draw
-    //End
-    //===================================================================
+
     t = (clock() - start + 0.0)/CLOCKS_PER_SEC;
     std::cout << "time used for rendering the map: " << t << "s" << std::endl;
 
@@ -154,6 +148,10 @@ void MainWindow::loadFile(string filePath)
     m_mapView->setBackgroundBrush(QBrush(QColor(230,230,230)));
 
     m_mapView->setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
+
+//    m_model->getCenter();
+
+    m_mapView->centerOn(m_model->getCenter());
 
 }
 
