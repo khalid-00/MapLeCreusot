@@ -505,29 +505,63 @@ To finish, you can select (Menu - Quit) to exit the software.
 %=============================================================
 \section{Overview of the Project Planning}
 
-We Received the Project on 30Th of September,it took us about 2 weeks to 
-team up in a group of 3 students, then we started The Research for the 
-Project since 15Th of October, Research for this project took 3 weeks 
-until 6Th of November, There was many choices, and due to strict conditions such as: the Project should work under different operating systems, we excluded promising solutions such as "Libsmscout" which was easy to use Library with advanced features, but it doesn't work on Windows, only Linux, that lead us to more complicated choices such as "Libosmium" and "Boost" Libraries.
-%>>>>>>> dev
-The Implementation started on the 6Th of November, each student worked on different part of the project: "Data Manipulation and Map Rendering" for Deng, "Shortest Path Algorithm" for Belal, and "Graphical User Interface" for Our Third Partner.
-Ten Days later At 16Th of November Deng Proposed Three Solutions for dealing with the Project:
+We received the project at the end of September and the deadline is in Dec. 14th. So, we have about two and a half months' time for this project. Then after we teamed up with 3 students, we decided to divided the project in 3 different periods. First is the research period. We would spend about a month's time to study about this project. After having a basic directions, we shall then move to the second period development, which will also last for about a month. And at last we plan to release the application for test, so that we can fix some bugs and prepare our documentation. All the details about the research period is logged in the discussion log of this repository. \\
+At about the beginning of October, when we have a basic direction, we decided to divide this project into three main functional part: 
 \begin{enumerate}
-\item {\textbf{ First solution: Using one-for-all library.}}
-\item{\textbf{Second solution: Using OSM data access library.}}
-\item{\textbf{Third solution: Display the map using Image.}}
+	\item {\textbf{Data Manipulation}}\\
+	
+	This part will handle the OSM data input, building friendly interface for rendering and routing. So, it requires an in-depth understanding on the OSM data. Apart from that, it will also help build the user rating and comment database.
+	\item {\textbf{Map Rendering}}\\
+	
+	This part aims to render the OSM data, provide a graphical view of the map. It will also help build some common interactions like zooming, dragging and etc. Besides, it also need to provide the entry for user to rate and comment a place.
+	\item {\textbf{Routing}}\\
+	
+	This part is trying to implement routing algorithms on the OSM data.
 \end{enumerate}
-%-------------------------------------------------------------
-At that Point Belal and Deng Agreed on the second solution, because we want to propose something different and more advanced than image solution.
-Our partner preferred to go on different direction with third solution, so we had to work on the project as a team of two members only !.
-Following the advice to "Expect what is Unexpected " we reduced the project size and features so we can finish it before deadline.
-A week later, on 24Th of November we had our first working project with minimum features available, a week later on the 1st of December We did a simple GUI to deal with our map.
-Writing The Documentation took a week until 7Th of December, and writing the report in \textbf{\LaTeX} \space took another week up to 14Th of December, so We did it on time.
+
+So far, everything seems to be nice and neat. However, at Nov. 11th, one of our member choose to leave the team because of the different implementation ideas. So, we need to change our plan to guarantee a basic functional version can be done on time. So, the following will be the new work assignment to the two of us.
+
+\subsubsection{Belal}
+
+\begin{enumerate}
+	\item Routing algorithm implementation
+	\item Basic GUI widget
+\end{enumerate}
+
+\subsubsection{Deng}
+\begin{enumerate}
+	\item Basic data manipulation(reading OSM file only)
+	\item Map rendering
+\end{enumerate}
+
+With those work, we can at least purpose a functional map application. And user rating and commenting will be considered as a advanced features, which means it has the lowest priority in this project.
+
+% We Received the Project on 30Th of September,it took us about 2 weeks to 
+% team up in a group of 3 students, then we started The Research for the 
+% Project since 15Th of October, Research for this project took 3 weeks 
+% until 6Th of November, There was many choices, and due to strict conditions such as: the Project should work under different operating systems, we excluded promising solutions such as "Libsmscout" which was easy to use Library with advanced features, but it doesn't work on Windows, only Linux, that lead us to more complicated choices such as "Libosmium" and "Boost" Libraries.
+% %>>>>>>> dev
+% The Implementation started on the 6Th of November, each student worked on different part of the project: "Data Manipulation and Map Rendering" for Deng, "Shortest Path Algorithm" for Belal, and "Graphical User Interface" for Our Third Partner.
+% Ten Days later At 16Th of November Deng Proposed Three Solutions for dealing with the Project:
+% \begin{enumerate}
+% \item {\textbf{ First solution: Using one-for-all library.}}
+% \item{\textbf{Second solution: Using OSM data access library.}}
+% \item{\textbf{Third solution: Display the map using Image.}}
+% \end{enumerate}
+% %-------------------------------------------------------------
+% At that Point Belal and Deng Agreed on the second solution, because we want to propose something different and more advanced than image solution.
+% Our partner preferred to go on different direction with third solution, so we had to work on the project as a team of two members only !.
+% Following the advice to "Expect what is Unexpected " we reduced the project size and features so we can finish it before deadline.
+% A week later, on 24Th of November we had our first working project with minimum features available, a week later on the 1st of December We did a simple GUI to deal with our map.
+% Writing The Documentation took a week until 7Th of December, and writing the report in \textbf{\LaTeX} \space took another week up to 14Th of December, so We did it on time.
 
 %-------------------------------------------------------------
 %<<<<<<< HEAD
 \section{Work schedules}
-We divided the tasks to all team members, so every member has his own schedule of work due to his task and time.
+
+This section contains a detailed schedule for each member in the team.
+
+%We divided the tasks to all team members, so every member has his own schedule of work due to his task and time.
 %-------------------------------------------------------------
 \subsection{Belal schedule}
 %-------------------------------------------------------------
@@ -601,19 +635,74 @@ Building friendly user interface to interact with user.
 %-------------------------------------------------------------
 \subsection{Deng schedule}
 
+\subsubsection{Research Period}
+
+	{\textbf{From Oct. 06 to Nov. 06:}} The main task in this period is to gather enough information about this project and form a big picture of it. 
+
+\begin{enumerate}
+	\item Get familiar with OSM data
+	\item Research on libraries about rendering\\
+	{\textit{Cartotype, Marble, IO2D, mapnik}}
+	\item Read source codes in {\textit{Marble}} and {\textit{IO2D}}
+	\item Read source codes and examples of {\textit{Libosmium}}
+	\item Learn how to draw polygon using {\textit{QPainter}}
+	\item Estimate if it is possible to build our own rendering library\\
+	Documents for {\textit{Marble}} is not so detailed and the source code is too complicated for us.
+	\item Think how to construct a easy-to-use database
+\end{enumerate}
+
+
+\subsubsection{Development Period}
+
+	{\textbf{From Nov. 06 to Nov.17:}}
+
+\begin{enumerate}
+
+	\item Try to run and modified example code of {\textit{Libosmium}}
+	\item Implement the basic database using C++ STL.
+	\item Learn how to use {\textit{QGraphics}} framework and its interaction mechanism
+	\item Try to dray simple things with {\textit{QGraphics}} framework
+	\item Try to use data from database to draw buildings
+	
+\end{enumerate}
+
+	{\textbf{From Nov. 17 to Nov. 30:}}
+\begin{enumerate}
+	\item Sort useful data from database for rendering(buildings and roads)
+	\item Tweak the style and z-value for the {\textit{QGraphicsItem}}
+	\item Update interface for routing
+	\item Implement item retrieving for the rendering
+	\item Design user interaction logic using {\textit{finite state machine}}
+	\item Get familiar and implement with signal and slot for interaction
+ 	\item Implement place searching and visualize the result
+\end{enumerate}
+
+
+\subsubsection{Document Period}
+
+{\textbf{From Dec. 01 to the deadline of this project:}}
+\begin{enumerate}
+	\item Fix bugs in place searching to avoid crashes\\
+	Segmentation fault for those object without tag: name
+	\item Fix bugs in widgets to avoid crashes\\
+	Segmentation fault when clicking on the button before loading the file
+	\item Fix bugs in FSM\\
+	Segmentation fault because of incomplete reset to state {\textit{init}}
+\end{enumerate}
+
 
 
 %-------------------------------------------------------------
 
 
 %>>>>>>> dev
-\section{Plans VS Actual}
-\say{{\Large A goal without a plan is just a wish.\par}\say{Antoine de Saint-Exupéry}}
-We started planning at earlier stage, that gave us the advantage of evaluation many solutions, and taking a look into some promising solutions, what we did over this project was not so far from what we have planned to do, but of course there is some points which we did planned to do it, but we couldn't due to time factor.
-The graphical user interface, travelling methods, and giving more choices to the user like adding a place or rating it, we hope that we can improve that in the next release so the user has the ability to do more things.
+%\section{Plans VS Actual}
+%\say{{\Large A goal without a plan is just a wish.\par}\say{Antoine de Saint-Exupéry}}
+%We started planning at earlier stage, that gave us the advantage of evaluation many solutions, and taking a look into some promising solutions, what we did over this project was not so far from what we have planned to do, but of course there is some points which we did planned to do it, but we couldn't due to time factor.
+%The graphical user interface, travelling methods, and giving more choices to the user like adding a place or rating it, we hope that we can improve that in the next release so the user has the ability to do more things.
 
 %-------------------------------------------------------------
-\section{Conclusion}
+%\section{Conclusion}
 
 
 

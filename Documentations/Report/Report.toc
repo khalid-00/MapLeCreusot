@@ -34,9 +34,12 @@
 \contentsline {subsection}{\numberline {2.3.4}Widget}{13}{subsection.2.3.4}
 \contentsline {chapter}{\numberline {3}Project Management}{15}{chapter.3}
 \contentsline {section}{\numberline {3.1}Overview of the Project Planning}{15}{section.3.1}
-\contentsline {section}{\numberline {3.2}Work schedules}{15}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Belal schedule}{15}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Deng schedule}{16}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Plans VS Actual}{16}{section.3.3}
-\contentsline {section}{\numberline {3.4}Conclusion}{17}{section.3.4}
-\contentsline {chapter}{\numberline {4}Summary}{18}{chapter.4}
+\contentsline {subsubsection}{Belal}{15}{section*.12}
+\contentsline {subsubsection}{Deng}{16}{section*.13}
+\contentsline {section}{\numberline {3.2}Work schedules}{16}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Belal schedule}{16}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Deng schedule}{17}{subsection.3.2.2}
+\contentsline {subsubsection}{Research Period}{17}{section*.14}
+\contentsline {subsubsection}{Development Period}{17}{section*.15}
+\contentsline {subsubsection}{Document Period}{18}{section*.16}
+\contentsline {chapter}{\numberline {4}Summary}{19}{chapter.4}
