@@ -36,7 +36,7 @@ private:
   //===============================================
 public:
   MyAlgorithm();//Default Constructor
-  MyAlgorithm(graph_t const&,GraphMap,Vertex);//,Vertex);//Parameters Constructor
+  MyAlgorithm(graph_t const&,GraphMap,idType);//,Vertex);//Parameters Constructor
   ~MyAlgorithm();//Default Destructor
 
   //===============================================
