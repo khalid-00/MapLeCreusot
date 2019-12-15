@@ -5,23 +5,7 @@
 */
 #include "SceneBuilder.h"
 
-
-void SceneBuilder::buildMutipolygonFromWay(vector<idType> nodeRefList)
-{
-    //loop over the nodelist for form a multpolygon item
-    QPolygonF polygon;
-
-    for(vector<idType>::iterator it = nodeRefList.begin();it != nodeRefList.end()-1;it++)
-    {
-        auto point = projection(m_model->getNodeLoaction(*(it)).lon(), m_model->getNodeLoaction(*(it)).lat());
-        polygon << point;
-    }
-    Multipolygon *polyItem = new Multipolygon;
-    polyItem->setPolygon(polygon);
-    m_polygonList.emplace_back(polyItem);
-    m_scene->addItem(polyItem);
-}
-
+// created a multi-polygon from the "way" data in osm, they are basically buildings or aeras
 void SceneBuilder::buildMutipolygon(wayData way, idType wayId)
 {
     QPolygonF polygon;
@@ -32,6 +16,7 @@ void SceneBuilder::buildMutipolygon(wayData way, idType wayId)
         polygon << point;
     }
     Multipolygon *polyItem = new Multipolygon;
+
     polyItem->setId(wayId);
     polyItem->setPolygon(polygon);
     polyItem->setPolyType(way.pType);

@@ -21,7 +21,7 @@
 #include <QMenu>
 #include <iostream>
 
-//================================ use color reference from P0267_RefImpl
+// use style reference from P0267_RefImpl, but not exactly the same
 static QColor getPolygonColor(polygonType type)
 {
     switch (type) {
@@ -85,8 +85,7 @@ static float getPathWidth(roadType type)
     }
 }
 
-// test for drawing multipolygon in relations
-class Multipolygon : public QGraphicsItem/*QGraphicsPolygonItem*/
+class Multipolygon : public QGraphicsItem
 {
 
     polygonType m_PolygonType;    //this will determin the z-value
@@ -181,15 +180,11 @@ public:
         m_pen.setBrush(getPathColor(rType));
         m_pen.setWidth(getPathWidth(rType)+3.0);
         setZValue(leisure + static_cast<int>(rType) * 0.1);
-        if(rType == Route)
-        {
-//            QGraphicsItem::setFlag(QGraphicsItem::ItemIgnoresTransformations,true);
-        }
     }
 
 };
 
-
+// this class is used to draw a pin on the selected item
 class Pin : public QGraphicsItem
 {
     QPolygonF m_poly;

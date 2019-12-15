@@ -61,7 +61,7 @@ class modelData
                 catagoryData temp;
                 for(auto tag = tags.begin(); tag != tags.end(); tag ++)
                 {
-                    if(tag->first == "amenity" || tag->first == "shop")
+                    if(tag->first == "amenity" || tag->first == "shop" || data->second.osmType == osmium::item_type::node)
                     {
                         temp.itemType = data->second.osmType;
                         temp.type = tag->second;

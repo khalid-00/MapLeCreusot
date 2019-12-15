@@ -41,10 +41,7 @@ class SceneBuilder : public QObject
     Road *m_route;
     Pin *m_source;
     Pin *m_dest;
-    vector<Pin *> m_pinContainer;
-    // m_roadList, m_pointList;
-
-    void buildMutipolygonFromWay(vector<idType> nodeRefList);
+    vector<Pin *> m_pinContainer; // a container for pin object, release them when cancel is triggered
 
     void buildMutipolygon(wayData way, idType wayId);
 
@@ -59,7 +56,6 @@ class SceneBuilder : public QObject
 
     void drawPin(idType, QPointF);
 
-//    void drawWayPin(idType, QPointF);
 
 public:
 
@@ -81,12 +77,10 @@ public:
     void drawPointText();
 
 
-//    void cancelRoute();
-
 public slots:
     void setSource(Multipolygon* item);
     void setDest(Multipolygon* item);
-    //popup input box and display result research
+
     bool searchPlace(QString name);
     void cancel();
     void getSrcDestId();

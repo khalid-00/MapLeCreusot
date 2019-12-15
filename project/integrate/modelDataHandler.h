@@ -33,6 +33,7 @@ class modelDataHandler : public osmium::handler::Handler
         }
     }
 
+    // using tons of if-else to filter the data, it's stupid but it works
     void getTagsAndType(std::vector<tagPair>& tagStore, const osmium::TagList& tagList, wayData& wayD)
     {
         bool nonPolyFlag = false;
@@ -120,6 +121,8 @@ public:
     {
         m_modelData = Data;
     }
+
+    //the following code is in the example to extract nodes, ways, and relations. just read the name
     void node(const osmium::Node& node)
     {
         const int64_t id = node.id();
