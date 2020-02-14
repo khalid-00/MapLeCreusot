@@ -20,6 +20,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     mapview.cpp \
+    modeldata.cpp \
     projection.cpp \
     myalgorithm.cpp \
     mygraphbuilder.cpp \
@@ -27,7 +28,6 @@ SOURCES += \
 
 HEADERS += \
     RenderEnum.h \
-    RenderItem.h \
     SceneBuilder.h \
     mainwindow.h \
     mapview.h \
@@ -38,6 +38,7 @@ HEADERS += \
     myalgorithm.h \
     mygraphbuilder.h \
     projection.h \
+    renderitem.h \
     shortpath.h
 
 FORMS += \

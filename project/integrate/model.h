@@ -40,6 +40,10 @@ class Model
 
     void loadFile()
     {
+        if(m_isFileLoaded)
+        {
+            m_Data->clear();
+        }
         std::cout << "loading file" << std::endl;
         osmium::io::File inputFile(m_filePath);
         modelDataHandler handler(m_Data);
@@ -75,6 +79,7 @@ public:
         {
             m_filePath = filePath;
             loadFile();
+            m_isFileLoaded = true;
         }
     }
 

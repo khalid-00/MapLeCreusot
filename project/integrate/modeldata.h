@@ -32,141 +32,49 @@ class modelData
     friend class modelDataHandler;
 
 
-    vector<string> findName(vector<tagPair> &tags)
-    {
-        vector<string> tempVec;
-        for(auto it = tags.begin(); it != tags.end(); it ++)
-        {
-            if(it->first.find("name") != string::npos)
-            {
-                tempVec.emplace_back(it->second);
-            }
-        }
-        for(auto it = tempVec.begin(); it != tempVec.end(); it ++)
-        {
-            boost::algorithm::to_lower(*it);
-        }
-        return tempVec;
-    }
+    vector<string> findName(vector<tagPair> &tags);
+
 
     template <typename T>
-    void buildCatagory(const T &map)
-    {
-        //loop over node map and way map
-        for(auto data = map.begin(); data != map.end(); data ++)
-        {
-            vector<tagPair> tags = data->second.tagList;
-            if(tags.size() != 0)
-            {
-                catagoryData temp;
-                for(auto tag = tags.begin(); tag != tags.end(); tag ++)
-                {
-                    if(tag->first == "amenity" || tag->first == "shop" || data->second.osmType == osmium::item_type::node)
-                    {
-                        temp.itemType = data->second.osmType;
-                        temp.type = tag->second;
-                        boost::algorithm::to_lower(temp.type);
-                        temp.name = findName(tags);
-                        temp.id = data->first;
-                        m_Amenity.emplace_back(temp);
-                        m_AmenityType.insert(temp.type);
-                        break;
-                    }
-                }
-            }
-        }
-    }
+    void buildCatagory(const T &map);
+
 
 public:
     modelData(){}
 
-    const osmium::Location getNodeLoaction(idType id)
-    {
-        return m_NodesLocation.get(id);
-    }
+    const osmium::Location getNodeLoaction(idType id);
 
-    const nodeData getNodeData(idType id)
-    {
-        return m_NodeMap.at(id);
-    }
+    void clear();
 
-    const wayData getWayData(idType id)
-    {
-        return m_WayMap.at(id);
-    }
+    const nodeData getNodeData(idType id);
 
-    const relationData getRelationData(idType id)
-    {
-        return m_RelationMap.at(id);
-    }
 
-    const map<idType,nodeData> getNodeMap()
-    {
-        return m_NodeMap;
-    }
+    const wayData getWayData(idType id);
 
-    const map<idType,wayData> getWayMap()
-    {
-        return m_WayMap;
-    }
+    const relationData getRelationData(idType id);
 
-    const map<idType,relationData> getRelationMap()
-    {
-        return m_RelationMap;
-    }
+    const map<idType,nodeData> getNodeMap();
 
-    const map<idType, vector<idType>> getMultipolygon()
-    {
-        return m_Multipolygon;
-    }
+    const map<idType,wayData> getWayMap();
 
-    void buildAmenityCatagory()
-    {
-        buildCatagory(m_NodeMap);
-        buildCatagory(m_WayMap);
-    }
+    const map<idType,relationData> getRelationMap();
+
+
+    const map<idType, vector<idType>> getMultipolygon();
+
+
+    void buildAmenityCatagory();
+
 
 
     //return a vector of catagory data
-    vector<catagoryData> searchAmenityByName(string name)
-    {
-        vector<catagoryData> result;
-        for(auto it = m_Amenity.begin(); it != m_Amenity.end(); it ++)
-        {
-            for(auto it2 = it->name.begin(); it2 != it->name.end(); it2 ++)
-            {
-                if(it2->find(name) != string::npos)
-                {
-                    result.emplace_back(*it);
-                    break;
-                }
-            }
-        }
-        return result;
-    }
+    vector<catagoryData> searchAmenityByName(string name);
 
-    bool isAmenityTypeExist(string name)
-    {
-        for(auto it = m_AmenityType.begin(); it != m_AmenityType.end(); it ++)
-        {
-            if(it->find(name) != string::npos)
-                return true;
-        }
-        return false;
-//        return (m_AmenityType.count(name) != 0);
 
-    }
+    bool isAmenityTypeExist(string name);
 
-    vector<catagoryData> searchAmenityByType(string name)
-    {
-        vector<catagoryData> result;
-        for(auto it = m_Amenity.begin(); it != m_Amenity.end(); it ++)
-        {
-            if(it->type.find(name) != string::npos)
-                result.emplace_back(*it);
-        }
-        return result;
-    }
+
+    vector<catagoryData> searchAmenityByType(string name);
 
 };
 

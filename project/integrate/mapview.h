@@ -10,7 +10,7 @@
 #include <QWheelEvent>
 #include <iostream>
 #include <QGraphicsItem>
-#include "RenderItem.h"
+#include "renderitem.h"
 #include <iostream>
 #include <QContextMenuEvent>
 

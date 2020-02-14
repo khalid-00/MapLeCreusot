@@ -10,6 +10,7 @@ void SceneBuilder::buildMutipolygon(wayData way, idType wayId)
 {
     QPolygonF polygon;
     auto nodeRefList = way.nodeRefList;
+    // build a multi-polygon from the OSM way data
     for(vector<idType>::iterator it = nodeRefList.begin();it != nodeRefList.end();it++)
     {
         auto point = projection(m_model->getNodeLoaction(*(it)).lon(), m_model->getNodeLoaction(*(it)).lat());
@@ -28,6 +29,7 @@ void SceneBuilder::buildRoad(wayData way, idType wayId)
 {
     QPolygonF polyLine;
     auto nodeRefList = way.nodeRefList;
+    // build a multi-polygon from the OSM way data
     for(vector<idType>::iterator it = nodeRefList.begin();it != nodeRefList.end();it++)
     {
         auto point = projection(m_model->getNodeLoaction(*(it)).lon(), m_model->getNodeLoaction(*(it)).lat());
@@ -55,6 +57,11 @@ SceneBuilder::SceneBuilder(Model *model)
 SceneBuilder::~SceneBuilder()
 {
     delete m_scene;
+}
+
+void SceneBuilder::clear()
+{
+    m_scene->clear();
 }
 
 void SceneBuilder::addAllItem()

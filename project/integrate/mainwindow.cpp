@@ -129,6 +129,8 @@ void MainWindow::loadFile(string filePath)
     // =================== render map ==========================
     start = clock();
 
+    m_sceneBuilder->clear();
+
     m_sceneBuilder->addPolyItem();
     m_sceneBuilder->addRoadItem();
 
@@ -153,6 +155,7 @@ void MainWindow::loadFile(string filePath)
 
     m_mapView->centerOn(m_model->getCenter());
 
+    update();
 }
 
 void MainWindow::resizeEvent(QResizeEvent *event)

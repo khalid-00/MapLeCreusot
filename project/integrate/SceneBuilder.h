@@ -17,7 +17,7 @@
 #include <QPen>
 #include <vector>
 #include "RenderEnum.h"
-#include "RenderItem.h"
+#include "renderitem.h"
 #include <QLine>
 #include "projection.h"
 #include <QGraphicsItem>
@@ -64,6 +64,8 @@ public:
     SceneBuilder(Model *model);
 
     ~SceneBuilder();
+
+    void clear();
 
     void addAllItem();
 
