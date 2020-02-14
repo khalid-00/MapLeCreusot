@@ -338,16 +338,16 @@ The graph in my approach is \textbf{adjacency list }proposed by Boost Graph Libr
 The need for this procedure comes from the fact that: finding shortest path will be implemented through an algorithm, and the algorithm deals with a graph, not a map, so I wrote this class to build the desired graph from the data structure we imported from OSM file.
 The input for this class is the Model (data structure) extracted from OSM file, 
 and the output is a bidirectional weighted graph.
-bidirectional: because it’s easy to implement, in case we want improve it to directional graph, we must do a complicated constrains, and check each tag, to see the type of transportation, and if the way was one direction, or bidirectional.
+bidirectional: because it's easy to implement, in case we want improve it to directional graph, we must do a complicated constrains, and check each tag, to see the type of transportation, and if the way was one direction, or bidirectional.
 Weighted graph: because we are calculating Euclidean distance between the nodes depending on longitude, and latitude.
 %-------------------------------------------------------------
 \subsection{ MyAlgorithm Class:}
 This class takes the graph produced on the past class MyGraphBuilder, and the source node which we will start from, and runs Dijkstra algorithm proposed by Boost Graph Library to Find the shortest path between the source node, and all other nodes in The graph.
 Special function in this class called: getShortPath takes the destination node, then returns the shortest path between the source and destination only.
-In case that there was no path between nodes, the path (vector) will contain only one default node, so we don’t face issues due to empty vector.
+In case that there was no path between nodes, the path (vector) will contain only one default node, so we don't face issues due to empty vector.
 %-------------------------------------------------------------
 \subsection{ ShortPath Class:}
-This class is just to reduce amount of code in the main window, it doesn’t do much, it just takes source node, destination node, and Model, then it builds the graph from the Model using MyGraphBuilder class, and runs MyAlgorithm class, and its special function getShortPath, finally the output is our shortest path.
+This class is just to reduce amount of code in the main window, it doesn't do much, it just takes source node, destination node, and Model, then it builds the graph from the Model using MyGraphBuilder class, and runs MyAlgorithm class, and its special function getShortPath, finally the output is our shortest path.
 
 \subsection{Routing}
 Routing on this approach is just on foot, it's possible to add more transport methods later using tag filtering, building different transport maps, vertices, and edges, but unfortunately time was short for this project !\\
@@ -360,13 +360,13 @@ There is two kind of Difficulties here:
 \subsubsection{Difficulties we got rid of it:} 
 %*************************************************************
 \begin{enumerate}
-	\item {\textbf{First difficulty was CMake didn’t find some libraries:}}\\
+	\item {\textbf{First difficulty was CMake didn't find some libraries:}}\\
 	specially Boost Library, later we used qmake.
-	\item {\textbf{Second difficulty was that edges can’t be built using idType nodes:}\\
+	\item {\textbf{Second difficulty was that edges can't be built using idType nodes:}\\
 		the solution for that was mapping the idType Nodes to unsigned int indexes through a map, so each node has ID, and vertex number.}
 	\item{\textbf{Third one is redundancy of nodes in different Ways:}\\
 		the solution was to compare each node of way to the map we built as solution to
-		problem1.2, so if the node already found, we don’t add it to our map, instead we just call it and get node index.}	
+		problem1.2, so if the node already found, we don't add it to our map, instead we just call it and get node index.}	
 \end{enumerate}
 %-------------------------------------------------------------
 \subsubsection{Difficulties we can solve, but it needs more time:}
@@ -499,7 +499,16 @@ by clicking on navigate button, the shortest path will be drawn by red , so you 
 Cancel button is to hide that path, and you can choose again your start point and target, so your path again will be drawn for you.
 To finish, you can select (Menu - Quit) to exit the software.
 %=============================================================
+\subsection{Implementation ideas for comment and rating system}
 
+Although we didn't implement the rating system, but doing this is very straight forward in our design. All we need to do is:
+\begin{enumerate}
+	\item A file on the file system to store the information
+	\item A pop-out page when user click on the building
+	The pop-out page will show detail information about this building. And in this page, we will implement a input text line or other widget for the user. Since we can retrieve the way id on the mouse click, we can store the information as a key-value pair with way id.
+	\item Write the user input in the file and store them.
+	Do remember to load this file when loading the map so that the information can be linked together through way id.
+\end{enumerate}
 %=============================================================
 \chapter{Project Management}
 %=============================================================
